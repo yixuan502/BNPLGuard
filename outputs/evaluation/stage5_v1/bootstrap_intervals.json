@@ -1,0 +1,251 @@
+{
+  "logistic_regression": {
+    "positive_rate": {
+      "lower": 0.3598425196850394,
+      "upper": 0.41340551181102353,
+      "valid_replicates": 2000,
+      "invalid_replicates": 0,
+      "reason": null,
+      "point": 0.38661417322834646,
+      "na_reason": null
+    },
+    "accuracy": {
+      "lower": 0.74251968503937,
+      "upper": 0.7889763779527559,
+      "valid_replicates": 2000,
+      "invalid_replicates": 0,
+      "reason": null,
+      "point": 0.7661417322834646,
+      "na_reason": null
+    },
+    "precision": {
+      "lower": 0.6805989851373049,
+      "upper": 0.7664233576642335,
+      "valid_replicates": 2000,
+      "invalid_replicates": 0,
+      "reason": null,
+      "point": 0.7235023041474654,
+      "na_reason": null
+    },
+    "recall": {
+      "lower": 0.5960376037603761,
+      "upper": 0.681633141762452,
+      "valid_replicates": 2000,
+      "invalid_replicates": 0,
+      "reason": null,
+      "point": 0.639511201629328,
+      "na_reason": null
+    },
+    "f1": {
+      "lower": 0.6434569391662143,
+      "upper": 0.7128728487990754,
+      "valid_replicates": 2000,
+      "invalid_replicates": 0,
+      "reason": null,
+      "point": 0.6789189189189189,
+      "na_reason": null
+    },
+    "roc_auc": {
+      "lower": 0.8210615491482605,
+      "upper": 0.8642136272640872,
+      "valid_replicates": 2000,
+      "invalid_replicates": 0,
+      "reason": null,
+      "point": 0.8431575810023294,
+      "na_reason": null
+    },
+    "average_precision": {
+      "lower": 0.7251724041918685,
+      "upper": 0.8023428342937875,
+      "valid_replicates": 2000,
+      "invalid_replicates": 0,
+      "reason": null,
+      "point": 0.7634219609584756,
+      "na_reason": null
+    },
+    "brier": {
+      "lower": 0.14596848437061447,
+      "upper": 0.16858130914091998,
+      "valid_replicates": 2000,
+      "invalid_replicates": 0,
+      "reason": null,
+      "point": 0.15729470959195263,
+      "na_reason": null
+    },
+    "false_positive_rate": {
+      "lower": 0.1270632754517381,
+      "upper": 0.17866323907455012,
+      "valid_replicates": 2000,
+      "invalid_replicates": 0,
+      "reason": null,
+      "point": 0.1540436456996149,
+      "na_reason": null
+    }
+  },
+  "dummy": {
+    "positive_rate": {
+      "lower": 0.3598425196850394,
+      "upper": 0.41340551181102353,
+      "valid_replicates": 2000,
+      "invalid_replicates": 0,
+      "reason": null,
+      "point": 0.38661417322834646,
+      "na_reason": null
+    },
+    "accuracy": {
+      "lower": 0.5865944881889763,
+      "upper": 0.6401574803149607,
+      "valid_replicates": 2000,
+      "invalid_replicates": 0,
+      "reason": null,
+      "point": 0.6133858267716535,
+      "na_reason": null
+    },
+    "precision": {
+      "lower": null,
+      "upper": null,
+      "valid_replicates": 0,
+      "invalid_replicates": 2000,
+      "reason": "Insufficient defined replicates; see point-estimate N/A reason",
+      "point": null,
+      "na_reason": "No predicted positives"
+    },
+    "recall": {
+      "lower": 0.0,
+      "upper": 0.0,
+      "valid_replicates": 2000,
+      "invalid_replicates": 0,
+      "reason": null,
+      "point": 0.0,
+      "na_reason": null
+    },
+    "f1": {
+      "lower": 0.0,
+      "upper": 0.0,
+      "valid_replicates": 2000,
+      "invalid_replicates": 0,
+      "reason": null,
+      "point": 0.0,
+      "na_reason": null
+    },
+    "roc_auc": {
+      "lower": 0.5,
+      "upper": 0.5,
+      "valid_replicates": 2000,
+      "invalid_replicates": 0,
+      "reason": null,
+      "point": 0.5,
+      "na_reason": null
+    },
+    "average_precision": {
+      "lower": 0.3598425196850394,
+      "upper": 0.41340551181102353,
+      "valid_replicates": 2000,
+      "invalid_replicates": 0,
+      "reason": null,
+      "point": 0.38661417322834646,
+      "na_reason": null
+    },
+    "brier": {
+      "lower": 0.2310586176727909,
+      "upper": 0.2432333030221615,
+      "valid_replicates": 2000,
+      "invalid_replicates": 0,
+      "reason": null,
+      "point": 0.23714372317633522,
+      "na_reason": null
+    },
+    "false_positive_rate": {
+      "lower": 0.0,
+      "upper": 0.0,
+      "valid_replicates": 2000,
+      "invalid_replicates": 0,
+      "reason": null,
+      "point": 0.0,
+      "na_reason": null
+    }
+  },
+  "random_forest": {
+    "positive_rate": {
+      "lower": 0.3598425196850394,
+      "upper": 0.41340551181102353,
+      "valid_replicates": 2000,
+      "invalid_replicates": 0,
+      "reason": null,
+      "point": 0.38661417322834646,
+      "na_reason": null
+    },
+    "accuracy": {
+      "lower": 0.7393700787401575,
+      "upper": 0.7866141732283465,
+      "valid_replicates": 2000,
+      "invalid_replicates": 0,
+      "reason": null,
+      "point": 0.7622047244094489,
+      "na_reason": null
+    },
+    "precision": {
+      "lower": 0.6884797784353897,
+      "upper": 0.7752577861952862,
+      "valid_replicates": 2000,
+      "invalid_replicates": 0,
+      "reason": null,
+      "point": 0.7321867321867321,
+      "na_reason": null
+    },
+    "recall": {
+      "lower": 0.5633144828085022,
+      "upper": 0.6492415957086686,
+      "valid_replicates": 2000,
+      "invalid_replicates": 0,
+      "reason": null,
+      "point": 0.6069246435845214,
+      "na_reason": null
+    },
+    "f1": {
+      "lower": 0.6258471870787713,
+      "upper": 0.698380058815292,
+      "valid_replicates": 2000,
+      "invalid_replicates": 0,
+      "reason": null,
+      "point": 0.6636971046770601,
+      "na_reason": null
+    },
+    "roc_auc": {
+      "lower": 0.8137230437065411,
+      "upper": 0.8592787664895122,
+      "valid_replicates": 2000,
+      "invalid_replicates": 0,
+      "reason": null,
+      "point": 0.8363024819014403,
+      "na_reason": null
+    },
+    "average_precision": {
+      "lower": 0.7298813658679952,
+      "upper": 0.8034038379661503,
+      "valid_replicates": 2000,
+      "invalid_replicates": 0,
+      "reason": null,
+      "point": 0.7668956051939922,
+      "na_reason": null
+    },
+    "brier": {
+      "lower": 0.15841156660971295,
+      "upper": 0.17500870092031576,
+      "valid_replicates": 2000,
+      "invalid_replicates": 0,
+      "reason": null,
+      "point": 0.16668213434809323,
+      "na_reason": null
+    },
+    "false_positive_rate": {
+      "lower": 0.11572221952757433,
+      "upper": 0.16443981164742183,
+      "valid_replicates": 2000,
+      "invalid_replicates": 0,
+      "reason": null,
+      "point": 0.1399229781771502,
+      "na_reason": null
+    }
+  }
+}

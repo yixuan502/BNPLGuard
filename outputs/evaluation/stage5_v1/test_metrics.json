@@ -1,0 +1,73 @@
+{
+  "logistic_regression": {
+    "n": 1270,
+    "positive_n": 491,
+    "negative_n": 779,
+    "positive_rate": 0.38661417322834646,
+    "threshold": 0.5,
+    "accuracy": 0.7661417322834646,
+    "precision": 0.7235023041474654,
+    "recall": 0.639511201629328,
+    "f1": 0.6789189189189189,
+    "false_positive_rate": 0.1540436456996149,
+    "roc_auc": 0.8431575810023294,
+    "average_precision": 0.7634219609584756,
+    "brier": 0.15729470959195263,
+    "confusion_matrix_tn_fp_fn_tp": [
+      659.0,
+      120.0,
+      177.0,
+      314.0
+    ],
+    "confusion_unit": "respondents",
+    "na_reasons": {}
+  },
+  "dummy": {
+    "n": 1270,
+    "positive_n": 491,
+    "negative_n": 779,
+    "positive_rate": 0.38661417322834646,
+    "threshold": 0.5,
+    "accuracy": 0.6133858267716535,
+    "precision": null,
+    "recall": 0.0,
+    "f1": 0.0,
+    "false_positive_rate": 0.0,
+    "roc_auc": 0.5,
+    "average_precision": 0.38661417322834646,
+    "brier": 0.23714372317633522,
+    "confusion_matrix_tn_fp_fn_tp": [
+      779.0,
+      0.0,
+      491.0,
+      0.0
+    ],
+    "confusion_unit": "respondents",
+    "na_reasons": {
+      "precision": "No predicted positives"
+    }
+  },
+  "random_forest": {
+    "n": 1270,
+    "positive_n": 491,
+    "negative_n": 779,
+    "positive_rate": 0.38661417322834646,
+    "threshold": 0.5,
+    "accuracy": 0.7622047244094489,
+    "precision": 0.7321867321867321,
+    "recall": 0.6069246435845214,
+    "f1": 0.6636971046770601,
+    "false_positive_rate": 0.1399229781771502,
+    "roc_auc": 0.8363024819014403,
+    "average_precision": 0.7668956051939922,
+    "brier": 0.16668213434809323,
+    "confusion_matrix_tn_fp_fn_tp": [
+      670.0,
+      109.0,
+      193.0,
+      298.0
+    ],
+    "confusion_unit": "respondents",
+    "na_reasons": {}
+  }
+}

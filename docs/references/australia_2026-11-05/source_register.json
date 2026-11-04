@@ -1,0 +1,93 @@
+{
+  "access_date_timezone": "Australia/Sydney",
+  "checked_at": "2026-11-05T03:32:26.850719+11:00",
+  "sources": [
+    {
+      "id": "asic_rg281",
+      "title": "RG 281 Low cost credit contracts",
+      "url": "https://www.asic.gov.au/regulatory-resources/find-a-document/regulatory-guides/rg-281-low-cost-credit-contracts",
+      "published_on": "2025-05-08",
+      "kind": "Issued regulator guidance, not a consultation proposal",
+      "supports": "Most BNPL contracts fall in the low-cost credit category; the guide explains modified responsible lending obligations.",
+      "limit": "Guidance is not model validation or an affordability cutoff; do not apply legal thresholds in this simulator.",
+      "accessed_on": "2026-11-05",
+      "verified_via": "Web tool read original official page; relevant passages reviewed",
+      "archive_http_status": 200,
+      "archive_path": "docs/references/australia_2026-11-05/asic_rg281.html",
+      "sha256": "929da44a4716dde50fc8d7803a0689406e16f9db797c38d1053ef877ee0676fd"
+    },
+    {
+      "id": "asic_licensing",
+      "title": "Buy now pay later credit contracts: Credit licensing",
+      "url": "https://www.asic.gov.au/regulatory-resources/credit/buy-now-pay-later-credit-contracts-credit-licensing",
+      "published_on": "2025-01 (month only, per page)",
+      "kind": "Regulator information sheet; contains historical transition wording",
+      "supports": "Regime commencement 10 June 2025 and credit-licensing requirements, including qualifying transitional applications.",
+      "limit": "Page was issued before commencement; use issued RG 281 and current law rather than treating future-tense text as a new proposal.",
+      "accessed_on": "2026-11-05",
+      "verified_via": "Web tool read original official page; relevant passages reviewed",
+      "archive_http_status": 200,
+      "archive_path": "docs/references/australia_2026-11-05/asic_licensing.html",
+      "sha256": "94412de5df40cc53863f5e7543db56873b265d5fab85e1f5958ba4e8966cc32e"
+    },
+    {
+      "id": "asic_rep672",
+      "title": "REP 672 Buy now pay later: An industry update",
+      "url": "https://www.asic.gov.au/regulatory-resources/find-a-document/reports/rep-672-buy-now-pay-later-an-industry-update",
+      "published_on": "2020-11-16",
+      "kind": "Historical official research",
+      "supports": "Review of industry growth, consumer experiences and regulatory developments; establishes historical research context.",
+      "limit": "Historical review, not a 2026 prevalence estimate or Australian external validation of CFPB/Kaggle.",
+      "accessed_on": "2026-11-05",
+      "verified_via": "Web tool read original official page; relevant passages reviewed",
+      "archive_http_status": 200,
+      "archive_path": "docs/references/australia_2026-11-05/asic_rep672.html",
+      "sha256": "57eaf6e67806026b2177d2e309b6e38421dbf59bc2e549d5a64ad349b5ced11e"
+    },
+    {
+      "id": "asic_2020_release",
+      "title": "20-280MR ASIC releases latest data on buy now pay later industry",
+      "url": "https://www.asic.gov.au/about-asic/news-centre/find-a-media-release/2020-releases/20-280mr-asic-releases-latest-data-on-buy-now-pay-later-industry",
+      "published_on": "2020-11-16 (linked report date)",
+      "kind": "Historical official research release",
+      "supports": "Consumer harm can coexist with product use; ASIC considered provider/bank aggregate data and commissioned consumer research.",
+      "limit": "Different populations and definitions; not this project's default label or a present-day industry default estimate.",
+      "accessed_on": "2026-11-05",
+      "verified_via": "Web tool read original official page; relevant passages reviewed",
+      "archive_http_status": 200,
+      "archive_path": "docs/references/australia_2026-11-05/asic_2020_release.html",
+      "sha256": "81278948fc2f44d0987e04a20f66d5e324974f52d79c550ac6c39c996cb1594e"
+    },
+    {
+      "id": "nccp_current",
+      "title": "National Consumer Credit Protection Act 2009, compilation 52",
+      "url": "https://www.legislation.gov.au/C2009A00134/latest",
+      "version": "C2026C00340; compilation date 2026-07-01",
+      "published_on": "2026-07-01 (compilation date; register publication date not separately confirmed)",
+      "accessed_on": "2026-11-05",
+      "kind": "In-force legislation, not a proposal",
+      "reviewed_sections": [
+        "Schedule 1 Part 1A, especially sections 13B-13E",
+        "Part 3-2BA, especially 133BXA-133BXC"
+      ],
+      "supports": "The current code expressly covers BNPL and low-cost credit contracts; modified inquiries apply in the statutory election context.",
+      "limit": "Limited background review, not a complete legal application/transition assessment; no thresholds imported into the simulator.",
+      "verified_via": "Current-register header and original HTML volumes reviewed with web tool",
+      "original_text_urls": [
+        "https://www.legislation.gov.au/C2009A00134/2026-07-01/2026-07-01/text/original/epub/OEBPS/document_1/document_1.html",
+        "https://www.legislation.gov.au/C2009A00134/2026-07-01/2026-07-01/text/original/epub/OEBPS/document_2/document_2.html"
+      ],
+      "archives": [
+        {
+          "path": "docs/references/australia_2026-11-05/nccp_compilation52_volume1.html",
+          "sha256": "1b67bd4a148132880cfc029f1a400ff65056636ab86bcc23133832f0ffbbefb0"
+        },
+        {
+          "path": "docs/references/australia_2026-11-05/nccp_compilation52_volume2.html",
+          "sha256": "25c0e9333748a5c0a8318dc97464990ac8e28b28c51231ecd0cb1cda57c5eb37"
+        }
+      ]
+    }
+  ],
+  "use": "Background/applicability only; no model validation, legal compliance engine or simulator risk thresholds"
+}

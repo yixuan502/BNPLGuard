@@ -1,0 +1,10 @@
+{
+  "survey_year": 2016,
+  "release": "September 2017",
+  "landing_url": "https://www.consumerfinance.gov/data-research/financial-well-being-survey-data/",
+  "codebook_current_url": "https://www.consumerfinance.gov/documents/5586/cfpb_nfwbs-puf-codebook.pdf",
+  "guide_current_url": "https://www.consumerfinance.gov/documents/5588/cfpb_nfwbs-puf-user-guide.pdf",
+  "local_csv_sha256": "3680d33576549a99a8dfd7f99d5661a36a8fc1aac0d66f2bf2ec5524695304d8",
+  "verification": "official release and filename linkage; 6394 x 217; local Codebook September 2017; exact label/model-feature frequencies checked",
+  "usage": "Official public-use file intended for research, no respondent PII per CFPB. No separate dataset license identified in reviewed materials; do not automatically republish raw data or course PDFs. Cite CFPB."
+}

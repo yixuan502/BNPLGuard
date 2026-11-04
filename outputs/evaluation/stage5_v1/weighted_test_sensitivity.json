@@ -1,0 +1,73 @@
+{
+  "logistic_regression": {
+    "n": 1270,
+    "positive_n": 491,
+    "negative_n": 779,
+    "positive_rate": 0.43067267237177403,
+    "threshold": 0.5,
+    "accuracy": 0.751034185899388,
+    "precision": 0.7252838134892705,
+    "recall": 0.6791598516091684,
+    "f1": 0.7014644437295804,
+    "false_positive_rate": 0.19459584076266526,
+    "roc_auc": 0.8391508111216626,
+    "average_precision": 0.7892743410330421,
+    "brier": 0.16309202000011175,
+    "confusion_matrix_tn_fp_fn_tp": [
+      576.6928418424887,
+      139.33629114408444,
+      173.7819579946022,
+      367.8645873838447
+    ],
+    "confusion_unit": "sum of finalwt",
+    "na_reasons": {}
+  },
+  "dummy": {
+    "n": 1270,
+    "positive_n": 491,
+    "negative_n": 779,
+    "positive_rate": 0.43067267237177403,
+    "threshold": 0.5,
+    "accuracy": 0.569327327628226,
+    "precision": null,
+    "recall": 0.0,
+    "f1": 0.0,
+    "false_positive_rate": 0.0,
+    "roc_auc": 0.5000000000000002,
+    "average_precision": 0.4306726723717749,
+    "brier": 0.24715806970079932,
+    "confusion_matrix_tn_fp_fn_tp": [
+      716.0291329865731,
+      0.0,
+      541.646545378447,
+      0.0
+    ],
+    "confusion_unit": "sum of finalwt",
+    "na_reasons": {
+      "precision": "No predicted positives"
+    }
+  },
+  "random_forest": {
+    "n": 1270,
+    "positive_n": 491,
+    "negative_n": 779,
+    "positive_rate": 0.430672672371774,
+    "threshold": 0.5,
+    "accuracy": 0.7492452584726101,
+    "precision": 0.7362584355401092,
+    "recall": 0.6509387068603353,
+    "f1": 0.6909747710641457,
+    "false_positive_rate": 0.17638988454627696,
+    "roc_auc": 0.8340368117811356,
+    "average_precision": 0.7949731548235468,
+    "brier": 0.17236802455645459,
+    "confusion_matrix_tn_fp_fn_tp": [
+      589.7288368873008,
+      126.30029609927244,
+      189.06784355443276,
+      352.57870182401416
+    ],
+    "confusion_unit": "sum of finalwt",
+    "na_reasons": {}
+  }
+}
