@@ -34,7 +34,7 @@ The independent simulator takes I/E/D/B0/Bnew/S in one currency, AUD by default.
 
 ## Deployment and acceptance
 
-Repository: [yixuan502/BNPLGuard](https://github.com/yixuan502/BNPLGuard), private by default. The instructor must receive repository access if code access is required. The application is intended to be public separately from the code repository. **Public URL and online acceptance are not yet confirmed**; current facts and required account actions are in [deployment record](docs/deployment.md).
+Repository: [yixuan502/BNPLGuard](https://github.com/yixuan502/BNPLGuard), private by default. The instructor must receive repository access if code access is required. The application is intended to be public separately from the code repository. Initial application release: [`ffa9249`](https://github.com/yixuan502/BNPLGuard/commit/ffa92490dcf1c38793afe7d6313ae02beddc63e5). The actual remote checkout passed all four portable app checks. **Public URL and online acceptance are not yet confirmed**; current facts and required account actions are in [deployment record](docs/deployment.md).
 
 Deploy `main`, `app.py`, Python **3.13**, no secrets. After deployment, set app Sharing to public and verify in a browser not signed into Streamlit. Never infer anonymous access from repository visibility or an HTTP health check.
 
