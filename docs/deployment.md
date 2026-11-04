@@ -1,25 +1,53 @@
-# Stage 8 deployment record
+# Stage 8: public deployment and acceptance
 
-Date: 5 November 2026. Status: preparing clean-tree verification and private GitHub publication; no public app URL or online acceptance claimed yet.
+Completed 5 November 2026 (Australia/Sydney). Public application: **https://bnplguard-yixuan502.streamlit.app/**. A fresh browser without Community Cloud login opened the real URL and completed the four-area workflow. This is a working research demonstration, not a real-user study.
 
-Target: yixuan502/BNPLGuard, main, app.py, Python 3.13. Original project had no .git directory or remote. GitHub connector and authenticated CLI identity were verified as yixuan502; both initially reported the target repository absent. The private repository https://github.com/yixuan502/BNPLGuard has now been created under the verified account. Course project pp. 3–4 allow public code or instructor access, so private code is compatible provided instructor access is granted before the deadline. The application itself must be public without login.
+## Release identity
 
-The old local service was stopped. It was restarted from the project .venv at the actual terminal URL http://127.0.0.1:8501; / and /_stcore/health returned 200. The old in-app browser session was disconnected; reloading it re-established interaction. A fictional questionnaire produced 83.85% with matching eight-input SHAP/template, and the Stress example completed. This is local verification, not online acceptance.
+- Private source repository: https://github.com/yixuan502/BNPLGuard . Verified owner: yixuan502. No previous local Git history existed; no history was replaced.
+- Branch: main; entry point: app.py; Cloud Python setting: **3.13** (explicitly selected instead of the current platform default 3.14); no secrets.
+- Initially accepted deployed revision: **c23178cd823ae6d70b4f2cfdb11576bad6793670**. Initial package commit ffa92490dcf1c38793afe7d6313ae02beddc63e5 was independently cloned and tested. The final publication record/screenshots are a subsequent documentation-only commit on main; no numerical runtime module/model changes were needed after c23178c.
+- Application Sharing was changed from specific viewers to **This app is public and searchable**. The GitHub repository remains private. Source access for the instructor must be granted separately if required; the course permits public code or instructor access.
 
-Cloud packaging uses an explicit file allowlist and uv.lock with Python 3.13, preserving original model-package versions. Fictional presets and source metadata are now standalone runtime configs, avoiding a dependency on local research receipts or unrelated course metadata. Frozen model, label, schema, split, SHAP background and formal evaluation bytes remain unchanged.
+## Actual build and environment
 
-Streamlit Community Cloud currently presents a sign-in page whose Continue to sign-in action accepts terms and may require GitHub OAuth. Those account/legal actions must be completed by the user after the release is ready; no password or token is requested in chat. LLM remains disabled; Kaggle remains report-appendix only.
+Cloud logs show cloning main, successful dependency installation from **/mount/src/bnplguard/uv.lock using uv-sync**, and server startup. The recorded log starts 4 November 2026 at 23:34:51 UTC (5 November 10:34:51 AEDT); dependencies completed at 23:35:04 UTC. Installed core versions include scikit-learn 1.9.1, NumPy 2.5.4, pandas 3.1.0, SHAP 0.54.1, Streamlit 1.66.1 and Altair 6.3.0. Cloud also manages its own pip/certifi and adds watchdog; no core ML package was silently upgraded.
 
+The build reports multiple dependency files and explicitly selects uv.lock. Historical requirements files remain preserved model-environment evidence; this warning did not prevent installation. The server logs 127.0.0.1:8501, and the actual public HTTPS/WebSocket workflow works with the platform proxy. No network-protection change was required. Initial provisioning showed a loading page; the separate anonymous browser subsequently loaded and submitted successfully. The owner management page supplied build/settings evidence and was not used as proof of anonymous app access.
 
-### Isolated release check passed
+A raw-data-free isolated tree and an actual fresh GitHub clone each installed their own locked .venv and passed all four AppTest areas. First-run checks took 72.488/81.745 seconds including dependency/font-cache initialization; the portable smoke timeout is 120 seconds. The existing project .venv is Python 3.13.13. All 154 local tests passed in 6.41 seconds, and the mandated local audit passed. Startup never trains, bootstraps, recalibrates or regenerates the fixed background.
 
-The new raw-data-free checkout with its own uv-created .venv passed all four areas in 72.488 seconds including first-run dependency/font-cache initialization. Probability 0.8384946129177755, maximum SHAP reconstruction error 6.661338147750939e-16; simulator buffers 900/700/0/-200/1100; saved Model metrics AP 0.7634/AUC 0.8432/Brier 0.1573. No unavailable-evidence warning occurred. The 45-second initial deadline was too short for that cold start; the portable check now allows 120 seconds. This is an isolated AppTest run, not anonymous public acceptance.
+## Anonymous browser acceptance actually performed
 
+The owner used Chrome to log in to Community Cloud. A separate in-app browser received no Cloud login/OAuth interaction and opened a new tab at the public URL. No login prompt, viewer invitation or owner Manage app control appeared. A second new viewer tab also opened directly with blank inputs and no prior prediction, confirming fresh-session behavior.
 
-## Private GitHub release verified; Cloud login pending
+| Area | Observed result |
+|---|---|
+| Screen | Initial empty state; loaded an explicitly fictional questionnaire and submitted. Frozen probability **83.85%**, class 1 at fixed threshold 0.5. Eight original-input SHAP bars and the existing English template corresponded to those choices. |
+| SHAP details | Fixed 200 training rows, seed 20261105, log-odds. Encoded additivity error **6.661338147750939e-16**, raw aggregation error **2.220446049250313e-16**, grouping error **4.440892098500626e-16**, probability reconstruction error **1.1102230246251565e-16**. |
+| Stress | Loaded fictional I4500/E2500/D700/B0400/Bnew200/S1000, shock20%, reduction200; submitted. Five signed chart values **900 / 700 / 0 / -200 / 1100 AUD**. Current RTI24.44%, coverage0.278 months. Combined template reports -200 AUD, delta -1100 AUD, RTI36.11%, coverage0.263 months with a negative-buffer notice. |
+| Explain | Global saved validation Permutation Importance loaded. Local retained the same submitted 83.85% estimate/SHAP. Scenario displayed the submitted five-scenario calculation and its assumptions. |
+| Model | Saved AP **0.7634**, ROC-AUC **0.8432**, Brier **0.1573** loaded. ROC and PR views, reliability graph/bin explanation, subgroup/weight disclosures, Kaggle appendix-only decision and dated official Australian links were inspected. Local overestimation and subgroup limitations remain visible. |
 
-Repository: https://github.com/yixuan502/BNPLGuard (private), branch main, entry app.py, Python 3.13, no secrets. Initial app release commit: ffa92490dcf1c38793afe7d6313ae02beddc63e5. The actual remote repository was cloned afresh, with all 98 reviewed files, no raw data and its own uv-locked .venv. All four AppTest areas passed in 81.745 seconds, including first-run font-cache initialization. Prediction, SHAP, offline-template, five simulator buffers and aggregate Model metrics matched the isolated-tree check. This verifies the published file set and is not cloud/anonymous acceptance. Later documentation/ignore-policy commits do not alter the validated numerical app behavior.
+The helper is an offline rule template; **LLM remains disabled, not live-tested**. Kaggle has no personal-input endpoint and contributes no probability to screening. Currency/Codebook separation, non-causal explanation and monthly due-date limitations remain.
 
-The required local data audit also passed: 6394x217, 6350 eligible, 2454 positives. Original protected files remain unchanged. The local service was restarted again after portable-path changes; its actual terminal URL is http://127.0.0.1:8501. The fictional questionnaire and eight-input SHAP/template were rechecked in the browser after restart. Release exceptions are root-anchored; unrelated nested documentation remains ignored.
+Screenshots and raw UI/log receipts are saved locally in outputs/deploy/stage8_v1. Only the fictional/aggregate Model screenshot is added to docs/images/app_public.jpg. No real financial inputs, login cookies, credentials or unrelated account material are committed.
 
-The only current external blocker is Community Cloud sign-in/terms and any GitHub OAuth authorization. The user must complete those account actions in the browser, without sending passwords/tokens in chat. Then select repository yixuan502/BNPLGuard, branch main, app.py, Advanced Python 3.13, and no secrets. If private repository authorization is required, grant only the repository access needed. Deploy, inspect real build logs, set application Sharing to public (repository remains private), and verify a fresh browser with no Streamlit login. No actual cloud build, public URL or anonymous four-area check has occurred yet. Do not send a guessed URL to the instructor. Real-user feedback remains a subsequent stage.
+## Preservation and release boundaries
+
+All **192** pre-stage-eight protected model/data/config/evaluation/core files remain SHA256-identical. The LR model SHA256 remains 6f8a82a70e38ae9d5f6143ca4b491d21932d480ca1b38e3d93f079c6794c06d8. Eight features, label, fixed splits, 0.5 threshold, calibration choice, saved formal metrics, SHAP reference and simulator results are unchanged. Release packaging uses a default-deny root-anchored allowlist. It excludes raw data, per-record predictions/bootstrap draws, course PDFs, reference Notebooks, backups, local environments, secrets and real-user inputs.
+
+Physical phones, Safari/Firefox, additional networks, adversarial traffic and real-user comprehension were not tested in this remote round. Local stage-seven desktop/mobile emulation and mocked failure tests remain separate historical evidence. Successful checks establish observed availability now; Community Cloud may sleep or cold-start later. Stage-nine real-user feedback has not begun.
+
+## Run and handoff
+
+Send the public app URL above to the instructor; app viewing requires no account in the tested anonymous session. For source review, grant the instructor access to the private GitHub repository through its normal access settings. Do not change repository visibility merely to share the application.
+
+```bash
+cd /Users/oneone/Desktop/BNPLGuard
+.venv/bin/python -m streamlit run app.py
+```
+
+Open the actual printed local URL, normally http://127.0.0.1:8501. Stop that running terminal with Ctrl+C. Do not start a second service on an occupied port or reuse an old PID. PyCharm interpreter: /Users/oneone/Desktop/BNPLGuard/.venv/bin/python; module streamlit; parameters run app.py; working directory the desktop root.
+
+Next: stage-nine real-user feedback, with consent and an explicit protocol, followed by course report/video review and AI-use disclosure. No feedback or student review is invented by this deployment.

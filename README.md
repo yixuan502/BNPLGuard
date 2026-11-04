@@ -2,6 +2,8 @@
 
 **AI-Powered Financial Vulnerability Screening and BNPL Repayment Stress Simulation**
 
+**[Open the public application](https://bnplguard-yixuan502.streamlit.app/)** — no login required in the verified anonymous browser workflow.
+
 An English Streamlit research app with four areas: **Screen / Stress / Explain / Model**. Screen loads the frozen CFPB Logistic Regression Pipeline and verified local SHAP; Stress uses an independent deterministic monthly calculator. The explanation helper uses offline English templates. **LLM is disabled; no API key or external AI request is needed.** Kaggle exploratory classification remains a report appendix, outside personal screening.
 
 ## Run locally
@@ -34,9 +36,9 @@ The independent simulator takes I/E/D/B0/Bnew/S in one currency, AUD by default.
 
 ## Deployment and acceptance
 
-Repository: [yixuan502/BNPLGuard](https://github.com/yixuan502/BNPLGuard), private by default. The instructor must receive repository access if code access is required. The application is intended to be public separately from the code repository. Initial application release: [`ffa9249`](https://github.com/yixuan502/BNPLGuard/commit/ffa92490dcf1c38793afe7d6313ae02beddc63e5). The actual remote checkout passed all four portable app checks. **Public URL and online acceptance are not yet confirmed**; current facts and required account actions are in [deployment record](docs/deployment.md).
+Repository: [yixuan502/BNPLGuard](https://github.com/yixuan502/BNPLGuard), private by default. The instructor must receive repository access if code access is required. The application is public separately from the private code repository. Accepted initial deployed app revision: [`c23178c`](https://github.com/yixuan502/BNPLGuard/commit/c23178cd823ae6d70b4f2cfdb11576bad6793670). The actual remote checkout passed all four portable app checks; the public URL passed actual anonymous Screen/SHAP, Stress, Explain and Model interaction. Detailed build, preservation and acceptance evidence is in the [deployment record](docs/deployment.md).
 
-Deploy `main`, `app.py`, Python **3.13**, no secrets. After deployment, set app Sharing to public and verify in a browser not signed into Streamlit. Never infer anonymous access from repository visibility or an HTTP health check.
+Deployed from `main`, `app.py`, Python **3.13**, no secrets, with app Sharing set to public. Cloud logs confirm uv-sync used uv.lock. The local full suite passed **154 tests**; anonymous acceptance exercised the real UI, beyond a health check. Community Cloud can sleep/cold-start; real-user feedback remains stage nine.
 
 The reviewed runtime file allowlist excludes raw datasets, per-record predictions, local environments, secrets, reference Notebooks, course PDFs and backups. It includes the trusted frozen model, schema, label/split reference, fixed encoded training-only SHAP background, fictional presets and aggregate evaluation evidence. These are sufficient for app inference; the complete historical research tests additionally require the local research archive. No unknown uploaded models are loaded and no personal financial inputs are logged by app code.
 
@@ -51,7 +53,7 @@ uv run --frozen --group test python deployment/smoke.py
 
 The portable smoke check exercises all four areas, exact frozen prediction/SHAP reconstruction, offline templates, simulator buffers and saved Model metrics. It is separate from actual browser/public acceptance. Original data/research artifacts are preserved locally; frozen model SHA256 is `6f8a82a70e38ae9d5f6143ca4b491d21932d480ca1b38e3d93f079c6794c06d8`.
 
-![Saved Model evidence, local browser acceptance](docs/images/app_model.jpg)
+![Actual public Model page in an anonymous browser](docs/images/app_public.jpg)
 
 ## Documentation
 

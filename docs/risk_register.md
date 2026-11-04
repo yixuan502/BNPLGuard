@@ -70,3 +70,8 @@ Session-only inputs/results, snapshot invalidation, trusted-resource locks and g
 - No external LLM provider is enabled. Public demonstrations should use fictional inputs; session-only application state is not a guarantee about the hosting provider's infrastructure policies. No financial-input logging is added by app code.
 - Initial isolated cold start exceeded a 45-second test deadline during dependency/font-cache initialization. A longer first-run check is required; a warmed local session alone cannot establish clean deployment readiness.
 - Instructor source access to a private repository remains a handoff item. No teammate contribution, public validation, user study or compliance certification is inferred.
+
+
+## Stage-eight acceptance update
+
+Public application sharing and separate anonymous four-area acceptance are complete at https://bnplguard-yixuan502.streamlit.app/. Private GitHub source visibility is unchanged; arrange instructor source access separately. Cloud logs confirm uv.lock and compatible versions; the unchanged local binding works through its actual proxy. Previous login/build/sharing acceptance gates are resolved. Community Cloud sleep/cold starts and untested physical devices/networks remain operational limits, not model uncertainty. No user-feedback, bias-free, calibrated-probability, Australian-validation or compliance claim follows from successful deployment.

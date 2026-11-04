@@ -30,3 +30,8 @@ Session-only inputs/results, snapshot invalidation, trusted-resource locks and g
 ## Stage-eight release preparation (5 November 2026)
 
 Codex restored the stopped local service and exercised fictional Screen/SHAP and Stress interactions, reviewed the release allowlist and dependency precedence, prepared an isolated raw-data-free runtime, added packaging checks and created the explicitly authorized private GitHub repository. Local regression passed 154 tests. Frozen research objects remain unchanged. Cloud account/terms actions, actual build/public acceptance and student review are distinct and are not claimed by preparation work.
+
+
+## Stage-eight public acceptance
+
+After the user completed Community Cloud account/terms/login, Codex deployed the reviewed private GitHub release, selected Python3.13, inspected real uv-sync build logs and set the app to public. Actual separate anonymous-browser interaction verified Screen/SHAP/templates, Stress, Explain and Model; all submitted cases were fictional. No real-user study or completed student review is claimed. Deployment records and the public aggregate Model screenshot are published separately from excluded raw/input-level artifacts.
