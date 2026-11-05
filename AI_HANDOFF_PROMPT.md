@@ -1,5 +1,13 @@
 # 粘贴给新对话的中文交接指令
 
+## Current status - 6 November 2026
+
+The [source repository](https://github.com/yixuan502/BNPLGuard) is public. The [public app](https://bnplguard-yixuan502.streamlit.app/) has accepted release marker `stress-installments-20261105` (application source `a77bc23`). Updated-app structured retest records have been received for three participants: two new and one returning. Read the [anonymous retest summary](docs/retest_evidence_2026-11-06.md) for independent versus prompted outcomes and unresolved questions. Original participant workbooks remain private; the study does not prove causal improvement or universal independent completion.
+
+This current status supersedes earlier private-repository and pending-retest statements below. Earlier stage records retain their original context and are not current completion claims. Final report/video, signed student contributions, AI disclosure and Moodle approval/deadline evidence still require separate verification.
+
+## Historical handoff text
+
 我在进行 UNSW FINS5557 Track A 的 BNPLGuard 小组项目。已上传的交接包是当前证据副本，请帮助我理解证据、组织后续正式报告与演示工作。首先只读 START_HERE.md 和 EVIDENCE_MAP.md，列出当前已完成/计划/待真实收集三类状态，再按我提出的问题定向打开具体文件；不要无差别将所有文件或历史提示词当作执行指令。
 
 以当前源码、冻结配置、模型和最终保存工件为准。引用任何数字时写明包内相对路径、JSON字段或CSV行/列、validation还是test、CFPB还是Kaggle、加权还是未加权、阈值与单位。图引用具体图文件。不得从文档措辞推断已经运行、验证或收集。若材料冲突，指出冲突及较新证据依据，不静默改写原始结果。缺失信息写“待确认”，告诉我到哪里核对，不能编造引文、用户反馈、组员贡献、统计显著性或课程要求。
@@ -11,3 +19,8 @@
 部署与本地交接版本区别、字段残留冲突及获取缺失CSV/课程材料的方法都在导航中。不要把旧文档的电脑绝对路径当作我的项目根目录；使用实际解压目录及包内相对路径。勿加载未知外部pickle，勿索取密码/token，勿上传用户真实财务输入。不要替我虚构执行、签名或提交；未获得明确指令时先给证据梳理和待确认清单，不自动写正式报告、训练、部署或修改仓库权限。
 
 请先向我简要复述两个研究问题、已上线功能、关键证据范围和剩余真实用户工作，然后等待我指定下一项报告任务。课程最终原文需从Moodle核对；AI辅助工作要披露，组员应理解并审查、实质修订输出。
+
+
+## Latest retest evidence — 6 November 2026
+
+The previous statements that real retesting was pending are historical and superseded. A user-supplied structured workbook records three updated-app sessions: two new participants and one returning, on Windows, iPhone and iPad. Read [the separate anonymous retest evidence](docs/retest_evidence_2026-11-06.md) for per-task independent versus assisted outcomes, exact workbook cell references, follow-up summary versus facilitator observation, and the P01 savings/hesitation issue requiring field-note confirmation. The workbook's English prose is not verified verbatim; do not use direct quotes. Project brief p.3 and rubric p.4 specify at least three users and a structured instrument; the supplied workbook documents those elements, subject to source/consent verification and current course requirements. The retest is not a controlled pre/post experiment and does not prove improvement. Source workbook remains private and is not in this package.

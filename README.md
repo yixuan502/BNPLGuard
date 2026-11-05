@@ -2,93 +2,91 @@
 
 **AI-Powered Financial Vulnerability Screening and BNPL Repayment Stress Simulation**
 
-**[Open the public application](https://bnplguard-yixuan502.streamlit.app/)** — no login required in the verified anonymous browser workflow.
+[Open the public application](https://bnplguard-yixuan502.streamlit.app/) · [GitHub repository](https://github.com/yixuan502/BNPLGuard)
 
-An English Streamlit research app with four areas: **Screen / Stress / Explain / Model**. Screen loads the frozen CFPB Logistic Regression Pipeline and verified local SHAP; Stress uses an independent deterministic monthly calculator. The explanation helper uses offline English templates. **LLM is disabled; no API key or external AI request is needed.** Kaggle exploratory classification remains a report appendix, outside personal screening.
+BNPLGuard is an English-language research prototype with four areas: **Screen**, **Stress**, **Explain** and **Model**. Screen uses a frozen Logistic Regression Pipeline trained on US survey data. Stress independently calculates monthly repayment scenarios. Explain presents saved global importance and local SHAP contributions. Model displays saved evaluation evidence and limitations.
+
+The application uses offline English explanation templates. **The optional LLM adapter is disabled and has not been live-tested.** No API key is required. The independent Kaggle experiment is retained as research material and is not part of personal screening.
 
 ## Run locally
 
-The active desktop project is `/Users/oneone/Desktop/BNPLGuard`. In PyCharm select `/Users/oneone/Desktop/BNPLGuard/.venv/bin/python`, working directory the project root, module `streamlit`, parameters `run app.py`.
+Clone or download the repository and open a terminal in the resulting **BNPLGuard project root** (the directory containing `app.py`). Use Python **3.13**. In PyCharm, set the project root as the working directory, select the interpreter inside the project's `.venv`, and run module `streamlit` with parameters `run app.py`.
 
-```bash
-cd /Users/oneone/Desktop/BNPLGuard
-.venv/bin/python -m streamlit run app.py
-```
-
-Open the URL actually printed by Streamlit (normally http://127.0.0.1:8501). Stop with **Ctrl+C** in that terminal. If the port is occupied, use the existing verified app or inspect its current process before stopping it; do not reuse an old PID.
-
-For a fresh checkout with Python **3.13**, install [uv](https://docs.astral.sh/uv/getting-started/installation/) and use the exact committed lock:
+For a fresh checkout, install [uv](https://docs.astral.sh/uv/getting-started/installation/) and use the committed lock:
 
 ```bash
 uv sync --frozen --group test
 uv run --frozen python -m streamlit run app.py
 ```
 
-Alternatively create `.venv` with Python 3.13 and install `requirements-app-lock.txt`. Community Cloud uses **uv.lock** ahead of the historical requirements files. Model-compatible versions include scikit-learn 1.9.1, NumPy 2.5.4, SHAP 0.54.1 and Streamlit 1.66.1. No fitting, audit, bootstrap or full-dataset explanation runs on app startup.
-
-## Research scope
-
-The CFPB task is contemporaneous self-reported difficulty covering expenses and paying bills, using the US 2016 survey: ENDSMEET 2/3 versus 1. Eight categorical inputs retain their Codebook meanings; annual household USD income bands are never mapped from simulator AUD monthly income. The fixed split is 3,810 / 1,270 / 1,270; threshold **0.5**, no extra calibration. Saved final LR test AP **0.763422**, ROC-AUC **0.843158**, Brier **0.157295** are unweighted sample performance. Validation and test evidence remain separate.
-
-Local probability overestimation, subgroup error differences, imputation and domain limits remain visible. This is not BNPL default prediction, credit approval, causal advice, Australian external validation or a compliance certification. SHAP reports contributions in **log-odds**, not probability percentage points or personal causes.
-
-The independent simulator takes I/E/D/B0/Bnew/S in one currency, AUD by default. Necessary living expenses exclude repayments already entered separately. Its five fictional example buffers are **900 / 700 / 0 / -200 / 1100 AUD**. Positive monthly cash flow does not guarantee cash on every due date. Hypothetical repayment reductions do not modify contracts. The simulator does not change the CFPB estimate.
-
-## Deployment and acceptance
-
-Repository: [yixuan502/BNPLGuard](https://github.com/yixuan502/BNPLGuard), private by default. The instructor must receive repository access if code access is required. The application is public separately from the private code repository. Accepted initial deployed app revision: [`c23178c`](https://github.com/yixuan502/BNPLGuard/commit/c23178cd823ae6d70b4f2cfdb11576bad6793670). The actual remote checkout passed all four portable app checks; the public URL passed actual anonymous Screen/SHAP, Stress, Explain and Model interaction. Detailed build, preservation and acceptance evidence is in the [deployment record](docs/deployment.md).
-
-Deployed from `main`, `app.py`, Python **3.13**, no secrets, with app Sharing set to public. Cloud logs confirm uv-sync used uv.lock. The local full suite passed **154 tests**; anonymous acceptance exercised the real UI, beyond a health check. Community Cloud can sleep/cold-start; real-user feedback remains stage nine.
-
-The reviewed runtime file allowlist excludes raw datasets, per-record predictions, local environments, secrets, reference Notebooks, course PDFs and backups. It includes the trusted frozen model, schema, label/split reference, fixed encoded training-only SHAP background, fictional presets and aggregate evaluation evidence. These are sufficient for app inference; the complete historical research tests additionally require the local research archive. No unknown uploaded models are loaded and no personal financial inputs are logged by app code.
+Alternatively, after creating the project virtual environment and installing `requirements-app-lock.txt`:
 
 ```bash
-# Complete local research copy only:
-.venv/bin/python -m pytest -q
-# Portable release audit:
-.venv/bin/python -m src.deployment audit
-# Fresh raw-data-free checkout only:
-uv run --frozen --group test python deployment/smoke.py
+# macOS / Linux, from the project root
+.venv/bin/python -m streamlit run app.py
 ```
 
-The portable smoke check exercises all four areas, exact frozen prediction/SHAP reconstruction, offline templates, simulator buffers and saved Model metrics. It is separate from actual browser/public acceptance. Original data/research artifacts are preserved locally; frozen model SHA256 is `6f8a82a70e38ae9d5f6143ca4b491d21932d480ca1b38e3d93f079c6794c06d8`.
+```powershell
+# Windows PowerShell, from the project root
+.\.venv\Scripts\python.exe -m streamlit run app.py
+```
 
-![Actual public Model page in an anonymous browser](docs/images/app_public.jpg)
+Open the address printed by Streamlit, normally <http://127.0.0.1:8501>. Stop the process with **Ctrl+C**. If the port is occupied, use the existing instance or choose another port, for example `--server.port 8502`.
 
-## Documentation
+Community Cloud resolves dependencies from `uv.lock`. The locked environment includes scikit-learn 1.9.1, NumPy 2.5.4, SHAP 0.54.1 and Streamlit 1.66.1. Starting the application does not train a model, run an audit or bootstrap the test set.
 
-Start with [project specification](docs/project_spec.md), [current progress](docs/progress.md), [model card](docs/model_card.md), [explanation addendum](docs/model_card_extensions.md), [local app acceptance](docs/stage7_app.md), [deployment packaging](deployment/README.md), [simulator method](docs/simulator_method.md), [SHAP method](docs/cfpb_local_explanation.md), [data selection decision](docs/data_source_decision.md) and [Australian official context](docs/australian_context.md).
+## Using the application
 
-The CFPB source/version links and raw checksum are retained in `config/app_source.json`; raw acquisition and earlier audit evidence remain in the local research archive. Third-party licenses remain separate from project code: the Kaggle page screenshot states CC0 1.0 for its dataset, not for reference Notebook code. No open-source code license is newly assigned by this deployment. AI-assisted implementation and verification are recorded in [contribution log](docs/contribution_log.md); student review and real-user research remain distinct responsibilities.
+- **Screen:** Enter eight CFPB survey categories and submit. Annual household income uses USD bands; these inputs are separate from Stress's monthly amounts. The fictional screening example and reset button are available.
+- **Stress:** Enter monthly after-tax income, living expenses, non-BNPL debt repayments, existing and proposed BNPL repayments, and the current savings balance in one currency. Living expenses exclude repayments entered separately. Five cards compare current, new BNPL, income shock, both changes, and a hypothetical reduction in existing BNPL. Each displays a final buffer and its change from current.
+- **Monthly instalment estimate:** Direct entry of the new monthly repayment is the default. Optionally choose **Estimate from a purchase plan**, enter purchase amount, upfront payment and a positive number of monthly instalments, review the result, and select **Use this repayment in the stress simulator** before comparing scenarios. The first N−1 instalments are rounded down to cents, the last clears the remainder, and the highest monthly instalment is applied. The estimate assumes monthly payments, no interest or fees, and an upfront payment made before the simulated month. Savings are the balance after that payment. This is not a provider quote. See [instalment method](docs/installment_plan.md) for validation rules and limitations.
+- **Explain / Model:** Review validation-set Permutation Importance, the submitted input's SHAP contribution, and saved test metrics, curves, reliability and subgroup results. No model is retrained when these pages open.
 
+The standard fictional Stress example uses AUD 4,500 income, 2,500 living expenses, 700 other debt, 400 existing BNPL, 200 proposed BNPL and 1,000 savings, with a 20% income shock and a hypothetical 200 reduction. Its five buffers are **900 / 700 / 0 / −200 / 1,100 AUD**. Savings do not count as monthly income. Positive monthly cash flow does not guarantee funds on every payment due date; a hypothetical repayment reduction does not change a contract.
 
-## Team handoff and research evidence
+## Research scope and limitations
 
-The repository now also contains final research artifacts, Kaggle appendix evidence, simulator/SHAP examples and blank English user-testing instruments; the reviewed inference runtime remains the separate99-file `deployment/runtime_files.json` subset. Start with [START_HERE](START_HERE.md), [EVIDENCE_MAP](EVIDENCE_MAP.md) and [AI_HANDOFF_PROMPT](AI_HANDOFF_PROMPT.md) (Chinese team navigation). See [repository contents and acquisition steps](docs/repository_contents.md) for deliberate exclusions and reproduction limits.
+The CFPB outcome is **contemporaneous self-reported difficulty** covering expenses and paying bills in a typical month, from the 2016 US National Financial Well-Being Survey. ENDSMEET responses 2/3 are mapped to class 1 and response 1 to class 0. The eight categorical inputs, stratified 3,810 / 1,270 / 1,270 split and 0.5 threshold are frozen; no extra calibration is applied.
 
-[User feedback verification](docs/user_testing_feedback_review.md) now records receipt of a three-participant compilation:16/18 text answers;18/18 recorded app answers, including12 after operational guidance. Independent app originals and S1 wording have evidence gaps; do not infer causal improvement or all-user independent success. The source workbook is private; only the aggregate review is committed. Blank instruments remain separate: participant PDF for testers, answer guide and blank results workbook for facilitators. This receipt supersedes earlier waiting-for-feedback statements; no course report has been written by this change.
+The selected Logistic Regression's held-out **test** AP is **0.763422**, ROC-AUC **0.843158** and Brier score **0.157295**. These primary metrics are unweighted. The model has local probability overestimation and subgroup error differences; its performance on Australian consumers has not been externally validated. It is not a BNPL default or credit-approval model. Local SHAP contributions use **log-odds**, not probability percentage points, and do not establish causes.
 
+The simulator uses deterministic arithmetic, not model predictions or default probabilities. Changing a Stress input does not alter the Screen estimate. The separately trained Kaggle experiment classifies the dataset's recorded `default_flag` for exploratory research only. Its provenance, outcome definition, timing and financial units have important gaps; it does not validate CFPB or Australian deployment. See the [model card](docs/model_card.md), [explanation addendum](docs/model_card_extensions.md), [Kaggle model card](docs/kaggle_model_card.md) and [data-source decision](docs/data_source_decision.md).
 
-## Local feedback revision — pending publication
+## User-testing evidence
 
-Stress now separates monthly cash-flow entries from savings today, preserves I/E/D/B0/Bnew/S reading order in one column, and shows all five scenario cards with final buffer, change and signed status. The existing RTI/coverage/details/templates remain. Revision stress-feedback-v1 is a local change on base d67f0ba; no push/deployment occurred. See [change and acceptance record](docs/stress_feedback_changes.md), [blank English retest form](user_testing/retest_v1/retest_form.md) and [facilitator-only guide](user_testing/retest_v1/facilitator_notes.md).155tests and desktop/narrow Chrome checks passed; physical devices and real retest outcomes remain unverified. Use the local app for this revision; the public URL still reflects the published version.
+Two rounds have been recorded using structured fictional tasks. In the first-round compilation, 16/18 written answers and 18/18 recorded app answers were correct; the latter includes 12 answers recorded after operational guidance. The original independent app answers for those assisted tasks and complete Screen-interpretation wording are unavailable. See the [first-round evidence review](docs/user_testing_feedback_review.md).
 
+The updated-app retest workbook records three sessions: **two new participants and one returning participant**. Some tasks required prompts, including distinguishing savings from monthly income, identifying repayment fields, finding the purchase-plan option, or stating a change from current. One participant reported substantial scrolling on a phone. The sequence of P01's recorded savings understanding and hesitation cannot be confirmed from the available notes. These small, nonrandomized sessions do not establish a causal improvement or universal independent success. Feedback summaries are not verified verbatim quotations.
 
-## Local monthly instalment estimator
+Original participant workbooks remain private and are not included in the public repository. The [anonymous updated-app retest summary](docs/retest_evidence_2026-11-06.md) records task-specific independent and prompted outcomes, evidence limitations and remaining usability questions. Do not publish source records or identify participants. The [blank participant materials](user_testing/materials_v1/participant_test_sheet.pdf), [blank retest form](user_testing/retest_v1/retest_form.md) and [facilitator guide](user_testing/retest_v1/facilitator_notes.md) are separate from collected responses.
 
-The optional purchase-plan input uses cent-exact allocation and applies the highest monthly instalment to the independent stress simulator after explicit user action. Direct input remains the default and is retained when switching modes. See docs/installment_plan.md. User retest task prepared; no participant result is implied. Changes are local and pending publication; no training, push or deployment.
+## Deployment and verification
 
+The [repository](https://github.com/yixuan502/BNPLGuard) is **public** on `main`; its visibility was verified on 6 November 2026. The public app runs on Streamlit Community Cloud. The updated Stress and instalment application code was committed as [`a77bc23`](https://github.com/yixuan502/BNPLGuard/commit/a77bc23b6fdb5b54645c5c4d23d7b4aaac6ffb67), with release marker `stress-installments-20261105`. A later documentation-only commit records the acceptance.
 
-## Stress and instalment release (5 November 2026)
+On 5 November 2026 at 23:39 AEDT, an anonymous browser showed the marker and exercised Screen/SHAP/templates, the standard Stress example, both instalment examples, mode switching, invalidation, reset, Explain and Model. A 390-pixel viewport was also checked; this was browser emulation, distinct from the later participant's reported iPhone session. Local regression recorded **170 tests passed**, followed by **32 relevant tests passed** after adding the release marker. See the [deployment record](docs/deployment.md) and [Stress change record](docs/stress_feedback_changes.md). Community Cloud can sleep or take time to start; repeat a fresh access check before a live demonstration.
 
-Release marker: `stress-installments-20261105`. Updated Stress input order, savings separation, five visible scenario results and optional monthly instalment estimation. User retest forms are prepared; actual participant retest remains pending. See docs/installment_plan.md, docs/stress_feedback_changes.md and user_testing/retest_v1/. Online acceptance and actual commit must be checked separately; do not infer them from this preparation note.
+The inference file list is maintained in `deployment/runtime_files.json`, and the broader reviewed repository list in `deployment/repository_files.json`. Raw datasets, participant workbooks, local environments, secrets, reference Notebook code and course PDFs are excluded from the release. The app loads only trusted local artifacts; the app code keeps inputs in session state and does not log financial inputs or send them to an external AI API.
 
+From a complete local research copy, run:
 
-## Stress and calculator publication update — 5 November 2026
+```bash
+# macOS / Linux: full local archive, including the required source data
+.venv/bin/python -m pytest -q
+# Audits the reviewed runtime files and frozen hashes
+.venv/bin/python -m src.deployment audit
+```
 
-Repository main contains the updated interface and monthly instalment calculator at commit `a77bc23b6fdb5b54645c5c4d23d7b4aaac6ffb67`, release marker `stress-installments-20261105`. The source was pushed successfully to the existing private repository. At the last anonymous check the public application still displayed the older version and did not show the new marker; Cloud rollout and the new-version online acceptance remain unconfirmed. Do not describe this revision as publicly accepted until the marker and requested interactions are checked. Real participant retesting remains outstanding. No participant responses were fabricated. See user_testing/retest_v1/ for blank materials and docs/installment_plan.md for the current calculation.
+A raw-data-free checkout can run `uv run --frozen --group test python deployment/smoke.py`. It cannot reproduce every historical research check without the omitted data and archive artifacts. Source acquisition, expected paths, checksums and limitations are in [repository contents](docs/repository_contents.md).
 
+![Public Model page](docs/images/app_public.jpg)
 
-## Public acceptance completed — 2026-11-05T23:39:09+11:00
+## Project documentation
 
-The prior Cloud pending note is superseded. After authorized reboot, an anonymous in-app browser displayed release marker `stress-installments-20261105` from app source commit `a77bc23b6fdb5b54645c5c4d23d7b4aaac6ffb67`. Screen fictional example returned83.85%, eight-feature SHAP and template text. Stress standard buffers900/700/0/-200/1100 AUD;600/0/3 previewed and applied200;100/0/3 displayed33.33/33.34 and applied33.34, yielding866.66 added-plan buffer. Editing invalidated prior results, switching restored manual200, reset cleared fields. Explain global plot and Model saved metrics AP0.7634/AUC0.8432/Brier0.1573 loaded. A390x844 viewport displayed the five standard scenario cards and the100/3 preview, visually inspected; this is emulation, not a physical iPhone or independent user test. Desktop was checked with the normal in-app-browser viewport. Local full regression170 passed; relevant tests32 passed after release marker. Original model, simulator and prior responses remain unchanged. Actual participant retest remains pending. Public app: https://bnplguard-yixuan502.streamlit.app/.
+- [Current course requirement checklist](docs/rubric_checklist.md) and [anonymous updated-app retest summary](docs/retest_evidence_2026-11-06.md).
+- [Project specification](docs/project_spec.md), [progress](docs/progress.md), [experiment log](docs/experiment_log.md) and [model selection](docs/model_selection.md).
+- [Simulator method](docs/simulator_method.md), [local SHAP method](docs/cfpb_local_explanation.md), [result templates](docs/result_explainer.md) and [Australian context](docs/australian_context.md).
+- [Team introduction](START_HERE.md), [evidence map](EVIDENCE_MAP.md) and [AI handoff prompt](AI_HANDOFF_PROMPT.md). Some historical documents retain their original time-specific status; later acceptance and retest records supersede older pending statements.
+- [Contribution and AI-assistance log](docs/contribution_log.md): the team must verify and document each student's actual contribution, review the work and complete the required disclosure.
+
+Dataset licenses and Notebook code licenses are separate. The Kaggle page screenshot states CC0 1.0 for the dataset; the reference Notebook's code license is unconfirmed. No new open-source code license is assigned by this README.

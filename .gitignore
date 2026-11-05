@@ -320,7 +320,7 @@
 **/secrets.toml
 **/.env
 
-# Local stress-feedback-v1 review candidates; publication pending.
+# Published Stress feedback evidence and blank retest instruments.
 !/docs/
 !/outputs/
 !/outputs/app/
@@ -344,7 +344,10 @@
 !/user_testing/retest_v1/facilitator_notes.md
 !/user_testing/retest_v1/retest_form.md
 
-# Local instalment calculator; publication pending.
+# Published monthly instalment calculator.
 !/src/installment_plan.py
 !/tests/test_installment_plan.py
 !/docs/installment_plan.md
+
+# Anonymous updated-app retest summary only; source workbooks remain private.
+!/docs/retest_evidence_2026-11-06.md

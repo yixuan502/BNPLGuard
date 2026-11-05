@@ -1,13 +1,21 @@
 # Stage 8: public deployment and acceptance
 
+## Current status - 6 November 2026
+
+The [source repository](https://github.com/yixuan502/BNPLGuard) is public. The [public app](https://bnplguard-yixuan502.streamlit.app/) has accepted release marker `stress-installments-20261105` (application source `a77bc23`). Updated-app structured retest records have been received for three participants: two new and one returning. Read the [anonymous retest summary](retest_evidence_2026-11-06.md) for independent versus prompted outcomes and unresolved questions. Original participant workbooks remain private; the study does not prove causal improvement or universal independent completion.
+
+This current status supersedes earlier private-repository and pending-retest statements below. Earlier stage records retain their original context and are not current completion claims. Final report/video, signed student contributions, AI disclosure and Moodle approval/deadline evidence still require separate verification.
+
+## Historical deployment log
+
 Completed 5 November 2026 (Australia/Sydney). Public application: **https://bnplguard-yixuan502.streamlit.app/**. A fresh browser without Community Cloud login opened the real URL and completed the four-area workflow. This is a working research demonstration, not a real-user study.
 
 ## Release identity
 
-- Private source repository: https://github.com/yixuan502/BNPLGuard . Verified owner: yixuan502. No previous local Git history existed; no history was replaced.
+- Initially private source repository: https://github.com/yixuan502/BNPLGuard . Verified owner: yixuan502. No previous local Git history existed; no history was replaced.
 - Branch: main; entry point: app.py; Cloud Python setting: **3.13** (explicitly selected instead of the current platform default 3.14); no secrets.
 - Initially accepted deployed revision: **c23178cd823ae6d70b4f2cfdb11576bad6793670**. Initial package commit ffa92490dcf1c38793afe7d6313ae02beddc63e5 was independently cloned and tested. The final publication record/screenshots are a subsequent documentation-only commit on main; no numerical runtime module/model changes were needed after c23178c.
-- Application Sharing was changed from specific viewers to **This app is public and searchable**. The GitHub repository remains private. Source access for the instructor must be granted separately if required; the course permits public code or instructor access.
+- Application Sharing was changed from specific viewers to **This app is public and searchable**. At initial deployment, the GitHub repository was private and required separate instructor access. It is now public, as verified on 6 November 2026; the course permits public code or instructor access.
 
 ## Actual build and environment
 
@@ -41,7 +49,7 @@ Physical phones, Safari/Firefox, additional networks, adversarial traffic and re
 
 ## Run and handoff
 
-Send the public app URL above to the instructor; app viewing requires no account in the tested anonymous session. For source review, grant the instructor access to the private GitHub repository through its normal access settings. Do not change repository visibility merely to share the application.
+Send the public app URL above to the instructor; app viewing requires no account in the tested anonymous session. For source review, use the now-public GitHub repository URL. The original private-source handoff required separate instructor access; that historical instruction is superseded by the visibility verification on 6 November 2026.
 
 ```bash
 cd /Users/oneone/Desktop/BNPLGuard

@@ -1,6 +1,6 @@
 # BNPLGuard progress
 
-Updated 5 November 2026, Australia/Sydney. **Stages 1–6 complete. Stage 7 Streamlit integration is next.**
+Updated 6 November 2026, Australia/Sydney. **Stages 1-8 complete. Updated-app structured retest records received for three participants (two new, one returning); report/video and formal submission evidence remain unverified.** The source repository is public; application source `a77bc23` has accepted release marker `stress-installments-20261105`. See [the anonymous retest summary](retest_evidence_2026-11-06.md) and [current course checklist](rubric_checklist.md). Earlier stage entries below are historical records, including their original pending/private status.
 
 ## Active project and preserved foundation
 
@@ -224,3 +224,22 @@ Repository main contains the updated interface and monthly instalment calculator
 ## Public acceptance completed — 2026-11-05T23:39:09+11:00
 
 The prior Cloud pending note is superseded. After authorized reboot, an anonymous in-app browser displayed release marker `stress-installments-20261105` from app source commit `a77bc23b6fdb5b54645c5c4d23d7b4aaac6ffb67`. Screen fictional example returned83.85%, eight-feature SHAP and template text. Stress standard buffers900/700/0/-200/1100 AUD;600/0/3 previewed and applied200;100/0/3 displayed33.33/33.34 and applied33.34, yielding866.66 added-plan buffer. Editing invalidated prior results, switching restored manual200, reset cleared fields. Explain global plot and Model saved metrics AP0.7634/AUC0.8432/Brier0.1573 loaded. A390x844 viewport displayed the five standard scenario cards and the100/3 preview, visually inspected; this is emulation, not a physical iPhone or independent user test. Desktop was checked with the normal in-app-browser viewport. Local full regression170 passed; relevant tests32 passed after release marker. Original model, simulator and prior responses remain unchanged. Actual participant retest remains pending. Public app: https://bnplguard-yixuan502.streamlit.app/.
+
+
+## Updated-app user retest received (6 November 2026)
+
+A user-supplied compiled workbook records three sessions on the live `stress-installments-20261105` release: two new and one returning; Windows/Chrome, iPhone/Safari and iPad/Safari. Original is byte-preserved in ignored `user_testing/private/retest_2026-11-06/`; no raw participant records are included in the handoff. See docs/retest_evidence_2026-11-06.md for task-specific independent and assisted results, source cell references, recorded observations versus follow-up summaries, unresolved P01 savings hesitation and course p.3/rubric p.4 checks. Do not quote summaries as verbatim or infer a causal improvement. No new report, training, application edit, fabricated feedback, commit or push occurred.
+
+
+## Latest handoff review — 6 November 2026
+
+Updated-app real retest has been received: two new participants and one returning participant, with task-specific hints and unresolved P01 savings/hesitation. See docs/retest_evidence_2026-11-06.md. A separate internal checklist reviews the supplied report and PPT drafts against current evidence. The recent update and comparison documents in the new handoff take precedence over historical pending-status notes. Original participant workbooks and the team draft originals are excluded from the team package; no application, model, GitHub or deployment change occurred in this handoff.
+
+
+## Submission-evidence documentation synchronization - 6 November 2026
+
+At the user's request, current documentation now identifies the public source repository, accepted Stress/instalment release and received three-participant updated-app retest. README links the anonymous retest summary and current course checklist. The exact summary path is added to the default-deny repository publication list and ignore exceptions; actual participant workbooks remain excluded. The public summary retains task-specific independent/prompted distinctions and source-cell references, while exact session start/end times remain private. Navigation documents identify their older body text as historical. Deployment and repository guidance distinguish initial private-source history from current public visibility. Existing local documentation changes are preserved.
+
+This is a documentation/publication maintenance change. Application source, model, features, label, splits, threshold, SHAP background, dependency locks, saved model metrics, financial formulas and original participant workbooks are unchanged. It does not establish completion of the final report, video, student signatures, AI-disclosure placement or Moodle requirements. Validation and remote publication are recorded separately after they actually complete.
+
+Validation completed in the existing project environment: 170 tests passed in 8.72 seconds; the data-audit gate passed (6,394 x 217, 6,350 eligible, 2,454 positive), with generated audit files isolated in a temporary directory. All changed-document links and 286 repository-manifest paths passed checks; the exact anonymous-summary exception and continued private-record exclusion were verified. Known credential-pattern scanning passed. All 461 captured source/model/config/data/result/private-record files remain hash-identical. GitHub metadata confirmed public source visibility. Remote main matched the local parent before the documentation commit. No new anonymous Cloud acceptance or fresh-environment research rerun is claimed by this maintenance step.

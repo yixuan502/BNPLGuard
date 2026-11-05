@@ -1,5 +1,13 @@
 # BNPLGuard：组员十分钟导读
 
+## Current status - 6 November 2026
+
+The [source repository](https://github.com/yixuan502/BNPLGuard) is public. The [public app](https://bnplguard-yixuan502.streamlit.app/) has accepted release marker `stress-installments-20261105` (application source `a77bc23`). Updated-app structured retest records have been received for three participants: two new and one returning. Read the [anonymous retest summary](docs/retest_evidence_2026-11-06.md) for independent versus prompted outcomes and unresolved questions. Original participant workbooks remain private; the study does not prove causal improvement or universal independent completion.
+
+This current status supersedes earlier private-repository and pending-retest statements below. Earlier stage records retain their original context and are not current completion claims. Final report/video, signed student contributions, AI disclosure and Moodle approval/deadline evidence still require separate verification.
+
+## Historical handoff text
+
 本包用于组内理解、演示和继续写作的证据交接，不是正式课程报告，也不是已完成的用户研究。先读本文件，再读 [EVIDENCE_MAP.md](EVIDENCE_MAP.md)，最后把 [AI_HANDOFF_PROMPT.md](AI_HANDOFF_PROMPT.md) 粘贴到自己的大模型对话，并上传本包。三份中文导航来自已交付交接包，现按反馈接收情况更新；正式课程报告未代写。
 
 ## 1. 项目要回答什么（第 1 分钟）
@@ -97,3 +105,13 @@ Repository main contains the updated interface and monthly instalment calculator
 ## Public acceptance completed — 2026-11-05T23:39:09+11:00
 
 The prior Cloud pending note is superseded. After authorized reboot, an anonymous in-app browser displayed release marker `stress-installments-20261105` from app source commit `a77bc23b6fdb5b54645c5c4d23d7b4aaac6ffb67`. Screen fictional example returned83.85%, eight-feature SHAP and template text. Stress standard buffers900/700/0/-200/1100 AUD;600/0/3 previewed and applied200;100/0/3 displayed33.33/33.34 and applied33.34, yielding866.66 added-plan buffer. Editing invalidated prior results, switching restored manual200, reset cleared fields. Explain global plot and Model saved metrics AP0.7634/AUC0.8432/Brier0.1573 loaded. A390x844 viewport displayed the five standard scenario cards and the100/3 preview, visually inspected; this is emulation, not a physical iPhone or independent user test. Desktop was checked with the normal in-app-browser viewport. Local full regression170 passed; relevant tests32 passed after release marker. Original model, simulator and prior responses remain unchanged. Actual participant retest remains pending. Public app: https://bnplguard-yixuan502.streamlit.app/.
+
+
+## Latest retest evidence — 6 November 2026
+
+The previous statements that real retesting was pending are historical and superseded. A user-supplied structured workbook records three updated-app sessions: two new participants and one returning, on Windows, iPhone and iPad. Read [the separate anonymous retest evidence](docs/retest_evidence_2026-11-06.md) for per-task independent versus assisted outcomes, exact workbook cell references, follow-up summary versus facilitator observation, and the P01 savings/hesitation issue requiring field-note confirmation. The workbook's English prose is not verified verbatim; do not use direct quotes. Project brief p.3 and rubric p.4 specify at least three users and a structured instrument; the supplied workbook documents those elements, subject to source/consent verification and current course requirements. The retest is not a controlled pre/post experiment and does not prove improvement. Source workbook remains private and is not in this package.
+
+
+## Latest handoff review — 6 November 2026
+
+Updated-app real retest has been received: two new participants and one returning participant, with task-specific hints and unresolved P01 savings/hesitation. See docs/retest_evidence_2026-11-06.md. A separate internal checklist reviews the supplied report and PPT drafts against current evidence. The recent update and comparison documents in the new handoff take precedence over historical pending-status notes. Original participant workbooks and the team draft originals are excluded from the team package; no application, model, GitHub or deployment change occurred in this handoff.
