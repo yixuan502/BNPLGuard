@@ -1,0 +1,3 @@
+# Instrument build sources
+
+The two PDFs and the blank workbook are prepared instruments, not collected results. Preserve the v1 blank templates and use a working copy when collecting real responses. Answer verification used the project .venv and the existing simulator; cases_verified.json contains deterministic fictional outputs only. build_materials.py requires ReportLab from the bundled document runtime. build_records.mjs uses the bundled @oai/artifact-tool; run from a tooling directory with its node_modules link and set BNPLGUARD_PROJECT_ROOT to this project root. Do not install or upgrade core ML packages for document authoring. Do not rebuild over a workbook containing real observations.

@@ -1,0 +1,61 @@
+{
+  "rows": 10345,
+  "columns": 17,
+  "standard_missing_total": 0,
+  "exact_duplicate_rows": 0,
+  "missing_user_id_n": 0,
+  "duplicate_user_id_extra_rows": 0,
+  "rows_with_duplicated_nonmissing_id": 0,
+  "distinct_nonmissing_user_ids": 10345,
+  "observed_grain": "One row per nonmissing user_id in this file",
+  "semantic_grain": "Unknown: identifier uniqueness does not authenticate people, accounts or transactions.",
+  "sha256": "780cdb1eec43519b0764059563d89258ef1d9e4cef3b1ffdeab9622d6976b1bd",
+  "bytes": 1170187,
+  "source_path": "data/raw/kaggle_bnpl/Buy_Now_Pay_Later_BNPL_CreditRisk_Dataset.csv",
+  "checked_at": "2026-11-05T02:40:08.931739+11:00",
+  "id_min": 1,
+  "id_max": 10345,
+  "id_is_ordered_1_to_n": true,
+  "recorded_flag_counts": {
+    "0": 6305,
+    "1": 4040
+  },
+  "recorded_flag_1_share": 0.39052682455292415,
+  "default_definition": "Unknown; no verified criterion or outcome window.",
+  "provenance": "unverified; exact-URL-linked third-party synthetic claim exists, primary card inaccessible",
+  "synthetic_status": "not authenticated by primary evidence",
+  "model_training_performed": false,
+  "dates": {
+    "valid_dates": 10345,
+    "nonmissing_parse_failures": 0,
+    "first_date": "2023-01-01",
+    "last_date": "2024-12-31",
+    "distinct_dates": 365,
+    "zero_record_months": [
+      "2023-07",
+      "2023-08",
+      "2023-09",
+      "2023-10",
+      "2023-11",
+      "2023-12",
+      "2024-01",
+      "2024-02",
+      "2024-03",
+      "2024-04",
+      "2024-05",
+      "2024-06"
+    ],
+    "interpretation": "Recorded dates only; application/outcome/as-of dates and sampling process are unknown."
+  },
+  "diagnostic_counts": {
+    "flag_1_with_zero_recorded_delay_and_misses": 325,
+    "flag_0_with_any_recorded_delay": 5428,
+    "flag_0_with_any_missed_payment": 3628,
+    "purchase_amount_at_5000": 6053,
+    "credit_score_at_300": 1373,
+    "numeric_noninteger_bnpl_installments": 0,
+    "numeric_noninteger_delay_or_missed_count": 0,
+    "negative_recorded_numeric_values": 0
+  },
+  "cautions": "Zero or boundary values are not recoded as missing. Outlier flags and caps do not prove synthesis. Date gaps do not identify a market trend."
+}

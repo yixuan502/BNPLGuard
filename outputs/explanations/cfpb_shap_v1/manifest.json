@@ -1,0 +1,27 @@
+{
+  "model_sha256": "6f8a82a70e38ae9d5f6143ca4b491d21932d480ca1b38e3d93f079c6794c06d8",
+  "background_config_sha256": "6daab5fdd06d537b2c4456a8a6d72058d0d4d154c3633d46895bd67a32365d4c",
+  "method": "Actual installed SHAP LinearExplainer; no model refit",
+  "max_reconstruction_errors": {
+    "encoded_additivity_absolute": 6.661338147750939e-16,
+    "raw_group_additivity_absolute": 2.220446049250313e-16,
+    "grouping_absolute": 4.440892098500626e-16,
+    "probability_absolute": 1.1102230246251565e-16
+  },
+  "files_sha256": {
+    "fictional_3_encoded_contributions.csv": "b6c2bcb44e14caeaac49282cda218dcbca1d646848952c99eaf71c72894b2b5d",
+    "background_sensitivity.json": "adf89072d233334a6794fb98bb1b9adc71272a0d3a22f583a4ff57f6a0e52847",
+    "fictional_2.json": "5069e4c35f8b448f758a035315ef570094865c1bb89d00d08a7c67798a4376bd",
+    "fictional_1_encoded_contributions.csv": "7b52080dd7ba10577f658acb50bc2185a2cc61e5a36868c0cf878a371432cc0c",
+    "fictional_3.json": "382356233ce241b50961c04263af4149622bef4ed284b5693dab2994498c6ffa",
+    "fictional_0_contributions.csv": "3983e2aad912ebfff6423a0be589a75bad5b16c15d6724b6e2697cd73ac84f9c",
+    "fictional_0.json": "7767b20a18c40936bdd938baa2b7a5bb69f86db55a1f6ed2f1bcb89a8f2450c5",
+    "fictional_0_encoded_contributions.csv": "3b7375ec686d07e917a09d85012539d608d2efc170c58e4eca96b0db4fae7d11",
+    "fictional_1.json": "b3c461ee8a35a7d56b142a36fa8f7e0fde1ba9cd60766c60495c91259b50c86d",
+    "fictional_1_contributions.csv": "9e8045c673e0e6679343b5b215fbb937e554e86e47c2b77d6c216920014aa70f",
+    "fictional_2_contributions.csv": "a4128c1f72f065780f2a81206eb7ce5ef756b9d98063f51991123b6db70528c3",
+    "fictional_local_contributions.png": "67088d1828f8dfe07fdefba9f91145429fe87b7853ce3d2aeb505499c7788890",
+    "fictional_2_encoded_contributions.csv": "151830d8c95dd0f019d3bb2c06dbe271f5f7bfc18d5ee19b7152c72684c231a9",
+    "fictional_3_contributions.csv": "c2ada97a1617da6e6992a7ce8a9157fdf23ea742ac58ba382a5aad0ac3f41542"
+  }
+}

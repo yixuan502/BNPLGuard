@@ -1,0 +1,15 @@
+[
+  {
+    "step": "raw",
+    "n": 10345
+  },
+  {
+    "step": "missing label excluded, never imputed",
+    "excluded_n": 0,
+    "n": 10345
+  },
+  {
+    "step": "no outlier removal, clipping, duplicate deletion or financial-unit conversion",
+    "n": 10345
+  }
+]

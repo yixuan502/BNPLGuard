@@ -1,0 +1,9 @@
+{
+  "cv_result_row": 1,
+  "params": {
+    "classifier__max_depth": 6,
+    "classifier__min_samples_leaf": 20
+  },
+  "best_cv_mean_ap": 0.7555233175624013,
+  "chosen_cv_mean_ap": 0.7515985754658961
+}

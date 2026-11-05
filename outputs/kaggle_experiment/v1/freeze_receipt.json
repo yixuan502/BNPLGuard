@@ -1,0 +1,13 @@
+{
+  "frozen_sha256": "daa8481972a6efc98c7f7fbbd4371570af4ddd1740b416f521f86aa24791e8a4",
+  "development_files_sha256": {
+    "training_cv_search.csv": "ba2e77b03c50a333b1599fc4a1ce650c3fce32a876ef2da8eda95dabeec6a76b",
+    "validation_predictions.csv": "7bdb1441aafc5d175cc17fdda39318db78bf3c9e907ccab17492a35f895fca37",
+    "protocol_before_training.json": "4c27bbc1ca37565f617edc0d0ee0e26641589aeb27d40d637b220e9c2d7a5941",
+    "development_metrics.json": "8db12e332d1fd5a041aa1b9c5428e8493ef2f6ab04f7698eb0165426e10a566c",
+    "sample_flow.json": "4f965a433b86d8858b6fd6c8d1a4d3d62bcff0eb52b3d1c1cbd420bde05f348f",
+    "split_accounting.json": "6d53e52a741d40e2d5fa8654a45bdfb636f0a09176b5fc2c88de7cedee1d0315",
+    "validation_comparison.csv": "c285fc4998319ad07acf533cdfd48fa31ebf6fcdbb5069ed682300df2f00f83f",
+    "feature_schema.json": "aeb9dd2313622190d918b7026df22a95d2f0b552a6e81b5b355a94b799e3595f"
+  }
+}

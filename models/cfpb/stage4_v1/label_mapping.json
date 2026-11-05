@@ -1,0 +1,21 @@
+{
+  "version": "endsmeet-any-difficulty-v1",
+  "field": "ENDSMEET",
+  "question": "In a typical month, how difficult is it for you to cover your expenses and pay all your bills?",
+  "labels": {
+    "1": "Not at all difficult",
+    "2": "Somewhat difficult",
+    "3": "Very difficult"
+  },
+  "mapping": {
+    "1": 0,
+    "2": 1,
+    "3": 1
+  },
+  "missing_codes": {
+    "-1": "Refused; no answer, not necessarily explicit refusal"
+  },
+  "codebook_pdf_page": 43,
+  "guide_pdf_page": 82,
+  "alternative_not_run": "Severe difficulty: 3 vs 1/2; never choose mapping based on performance"
+}

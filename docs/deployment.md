@@ -51,3 +51,8 @@ cd /Users/oneone/Desktop/BNPLGuard
 Open the actual printed local URL, normally http://127.0.0.1:8501. Stop that running terminal with Ctrl+C. Do not start a second service on an occupied port or reuse an old PID. PyCharm interpreter: /Users/oneone/Desktop/BNPLGuard/.venv/bin/python; module streamlit; parameters run app.py; working directory the desktop root.
 
 Next: stage-nine real-user feedback, with consent and an explicit protocol, followed by course report/video review and AI-use disclosure. No feedback or student review is invented by this deployment.
+
+
+## Post-release repository expansion (5 November 2026)
+
+At the user's request the private source repository now includes the reviewed research/team-handoff set, beyond the unchanged99-file inference packaging contract. See deployment/repository_files.json and docs/repository_contents.md. Added study evidence is aggregate only; the received participant workbook remains private.154local regression tests passed in6.27s, the data gate passed and192protected hashes remain unchanged. App source, model, encoded SHAP background, schema, lock and simulator arithmetic are unchanged. Existing Git history/visibility are preserved. This source publication is not a new manual deployment or new anonymous online acceptance; main may refresh automatically through the existing Community Cloud integration. The prior accepted deployed revision is771aadd; use Git history for the newer research handoff revision.

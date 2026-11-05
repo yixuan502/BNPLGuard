@@ -1,0 +1,16 @@
+{
+  "notice": "Illustrative scenario—not empirical model results",
+  "fictional_inputs": {
+    "I": 4500,
+    "E": 2500,
+    "D": 700,
+    "B0": 400,
+    "Bnew": 200,
+    "S": 1000,
+    "currency": "AUD"
+  },
+  "scenario_settings": {
+    "income_drop": 0.2,
+    "bnpl_reduction": 200
+  }
+}

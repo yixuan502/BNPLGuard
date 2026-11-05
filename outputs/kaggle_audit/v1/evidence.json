@@ -1,0 +1,53 @@
+{
+  "accessed_on": "2026-11-05",
+  "timezone": "Australia/Sydney",
+  "primary_publisher": {
+    "url": "https://www.kaggle.com/datasets/shree0910/buy-now-and-pay-later-fintech-ml-dataset",
+    "status": "No readable data-card text from web tool; public page and API metadata returned HTTP404 via direct request. Access failure does not prove deletion.",
+    "publisher_identity": "shree0910 is the supplied URL namespace, not authenticated publisher provenance.",
+    "version": "unknown",
+    "license": "unknown",
+    "data_origin": "unknown",
+    "synthetic_status": "unconfirmed by primary source",
+    "generation_code_or_method": "not obtained"
+  },
+  "notebook": {
+    "url": "https://www.kaggle.com/code/sumedh1507/bnpl-credit-risk-insights",
+    "alternate_url": "https://www.kaggle.com/code/sumedh1507/bnpl-credit-risk-insights/notebook",
+    "status": "Original page/public pull API HTTP404; alternate web page resolves title but exposes no readable cells.",
+    "current_source_verified": false,
+    "version": "unknown",
+    "license": "unknown",
+    "linkage_to_local_csv_bytes": "unverified"
+  },
+  "external_auxiliary": [
+    {
+      "url": "https://github.com/EnyuanTian/Buy_Now_Pay_Later_BNPL_CreditRisk",
+      "saved_evidence": "auxiliary_readme.txt",
+      "claim": "Describes a synthetic 10345x17 dataset and explicitly links the supplied shree0910 URL.",
+      "classification": "Third-party author claim; not a publisher card, generation-code authentication or byte match. External model scores not adopted.",
+      "exact_commit": "not obtained",
+      "license": "not used for code reuse"
+    }
+  ],
+  "historical_reference": {
+    "observed_on": "2026-11-04",
+    "basis": "Earlier tool inspection in this chat of the then-present local bnpl-credit-risk-insights.ipynb; not a new source read.",
+    "historical_file_sha256": "123a8f63ed40708e2e656d189b6c561ec0d57fa166a034157c2ece291b86b7b0",
+    "current_file_available": false,
+    "identity_to_online_notebook": "not verified",
+    "previously_observed_derived_expressions": {
+      "income_per_installment": "monthly_income / (bnpl_installments + 1)",
+      "delay_ratio": "repayment_delay_days / (bnpl_installments + 1)",
+      "month": "transaction_date converted to calendar month"
+    },
+    "use": "Conditional leakage/meaning review only; do not claim fresh verification of the online Notebook or copy its implementation."
+  },
+  "not_evidence": [
+    "Other Kaggle datasets with similar titles",
+    "Generic Kaggle licensing documentation",
+    "Regular-looking values as proof of synthesis",
+    "Third-party model metrics as this project results"
+  ],
+  "boundary": "No CSV redownload, no authentication, no Notebook execution and no model training."
+}

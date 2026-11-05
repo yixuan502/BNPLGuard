@@ -1,0 +1,6 @@
+{
+  "full_regression": "115 passed in 4.57s",
+  "cfpb_audit_returncode": 0,
+  "cfpb_audit_stdout": "Gate=PASS: 6394 x 217, eligible=6350, positives=2454 (38.6457%)",
+  "prior_audit_outputs_byte_identical": true
+}

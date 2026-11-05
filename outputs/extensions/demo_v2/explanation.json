@@ -1,0 +1,52 @@
+{
+  "status": "ok",
+  "mode": "template",
+  "sections": [
+    {
+      "id": "cfpb_estimate",
+      "text": "The frozen CFPB model estimates 83.85% for Self-reported difficulty covering expenses and paying all bills in a typical month (ENDSMEET codes 2/3 versus 1). Class 1 at the fixed reference threshold; the fixed threshold is 0.5."
+    },
+    {
+      "id": "cfpb_contributions",
+      "text": "Contributions to this model estimate, relative to the fixed training background: SAVINGSRANGES ($0): +2.0276 log-odds, direction increase; PPINCIMP (Less than $20,000): +0.7178 log-odds, direction increase; PPHHSIZE (1): -0.2414 log-odds, direction decrease. These are log-odds contributions, not probability percentage points."
+    },
+    {
+      "id": "cfpb_limits",
+      "text": "This describes a contemporaneous survey-model estimate, not BNPL default, a personal cause, a causal action effect or an Australian credit decision. Local calibration overestimation and subgroup differences remain documented."
+    },
+    {
+      "id": "sim_current",
+      "text": "Current: monthly cash buffer AUD 900.00; change from current AUD 0.00; repayment-to-income 24.44%; savings coverage 0.278 months. Scenario assumption: Proposed Bnew is excluded; all other submitted amounts are retained."
+    },
+    {
+      "id": "sim_added_bnpl",
+      "text": "Added BNPL: monthly cash buffer AUD 700.00; change from current AUD -200.00; repayment-to-income 28.89%; savings coverage 0.263 months. Scenario assumption: Apply proposed Bnew to current; income and all other amounts are unchanged."
+    },
+    {
+      "id": "sim_income_shock",
+      "text": "Income shock: monthly cash buffer AUD 0.00; change from current AUD -900.00; repayment-to-income 30.56%; savings coverage 0.278 months. Income exactly matches the listed monthly outflows; no monthly cash buffer remains. Scenario assumption: Apply income_drop to original income I; proposed Bnew remains excluded."
+    },
+    {
+      "id": "sim_added_bnpl_income_shock",
+      "text": "Added BNPL + income shock: monthly cash buffer AUD -200.00; change from current AUD -1,100.00; repayment-to-income 36.11%; savings coverage 0.263 months. Under these assumptions, monthly expenses and repayments exceed income. Scenario assumption: Apply both proposed Bnew and income_drop to current in this explicitly combined scenario."
+    },
+    {
+      "id": "sim_reduced_existing_bnpl",
+      "text": "Reduced existing BNPL: monthly cash buffer AUD 1,100.00; change from current AUD 200.00; repayment-to-income 20.00%; savings coverage 0.294 months. The reduction is a hypothetical input; it does not change contractual payment obligations. Scenario assumption: Subtract the user-selected reduction from B0; income is unchanged and proposed Bnew is excluded. This is a user-defined hypothetical assumption, not permission to reduce or change contractual repayments."
+    },
+    {
+      "id": "sim_assumptions",
+      "text": "Shared assumptions: All amounts use one currency and a monthly time unit; no foreign-exchange conversion is performed. Income is monthly after-tax income. E excludes every repayment already counted in D, B0 or Bnew. D contains non-BNPL repayments only; B0 and Bnew contain BNPL repayments only. Emergency savings coverage assumes no new income and unchanged expenses and repayments; it is not actual time until funds run out. A positive monthly buffer does not guarantee enough cash on each payment due date. These are deterministic scenario calculations, not empirical model results or BNPL default probabilities."
+    },
+    {
+      "id": "sim_limits",
+      "text": "Coverage assumes no new income and unchanged listed outflows. A positive monthly buffer does not guarantee cash on each due date. Reducing existing BNPL is hypothetical, not a contract change."
+    }
+  ],
+  "text": "The frozen CFPB model estimates 83.85% for Self-reported difficulty covering expenses and paying all bills in a typical month (ENDSMEET codes 2/3 versus 1). Class 1 at the fixed reference threshold; the fixed threshold is 0.5.\n\nContributions to this model estimate, relative to the fixed training background: SAVINGSRANGES ($0): +2.0276 log-odds, direction increase; PPINCIMP (Less than $20,000): +0.7178 log-odds, direction increase; PPHHSIZE (1): -0.2414 log-odds, direction decrease. These are log-odds contributions, not probability percentage points.\n\nThis describes a contemporaneous survey-model estimate, not BNPL default, a personal cause, a causal action effect or an Australian credit decision. Local calibration overestimation and subgroup differences remain documented.\n\nCurrent: monthly cash buffer AUD 900.00; change from current AUD 0.00; repayment-to-income 24.44%; savings coverage 0.278 months. Scenario assumption: Proposed Bnew is excluded; all other submitted amounts are retained.\n\nAdded BNPL: monthly cash buffer AUD 700.00; change from current AUD -200.00; repayment-to-income 28.89%; savings coverage 0.263 months. Scenario assumption: Apply proposed Bnew to current; income and all other amounts are unchanged.\n\nIncome shock: monthly cash buffer AUD 0.00; change from current AUD -900.00; repayment-to-income 30.56%; savings coverage 0.278 months. Income exactly matches the listed monthly outflows; no monthly cash buffer remains. Scenario assumption: Apply income_drop to original income I; proposed Bnew remains excluded.\n\nAdded BNPL + income shock: monthly cash buffer AUD -200.00; change from current AUD -1,100.00; repayment-to-income 36.11%; savings coverage 0.263 months. Under these assumptions, monthly expenses and repayments exceed income. Scenario assumption: Apply both proposed Bnew and income_drop to current in this explicitly combined scenario.\n\nReduced existing BNPL: monthly cash buffer AUD 1,100.00; change from current AUD 200.00; repayment-to-income 20.00%; savings coverage 0.294 months. The reduction is a hypothetical input; it does not change contractual payment obligations. Scenario assumption: Subtract the user-selected reduction from B0; income is unchanged and proposed Bnew is excluded. This is a user-defined hypothetical assumption, not permission to reduce or change contractual repayments.\n\nShared assumptions: All amounts use one currency and a monthly time unit; no foreign-exchange conversion is performed. Income is monthly after-tax income. E excludes every repayment already counted in D, B0 or Bnew. D contains non-BNPL repayments only; B0 and Bnew contain BNPL repayments only. Emergency savings coverage assumes no new income and unchanged expenses and repayments; it is not actual time until funds run out. A positive monthly buffer does not guarantee enough cash on each payment due date. These are deterministic scenario calculations, not empirical model results or BNPL default probabilities.\n\nCoverage assumes no new income and unchanged listed outflows. A positive monthly buffer does not guarantee cash on each due date. Reducing existing BNPL is hypothetical, not a contract change.",
+  "facts_digest": "3fd201756824d72231220c508de22ad25151586eef8129d2097f7193b16af531",
+  "llm_status": "disabled",
+  "fallback_reason": null,
+  "llm_live_tested": false,
+  "scope": "Structured results only; CFPB and simulator remain separate. No open-ended financial advice."
+}

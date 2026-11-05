@@ -75,3 +75,8 @@ Session-only inputs/results, snapshot invalidation, trusted-resource locks and g
 ## Stage-eight acceptance update
 
 Public application sharing and separate anonymous four-area acceptance are complete at https://bnplguard-yixuan502.streamlit.app/. Private GitHub source visibility is unchanged; arrange instructor source access separately. Cloud logs confirm uv.lock and compatible versions; the unchanged local binding works through its actual proxy. Previous login/build/sharing acceptance gates are resolved. Community Cloud sleep/cold starts and untested physical devices/networks remain operational limits, not model uncertainty. No user-feedback, bias-free, calibrated-probability, Australian-validation or compliance claim follows from successful deployment.
+
+
+## User-feedback evidence controls (5 November 2026)
+
+The submitted workbook records three sessions, but original forms/S1 screenshots and independent pre-guidance answers for two app sessions are unavailable in this review. Mixed assisted and independent18/18 app answers must not be described as universal unassisted success or causal improvement over16/18 text answers. Keep subjective clarity separate, identify translations, and clarify dates, version attribution and H0/assisted-duration ambiguity. Original workbook metadata contains personal author/path information: retain the source privately, publish only the aggregate verification note. No user financial inputs or individual feedback records are committed. See user_testing_feedback_review.md. No usability fix has been implemented or validated merely because a participant suggested it.

@@ -1,0 +1,220 @@
+{
+  "accessed_on": "2026-11-05",
+  "publisher_definition_status": "unavailable",
+  "decision_option": "C",
+  "adoption_status": "deferred",
+  "application_use": "excluded from current application",
+  "fields": [
+    {
+      "field": "user_id",
+      "meaning_evidence": "Local integer identifiers, unique and ordered 1..10345; real identity and semantic grain unverified",
+      "unit": "Identifier",
+      "time_availability": "No publisher-verified definition or as-of timestamp obtained",
+      "label_relationship": "No business outcome meaning established",
+      "potential_leakage_risk": "Identifier memorization; uniqueness does not prove independent real people",
+      "recommended_use": "Key/quality checks only; never predictor",
+      "simulator_mapping": "No automatic mapping"
+    },
+    {
+      "field": "age",
+      "meaning_evidence": "Name suggests age; observed18..59. No publisher codebook obtained",
+      "unit": "Years suggested by name; unverified",
+      "time_availability": "No publisher-verified definition or as-of timestamp obtained",
+      "label_relationship": "Descriptive association only",
+      "potential_leakage_risk": "Sensitive attribute/proxy; no historical timing evidence",
+      "recommended_use": "Local descriptive profile; not a predictive endorsement",
+      "simulator_mapping": "No automatic mapping"
+    },
+    {
+      "field": "employment_type",
+      "meaning_evidence": "Four recorded categories; no sampling/employment definition",
+      "unit": "Category",
+      "time_availability": "No publisher-verified definition or as-of timestamp obtained",
+      "label_relationship": "Descriptive association only",
+      "potential_leakage_risk": "Income/protected-attribute proxies and as-of uncertainty",
+      "recommended_use": "File-level category audit only",
+      "simulator_mapping": "No automatic mapping"
+    },
+    {
+      "field": "monthly_income",
+      "meaning_evidence": "Column name suggests monthly income; tax basis, person/household scope and reporting period unverified",
+      "unit": "Currency and common numeraire unknown; month only suggested by name",
+      "time_availability": "No publisher-verified definition or as-of timestamp obtained",
+      "label_relationship": "Do not infer affordability or causal effects",
+      "potential_leakage_risk": "Currency/period mismatch and as-of uncertainty",
+      "recommended_use": "Raw range profile only; no country amount-mean comparisons",
+      "simulator_mapping": "Do not autofill I: tax/currency/period semantics unresolved"
+    },
+    {
+      "field": "credit_score",
+      "meaning_evidence": "Observed300..850; provider, country comparability and score date unknown",
+      "unit": "Recorded score units; not authenticated as FICO",
+      "time_availability": "No publisher-verified definition or as-of timestamp obtained",
+      "label_relationship": "Overlapping label groups; no causal interpretation",
+      "potential_leakage_risk": "As-of uncertainty; score generation unverified",
+      "recommended_use": "Descriptive audit only",
+      "simulator_mapping": "No automatic mapping"
+    },
+    {
+      "field": "purchase_amount",
+      "meaning_evidence": "Observed100..5000; financed principal versus total price unknown",
+      "unit": "Currency unknown; not verified comparable across countries",
+      "time_availability": "No publisher-verified definition or as-of timestamp obtained",
+      "label_relationship": "Local descriptive values only",
+      "potential_leakage_risk": "Potential clipping/selection and unknown financed amount",
+      "recommended_use": "Boundary/range check only",
+      "simulator_mapping": "Cannot divide by instalment count and call it monthly Bnew"
+    },
+    {
+      "field": "product_category",
+      "meaning_evidence": "Five observed category strings",
+      "unit": "Category",
+      "time_availability": "No publisher-verified definition or as-of timestamp obtained",
+      "label_relationship": "Descriptive label co-occurrence if inspected",
+      "potential_leakage_risk": "No explicit target derivation shown; source/timing still unknown",
+      "recommended_use": "Auxiliary local EDA, not real-market shares",
+      "simulator_mapping": "No automatic mapping"
+    },
+    {
+      "field": "bnpl_installments",
+      "meaning_evidence": "Recorded values3/6/9/12; total/remaining/paid count unknown",
+      "unit": "Count/code suggested; frequency and timing unknown",
+      "time_availability": "No publisher-verified definition or as-of timestamp obtained",
+      "label_relationship": "No repayment window inferred",
+      "potential_leakage_risk": "Cannot interpret as months or monthly repayment denominator",
+      "recommended_use": "Recorded-value frequency plot only",
+      "simulator_mapping": "No monthly-payment mapping without schedule, fees and first-payment assumptions"
+    },
+    {
+      "field": "repayment_delay_days",
+      "meaning_evidence": "Integer0..33; days suggested by name; current versus historical obligation unknown",
+      "unit": "Days by field name; aggregation/window/grace period unknown",
+      "time_availability": "Repayment-related state; no dated historical evidence before the application",
+      "label_relationship": "Both flag classes appear across recorded delay ranges",
+      "potential_leakage_risk": "High if post-origination/current obligation; not eligible for application-time features without historical proof",
+      "recommended_use": "Exclude application-time prediction; descriptive audit only",
+      "simulator_mapping": "No automatic mapping"
+    },
+    {
+      "field": "missed_payments",
+      "meaning_evidence": "Integer0..7; event/count and observation period undefined",
+      "unit": "Payment count suggested; event definition unknown",
+      "time_availability": "Repayment-related state; no dated pre-application history",
+      "label_relationship": "Flag0 and1 coexist for most recorded counts; high-count cells can be tiny",
+      "potential_leakage_risk": "High if current/post-origination outcome; history cannot be assumed",
+      "recommended_use": "Exclude application-time prediction; descriptive audit only",
+      "simulator_mapping": "No automatic mapping"
+    },
+    {
+      "field": "default_flag",
+      "meaning_evidence": "Binary0/1 locally verified; default criterion, reference obligation and window unknown",
+      "unit": "Recorded binary flag, not validated loan-default outcome",
+      "time_availability": "Outcome/as-of date and maturity/censoring unknown",
+      "label_relationship": "4040 recorded1 and6305 recorded0; not an industry rate",
+      "potential_leakage_risk": "Target ambiguity, unknown future information and observation window",
+      "recommended_use": "Report flag distribution only; not a qualified predictive target",
+      "simulator_mapping": "No automatic mapping"
+    },
+    {
+      "field": "app_usage_frequency",
+      "meaning_evidence": "Observed numeric1..10 with decimals; visits versus index and time period unknown",
+      "unit": "Unknown",
+      "time_availability": "No publisher-verified definition or as-of timestamp obtained",
+      "label_relationship": "No approved behavioral interpretation",
+      "potential_leakage_risk": "Could include activity after outcome or be a generated score",
+      "recommended_use": "Descriptive range only",
+      "simulator_mapping": "No automatic mapping"
+    },
+    {
+      "field": "location",
+      "meaning_evidence": "Six observed country-name labels; residence/merchant jurisdiction unclear",
+      "unit": "Category; does not establish currency",
+      "time_availability": "No publisher-verified definition or as-of timestamp obtained",
+      "label_relationship": "No population comparison inferred",
+      "potential_leakage_risk": "Country/measurement proxies and mixed-unit risk",
+      "recommended_use": "File category count only; do not compare monetary means across countries",
+      "simulator_mapping": "No automatic mapping"
+    },
+    {
+      "field": "transaction_date",
+      "meaning_evidence": "ISO dates parse; onlyJan-Jun2023 andJul-Dec2024 have records",
+      "unit": "Calendar date; event identity/sampling unknown",
+      "time_availability": "No application/outcome/follow-up timestamps",
+      "label_relationship": "No vintage or prospective outcome construction possible",
+      "potential_leakage_risk": "Calendar date alone cannot establish valid forward prediction; coverage gap",
+      "recommended_use": "Coverage audit only, not market trend or automatic temporal split",
+      "simulator_mapping": "No automatic mapping"
+    },
+    {
+      "field": "debt_to_income_ratio",
+      "meaning_evidence": "Every local row matches purchase_amount/monthly_income within1e-8; authenticated generator unknown",
+      "unit": "Ratio of recorded numeric fields; currency/time basis unverified; not established as a dimensionless debt-service ratio",
+      "time_availability": "No publisher-verified definition or as-of timestamp obtained",
+      "label_relationship": "Redundant with its two component fields; no direct target transform established",
+      "potential_leakage_risk": "Semantic misuse and redundancy; label leakage not demonstrated by this equality",
+      "recommended_use": "Audit diagnostic only; not conventional household DTI",
+      "simulator_mapping": "Do not infer D from this ratio; non-BNPL monthly debt payments absent"
+    },
+    {
+      "field": "risk_score",
+      "meaning_evidence": "Every local row matches0.4*(850-credit_score)+2*delay+20*misses within1e-8; not publisher-confirmed generation code",
+      "unit": "Recorded score units; no probability or approved risk scale",
+      "time_availability": "Inherits unresolved timing of delay/missed-payment fields",
+      "label_relationship": "Association and overlapping flag ranges; no proof default_flag generated from it",
+      "potential_leakage_risk": "High: algebraically incorporates repayment-related states; do not assume available at application",
+      "recommended_use": "Exclude application-time model; document arithmetic dependency",
+      "simulator_mapping": "No automatic mapping"
+    },
+    {
+      "field": "customer_segment",
+      "meaning_evidence": "High/Medium/Low Risk strings observed; generation thresholds not authenticated",
+      "unit": "Unvalidated category labels",
+      "time_availability": "No publisher-verified definition or as-of timestamp obtained",
+      "label_relationship": "All three groups contain both binary flags; not deterministic default mapping",
+      "potential_leakage_risk": "Potential same-rule score/category proxy; target derivation and timing unresolved",
+      "recommended_use": "Descriptive crosstab only; not validated risk bands",
+      "simulator_mapping": "No automatic mapping"
+    },
+    {
+      "field": "Notebook: income_per_installment",
+      "meaning_evidence": "Historical2026-11-04 local Notebook read in this chat; source bytes absent now and correspondence to supplied online Notebook unverified; expression monthly_income/(bnpl_installments+1)",
+      "unit": "Unknown recorded income units divided by count+1; not instalment repayment",
+      "time_availability": "Inherits income/count timing gaps",
+      "label_relationship": "No independently verified predictive meaning",
+      "potential_leakage_risk": "Undefined denominator convention; semantic misuse; full-data imputation would also leak preprocessing if copied",
+      "recommended_use": "Conditional method warning only; not newly verified online code",
+      "simulator_mapping": "Never interpret as monthly BNPL amount"
+    },
+    {
+      "field": "Notebook: delay_ratio",
+      "meaning_evidence": "Historical2026-11-04 local Notebook read in this chat; source bytes absent now and correspondence to supplied online Notebook unverified; expression repayment_delay_days/(bnpl_installments+1)",
+      "unit": "Days per unexplained count+1",
+      "time_availability": "Inherits unresolved repayment-outcome timing",
+      "label_relationship": "No authenticated label-generation role",
+      "potential_leakage_risk": "High: transforms potentially post-outcome delay; denominator does not remove leakage",
+      "recommended_use": "Exclude application-time feature; conditional review only",
+      "simulator_mapping": "No automatic mapping"
+    },
+    {
+      "field": "Notebook: month",
+      "meaning_evidence": "Historical2026-11-04 local Notebook read in this chat; source bytes absent now and correspondence to supplied online Notebook unverified; calendar month from transaction_date",
+      "unit": "Calendar month",
+      "time_availability": "Date meaning and coverage gap remain unresolved",
+      "label_relationship": "No future label window established",
+      "potential_leakage_risk": "Calendar feature does not repair missing prospective design",
+      "recommended_use": "Coverage EDA only; conditional review, not current online-version certification",
+      "simulator_mapping": "No automatic mapping"
+    },
+    {
+      "field": "Notebook: other derived variables",
+      "meaning_evidence": "Current requested Notebook cells/version could not be retrieved",
+      "unit": "Unknown",
+      "time_availability": "Unknown",
+      "label_relationship": "Unknown",
+      "potential_leakage_risk": "Cannot certify unseen feature engineering or preprocessing",
+      "recommended_use": "Do not adopt unaudited code; original Notebook/version/license needed for a complete code audit",
+      "simulator_mapping": "No automatic mapping"
+    }
+  ],
+  "evidence_file": "data/metadata/kaggle_sources/evidence.json"
+}

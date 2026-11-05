@@ -1,0 +1,85 @@
+{
+  "reviewed_on": "2026-11-05",
+  "source_sha256": "e58fbd8bd7d914c7003198a581d17cf8b0b8cc8ee688194822ee62d69d70337f",
+  "source_type": "User-supplied compiled workbook; original session sheets/screenshots not supplied in this review",
+  "participants_reported": 3,
+  "consent_yes_recorded": 3,
+  "nondeveloper_yes_recorded": 3,
+  "app_commits_recorded": [
+    "771aadd"
+  ],
+  "test_dates_recorded": false,
+  "simulator_items_rescored": 36,
+  "answer_key_and_recorded_scores": "All 36 numeric/status scores agree with the existing simulator",
+  "summary_formula_review": "Two formulas and their cached values agree; static totals independently recomputed; workbook not edited/recalculated",
+  "text": {
+    "correct": 16,
+    "items": 18,
+    "percent": 88.88888888888889,
+    "phase_totals_out_of_6": [
+      4,
+      6,
+      6
+    ]
+  },
+  "app_recorded": {
+    "correct": 18,
+    "items": 18,
+    "percent": 100.0,
+    "qualification": "Mix of independent and post-guidance responses"
+  },
+  "app_unassisted_recorded": {
+    "correct": 6,
+    "items": 6,
+    "participants": 1
+  },
+  "app_after_operational_guidance": {
+    "correct": 12,
+    "items": 12,
+    "participants": 2
+  },
+  "missing_independent_app_item_responses": 12,
+  "screen": {
+    "recorded_total": 6,
+    "possible_total": 6,
+    "independently_rescored": false,
+    "reason": "Only English summaries; workbook says originals are partially obscured in screenshots unavailable here"
+  },
+  "subjective_clarity": {
+    "scale": "1-5",
+    "n": 3,
+    "mean": 4,
+    "median": 4,
+    "range": [
+      3,
+      5
+    ]
+  },
+  "timing_seconds": {
+    "text": {
+      "n": 3,
+      "mean": 150.66666666666666,
+      "median": 142.0
+    },
+    "app": {
+      "n": 3,
+      "mean": 152.66666666666666,
+      "median": 155.0
+    }
+  },
+  "feedback_themes": [
+    "Scenario comparison was described as clear",
+    "Savings stock was initially confused with monthly income",
+    "Input ordering differed from the task sheet"
+  ],
+  "feedback_wording": "Workbook contains translated/English-normalized comments, not independently verified verbatim quotes",
+  "pending_clarifications": [
+    "Obtain original independent app answers before H2/H3; do not replace missing originals with assisted scores",
+    "Obtain legible original S1 answers/screenshots and confirm their scoring",
+    "Confirm test dates and version attribution; commit is recorded by the workbook, not independently logged",
+    "Clarify nonzero assisted seconds for a session marked H0; do not infer it received substantive help",
+    "H2/H3 operational prompts should remain differentiated from navigation-only H1 wording"
+  ],
+  "scope": "Descriptive convenience sample; text-first order, different cases, practice, assistance and ceiling effects prevent a causal effectiveness claim",
+  "publication": "Aggregate review only; original workbook, author/path metadata, device details and individual feedback remain private"
+}

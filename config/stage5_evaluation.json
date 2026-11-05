@@ -1,0 +1,118 @@
+{
+  "version": "stage5-evaluation-v1",
+  "declared_at": "2026-11-04T21:56:19.857765+11:00",
+  "frozen_config": "config/stage5_frozen.json",
+  "selected": "logistic_regression",
+  "comparators": [
+    "dummy",
+    "random_forest"
+  ],
+  "model_directory": "models/cfpb/stage4_v1",
+  "threshold": 0.5,
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 20261104,
+    "unit": "respondent; ordinary iid row bootstrap, n draws with replacement",
+    "interval": "percentile 2.5 and 97.5; finite replicates only, valid counts retained",
+    "scope": "fixed models and current empirical sample only; not training/selection uncertainty or complex survey inference",
+    "paired_differences": [
+      "logistic_regression - dummy",
+      "logistic_regression - random_forest"
+    ],
+    "minimum_valid_fraction": 0.9
+  },
+  "calibration": {
+    "bins": 10,
+    "method": "equal width [0,0.1,...,1], left closed except final bin includes 1",
+    "interval": "Wilson 95% interval for observed fraction in each occupied bin; descriptive, no multiplicity adjustment",
+    "empty_bins": "retain table row; do not draw point",
+    "small_bin_n": 30
+  },
+  "permutation": {
+    "partition": "validation",
+    "model": "logistic_regression",
+    "scoring": "average_precision",
+    "repeats": 30,
+    "seed": 20261105,
+    "unit": "original input column through full frozen Pipeline",
+    "variation": "SD across permutations, not a confidence interval"
+  },
+  "subgroups": {
+    "codebook": "docs/references/cfpb_nfwbs-puf-codebook.pdf; PDF pages 78/79",
+    "age_primary": {
+      "18-34": [
+        1,
+        2
+      ],
+      "35-61": [
+        3,
+        4,
+        5
+      ],
+      "62+": [
+        6,
+        7,
+        8
+      ]
+    },
+    "age_detailed": {
+      "18-24": [
+        1
+      ],
+      "25-34": [
+        2
+      ],
+      "35-44": [
+        3
+      ],
+      "45-54": [
+        4
+      ],
+      "55-61": [
+        5
+      ],
+      "62-69": [
+        6
+      ],
+      "70-74": [
+        7
+      ],
+      "75+": [
+        8
+      ]
+    },
+    "income_primary": {
+      "Under USD30,000": [
+        1,
+        2
+      ],
+      "USD30,000-74,999": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "USD75,000+": [
+        7,
+        8,
+        9
+      ]
+    },
+    "small_group_n": 100,
+    "small_class_n": 30,
+    "interval": "Wilson 95% recall/FPR intervals; descriptive, not adjusted for multiple comparisons",
+    "missing": "report Unknown separately if present; do not drop rows"
+  },
+  "weights": "main unweighted; finalwt-weighted point sensitivity separately; no complex-design CI",
+  "validation_test_comparison": "descriptive deltas only; validation used for selection, no significance claim from its gap",
+  "stability": "reuse stage4 stability.csv; conditional fixed-parameter development CV, no extra fitting",
+  "prohibited": [
+    "refit",
+    "recalibrate",
+    "tune",
+    "change threshold/features/labels/splits",
+    "reselect from test scores",
+    "Kaggle modeling",
+    "app/LLM work"
+  ]
+}

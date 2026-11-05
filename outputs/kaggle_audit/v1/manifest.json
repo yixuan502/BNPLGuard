@@ -1,0 +1,32 @@
+{
+  "completed_at": "2026-11-05T02:40:09.584815+11:00",
+  "data_sha256": "780cdb1eec43519b0764059563d89258ef1d9e4cef3b1ffdeab9622d6976b1bd",
+  "source_sha256": "5b72d4ad3d90144bafba4332dfb7360ba855465181be2c220185c7ec57d04832",
+  "protected_existing_files": 157,
+  "protected_snapshot_sha256": "009b68f304d608c922047a49f9e1401a07821ad2f6846facff65569770528dfb",
+  "all_protected_files_unchanged": true,
+  "no_model_training": true,
+  "field_review_sha256": "0ad6483b0159a037f3ddcba6277da44b0d2857bf330c690cbe06cdc038c0612a",
+  "source_evidence_sha256": {
+    "evidence.json": "382af3d19934693024284667177af287ad12c42c0861245ed610704e341eba41",
+    "access_log.json": "33250433c3accb0549788a9496968b819070cc9473d1cca11f44f601fe8194b7",
+    "auxiliary_readme.txt": "b5157b5ea139b2cf4ed593c203d3f90139ab4fbeac8ae4f31d33cb5e820ea8a8"
+  },
+  "output_sha256": {
+    "evidence.json": "382af3d19934693024284667177af287ad12c42c0861245ed610704e341eba41",
+    "audit_config.json": "e9ebe7add66486838b7ebf0326b8b9646e0ef4346af61b97e2ddbf2aff7ce7d4",
+    "monthly_record_counts.csv": "68a20910f570c0087a7ac3d7535bd8fed7946647f2a61351111e5650a56ac5b4",
+    "column_quality.csv": "4a9633b30d1aba6e5677ef137e4b47aca94558ce9234d9c4fce2137681706edb",
+    "user_multiplicity_distribution.csv": "ca4b286dd4b4e4ac2f58396538841b5c3bfa1b653b2a7782668ebd9bc3453e30",
+    "label_cooccurrence.csv": "ba75e43c46a1880c85201f515edb4a631ad2af02184aba1c6caf3418e2ca56b4",
+    "quality_summary.json": "7a77ceaaf4d44fac71b81bc5f74dd258faabdabc2902d9df0437c7e72ebd4304",
+    "access_log.json": "33250433c3accb0549788a9496968b819070cc9473d1cca11f44f601fe8194b7",
+    "category_distributions.csv": "95bb16646387d77ecd0006fd3e94b4ba78df217c8e76ef79d7fd9e0c9cf7cc2b",
+    "recorded_date_coverage.png": "497fda38180dbd20487908343b67a9d711df93853e3755217d0cb9d02774de59",
+    "algebraic_consistency_checks.csv": "1ba14e03ee16929a1e352e8eb4e6701f4c0a87740ddbb36196459488533f34ce",
+    "field_review_evidence.json": "0ad6483b0159a037f3ddcba6277da44b0d2857bf330c690cbe06cdc038c0612a",
+    "field_leakage_review.csv": "8d00679f15b1e355ab518bc8b38b54385c36084ebdb5a6f4fff4cff88bf5eb26",
+    "record_distributions.png": "2a4d4c201ec66bc9147fbf73f8ca067747928220e0084f9f987034ab26284582",
+    "records_per_user.csv": "ca002932d4c91d0a1b07fbfff7c1f8aa2079488f5776b7f99abf4103f882f922"
+  }
+}

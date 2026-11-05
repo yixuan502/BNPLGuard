@@ -1,0 +1,48 @@
+{
+  "checked_at": "2026-11-04T16:11:04.774699+11:00",
+  "availability": "present_and_readable",
+  "files": [
+    {
+      "path": "data/raw/kaggle_bnpl/Buy_Now_Pay_Later_BNPL_CreditRisk_Dataset.csv",
+      "format": "CSV",
+      "bytes": 1170187,
+      "rows": 10345,
+      "column_count": 17,
+      "columns": [
+        "user_id",
+        "age",
+        "employment_type",
+        "monthly_income",
+        "credit_score",
+        "purchase_amount",
+        "product_category",
+        "bnpl_installments",
+        "repayment_delay_days",
+        "missed_payments",
+        "default_flag",
+        "app_usage_frequency",
+        "location",
+        "transaction_date",
+        "debt_to_income_ratio",
+        "risk_score",
+        "customer_segment"
+      ],
+      "sha256": "780cdb1eec43519b0764059563d89258ef1d9e4cef3b1ffdeab9622d6976b1bd"
+    }
+  ],
+  "modeling_status": "deferred",
+  "scope": "File registration only; no training or cross-source merge.",
+  "provenance_license_synthetic_status": "Not yet audited. A local file does not establish authenticity.",
+  "latest_audit": {
+    "checked_on": "2026-11-05",
+    "report": "docs/kaggle_data_audit.md",
+    "results": "outputs/kaggle_audit/v1",
+    "rows": 10345,
+    "columns": 17,
+    "sha256": "780cdb1eec43519b0764059563d89258ef1d9e4cef3b1ffdeab9622d6976b1bd",
+    "decision_option": "C",
+    "modeling_status": "deferred",
+    "current_application_use": "excluded",
+    "provenance": "primary source unverified; auxiliary synthetic claim only"
+  }
+}

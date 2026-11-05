@@ -1,0 +1,23 @@
+{
+  "version": "stage3-v1",
+  "data_path": "data/raw/cfpb/NFWBS_PUF_2016_data.csv",
+  "seed": 42,
+  "train_fraction": 0.6,
+  "validation_fraction": 0.2,
+  "test_fraction": 0.2,
+  "threshold": 0.5,
+  "selection_metric": "average_precision",
+  "fit_sample_weight": false,
+  "metric_scope": "unweighted held-out sample; additional finalwt-weighted validation sensitivity",
+  "dummy": {
+    "strategy": "prior"
+  },
+  "logistic_regression": {
+    "C": 1.0,
+    "solver": "lbfgs",
+    "max_iter": 1000,
+    "class_weight": null
+  },
+  "test_policy": "IDs only at stage 3; no test predictions, performance, threshold, tuning, calibration or selection",
+  "feature_choice_basis": "Codebook and finance rationale fixed before fitting; no target correlation selection"
+}

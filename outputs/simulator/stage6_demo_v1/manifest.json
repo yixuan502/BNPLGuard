@@ -1,0 +1,20 @@
+{
+  "notice": "Illustrative scenario—not empirical model results",
+  "currency": "AUD",
+  "scenario_count": 5,
+  "input_kind": "fictional",
+  "model_or_dataset_loaded": false,
+  "source_sha256": {
+    "src/input_validation.py": "ceacbf33b51b09ffe953c11e9366766f5f14c1bcde140aac17b1997c1d35a114",
+    "src/bnpl_simulator.py": "c66e496791a7fc91e4804c9d39632638fd8f4639f9ea5bcf15d0b1e999e7bfc4",
+    "src/simulator_presentation.py": "efb2b8cdcb1b24d22c3dd872b483ba5e4f28262b63acbbb4ec230d8601bcbcb7",
+    "src/simulator_demo.py": "38a7698671ce007d049e52b8a9a0918324d4597802a1fed0c943842d002933f5",
+    "config/simulator_demo.json": "c001e5146a550e1742c7b43582bdca7dc11e6b617c370c664252e622547bcecd"
+  },
+  "output_sha256": {
+    "demo_config.json": "587feb996d14d1e3e55238b76a813fbae5d653d0d7fd66b3b7e7fd0a8d2d91ff",
+    "scenario_comparison.png": "726f21018b7e6e5f3f2a1ce90f2e1d9282bb261c7bc8ebaac4c90aec0a2b9bbd",
+    "scenarios.json": "eeb8c2dcee3470a769888d8fec0cebe18ceb256022ca2f0eecf27f5b7f6cbef6",
+    "scenario_comparison.csv": "b935bbc625121d5cc48f8d2c1630963ad90f91c0f0f2f3575956fa2ca641bae6"
+  }
+}

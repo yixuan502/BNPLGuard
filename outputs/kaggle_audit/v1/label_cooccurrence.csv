@@ -1,0 +1,20 @@
+field,group,n,flag_0_n,flag_1_n,invalid_or_missing_flag_n,recorded_flag_1_share,mixed_flag_values,small_group,meaning
+repayment_delay_days,8-14,3184,2069,1115,0,0.3501884422110553,True,False,Exploratory co-occurrence; bins are not clinical/regulatory/industry thresholds.
+repayment_delay_days,15+,2385,816,1569,0,0.6578616352201258,True,False,Exploratory co-occurrence; bins are not clinical/regulatory/industry thresholds.
+repayment_delay_days,0 or below,1219,877,342,0,0.280557834290402,True,False,Exploratory co-occurrence; bins are not clinical/regulatory/industry thresholds.
+repayment_delay_days,1-7,3557,2543,1014,0,0.2850716896260894,True,False,Exploratory co-occurrence; bins are not clinical/regulatory/industry thresholds.
+missed_payments,1,3837,2395,1442,0,0.3758144383633047,True,False,Exploratory co-occurrence; bins are not clinical/regulatory/industry thresholds.
+missed_payments,2,1969,1092,877,0,0.4454037582529203,True,False,Exploratory co-occurrence; bins are not clinical/regulatory/industry thresholds.
+missed_payments,3+,835,141,694,0,0.8311377245508982,True,False,Exploratory co-occurrence; bins are not clinical/regulatory/industry thresholds.
+missed_payments,0 or below,3704,2677,1027,0,0.27726781857451405,True,False,Exploratory co-occurrence; bins are not clinical/regulatory/industry thresholds.
+risk_score,100-199.999,3998,2847,1151,0,0.28789394697348675,True,False,Exploratory co-occurrence; bins are not clinical/regulatory/industry thresholds.
+risk_score,200-299.999,4911,2448,2463,0,0.5015271838729383,True,False,Exploratory co-occurrence; bins are not clinical/regulatory/industry thresholds.
+risk_score,300+,480,68,412,0,0.8583333333333333,True,False,Exploratory co-occurrence; bins are not clinical/regulatory/industry thresholds.
+risk_score,Below 100,956,942,14,0,0.014644351464435146,True,False,Exploratory co-occurrence; bins are not clinical/regulatory/industry thresholds.
+debt_to_income_ratio,Below .1,3786,2888,898,0,0.23718964606444798,True,False,Exploratory co-occurrence; bins are not clinical/regulatory/industry thresholds.
+debt_to_income_ratio,.1-.1999,2612,1384,1228,0,0.47013782542113325,True,False,Exploratory co-occurrence; bins are not clinical/regulatory/industry thresholds.
+debt_to_income_ratio,.2-.3999,3306,1705,1601,0,0.4842710223835451,True,False,Exploratory co-occurrence; bins are not clinical/regulatory/industry thresholds.
+debt_to_income_ratio,.4+,641,328,313,0,0.48829953198127923,True,False,Exploratory co-occurrence; bins are not clinical/regulatory/industry thresholds.
+customer_segment,Medium Risk,2200,1946,254,0,0.11545454545454545,True,False,Exploratory co-occurrence; bins are not clinical/regulatory/industry thresholds.
+customer_segment,High Risk,7569,3818,3751,0,0.49557405205443256,True,False,Exploratory co-occurrence; bins are not clinical/regulatory/industry thresholds.
+customer_segment,Low Risk,576,541,35,0,0.06076388888888889,True,False,Exploratory co-occurrence; bins are not clinical/regulatory/industry thresholds.

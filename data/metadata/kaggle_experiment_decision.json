@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-05",
+  "experiment_completed": true,
+  "presentation_option": 2,
+  "presentation": "Report appendix only",
+  "selected_model": "random_forest",
+  "application_personal_prediction": false,
+  "source_supplement_sha256": "f8179cc99adff458494829f18e37000c5eef1a1d12ed2a4485a5186e4acf6799",
+  "model_card": "docs/kaggle_model_card.md",
+  "remaining_gaps": [
+    "real versus synthetic origin",
+    "default criterion and outcome window",
+    "currency and income basis",
+    "payment frequency",
+    "feature availability timestamps",
+    "byte identity to a named Kaggle version",
+    "Notebook code license"
+  ]
+}

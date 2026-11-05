@@ -1,0 +1,51 @@
+{
+  "version": "kaggle-exploratory-v1",
+  "numeric": [
+    "age",
+    "monthly_income",
+    "credit_score",
+    "purchase_amount",
+    "app_usage_frequency",
+    "debt_to_income_ratio"
+  ],
+  "categorical": [
+    "employment_type",
+    "product_category",
+    "location",
+    "bnpl_installments"
+  ],
+  "features": [
+    "age",
+    "monthly_income",
+    "credit_score",
+    "purchase_amount",
+    "app_usage_frequency",
+    "debt_to_income_ratio",
+    "employment_type",
+    "product_category",
+    "location",
+    "bnpl_installments"
+  ],
+  "excluded": {
+    "user_id": "Identifier only; split/accounting key, never predictor",
+    "repayment_delay_days": "Unverified historical versus post-origination state",
+    "missed_payments": "Unverified historical versus post-origination state",
+    "risk_score": "Algebraically incorporates delay/misses",
+    "customer_segment": "Unknown generation and label dependence",
+    "transaction_date": "Unknown event/as-of semantics; coverage gap; not a prospective prediction design",
+    "default_flag": "Recorded binary target, never predictor"
+  },
+  "policy": "No engineered features from excluded fields; no clipping, currency conversion or fabricated cash-flow variables",
+  "field_notes": {
+    "age": "Recorded number, age semantics not independently authenticated",
+    "monthly_income": "Name suggests monthly income; currency, gross/net, person/household unknown",
+    "credit_score": "Score provider/system/date unknown",
+    "purchase_amount": "Numeric amount; currency and financed versus gross unknown",
+    "app_usage_frequency": "Units/window unknown; only a recorded numerical predictor",
+    "debt_to_income_ratio": "Numerically purchase/income; not verified debt service or dimensionless DTI",
+    "bnpl_installments": "Recorded 3/6/9/12; categorical because period/count meaning uncertain",
+    "employment_type": "Recorded nominal label",
+    "product_category": "Recorded nominal label",
+    "location": "Recorded country-like category, not verified geographic provenance"
+  }
+}

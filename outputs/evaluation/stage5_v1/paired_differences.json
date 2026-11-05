@@ -1,0 +1,60 @@
+{
+  "dummy": {
+    "average_precision": {
+      "lower": 0.3422286200448199,
+      "upper": 0.4131801613551201,
+      "valid_replicates": 2000,
+      "invalid_replicates": 0,
+      "reason": null,
+      "point": 0.37680778773012913,
+      "direction": "LR minus comparator; negative Brier difference favors LR"
+    },
+    "roc_auc": {
+      "lower": 0.3210615491482605,
+      "upper": 0.3642136272640872,
+      "valid_replicates": 2000,
+      "invalid_replicates": 0,
+      "reason": null,
+      "point": 0.3431575810023294,
+      "direction": "LR minus comparator; negative Brier difference favors LR"
+    },
+    "brier": {
+      "lower": -0.09144824712125967,
+      "upper": -0.06820678910296088,
+      "valid_replicates": 2000,
+      "invalid_replicates": 0,
+      "reason": null,
+      "point": -0.0798490135843826,
+      "direction": "LR minus comparator; negative Brier difference favors LR"
+    }
+  },
+  "random_forest": {
+    "average_precision": {
+      "lower": -0.015864499094034097,
+      "upper": 0.00906243714222233,
+      "valid_replicates": 2000,
+      "invalid_replicates": 0,
+      "reason": null,
+      "point": -0.0034736442355166597,
+      "direction": "LR minus comparator; negative Brier difference favors LR"
+    },
+    "roc_auc": {
+      "lower": -0.0002142655922712703,
+      "upper": 0.013582027983625183,
+      "valid_replicates": 2000,
+      "invalid_replicates": 0,
+      "reason": null,
+      "point": 0.006855099100889106,
+      "direction": "LR minus comparator; negative Brier difference favors LR"
+    },
+    "brier": {
+      "lower": -0.014104642553382975,
+      "upper": -0.004594014757754864,
+      "valid_replicates": 2000,
+      "invalid_replicates": 0,
+      "reason": null,
+      "point": -0.0093874247561406,
+      "direction": "LR minus comparator; negative Brier difference favors LR"
+    }
+  }
+}

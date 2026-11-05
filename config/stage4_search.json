@@ -1,0 +1,45 @@
+{
+  "version": "stage4-v1",
+  "created_before_fitting": true,
+  "seed": 42,
+  "cv_folds": 5,
+  "stability_folds": 3,
+  "stability_seed": 1729,
+  "rf_grid": {
+    "classifier__max_depth": [
+      6,
+      null
+    ],
+    "classifier__min_samples_leaf": [
+      5,
+      20
+    ]
+  },
+  "rf_fixed": {
+    "n_estimators": 200,
+    "max_features": "sqrt",
+    "bootstrap": true,
+    "class_weight": null,
+    "random_state": 42,
+    "n_jobs": 1
+  },
+  "cv_primary": "average_precision",
+  "rf_cv_tie_tolerance": 0.005,
+  "calibration": {
+    "method": "sigmoid",
+    "cv": 5,
+    "ensemble": false
+  },
+  "threshold": 0.5,
+  "finalist_ap_tolerance": 0.01,
+  "finalist_brier_tolerance": 0.002,
+  "complexity_preference": [
+    "logistic_regression",
+    "logistic_sigmoid",
+    "random_forest",
+    "forest_sigmoid"
+  ],
+  "selection_rule": "RF: within .005 of highest train-CV AP, prefer depth6 then leaf20. Finalists: within .01 of best validation AP, then within .002 of lowest eligible Brier, then complexity preference. Tolerances are pragmatic, not statistical equivalence tests.",
+  "test_policy": "No test predictions, scores, calibration or selection. Freeze exact fitted object; no train+validation refit.",
+  "training_weights": "unweighted; weighted validation sensitivity only"
+}

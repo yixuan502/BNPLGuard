@@ -1,0 +1,30 @@
+{
+  "accessed_on": "2026-11-05",
+  "dataset_url": "https://www.kaggle.com/datasets/shree0910/buy-now-and-pay-later-fintech-ml-dataset",
+  "notebook_url": "https://www.kaggle.com/code/sumedh1507/bnpl-credit-risk-insights",
+  "evidence_class": "User-supplied page screenshots; page claims, not newly authenticated live metadata",
+  "license": "Page marked CC0 1.0 Public Domain; screenshot evidence available",
+  "screenshot_sha256": {
+    "docs/references/kaggle_supplement_2026-11-05/page_summary_2.png": "ba0e34295d809a5c42906384e9de28e65716e9d80bac4ca1ae3543940e24eecf",
+    "docs/references/kaggle_supplement_2026-11-05/page_summary_1.png": "6585c5c57584dafa24a3caf2cfeb88cbfc83e515de4423b7592ada4d7889bc76"
+  },
+  "page_claims": {
+    "rows": 10345,
+    "columns": 17,
+    "missing_values": 0,
+    "target": "default_flag",
+    "flag_1": 4040,
+    "countries": 6,
+    "date_range": "January 2023 - December 2024"
+  },
+  "still_unknown": [
+    "real versus synthetic origin",
+    "default criterion and outcome window",
+    "currency and income basis",
+    "payment frequency",
+    "feature availability timestamps",
+    "byte identity to a named Kaggle version",
+    "Notebook code license"
+  ],
+  "historical_audit": "Earlier v1 evidence remains immutable; this dated supplement supersedes its license-unknown status, not its timing/semantic findings"
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "dataset_metadata",
+    "url": "https://www.kaggle.com/api/v1/datasets/view/shree0910/buy-now-and-pay-later-fintech-ml-dataset",
+    "accessed_at": "2026-11-05T01:38:32.219672+11:00",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "name": "notebook_source",
+    "url": "https://www.kaggle.com/api/v1/kernels/pull/sumedh1507/bnpl-credit-risk-insights",
+    "accessed_at": "2026-11-05T01:38:32.566043+11:00",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "name": "dataset_page",
+    "url": "https://www.kaggle.com/datasets/shree0910/buy-now-and-pay-later-fintech-ml-dataset",
+    "accessed_at": "2026-11-05T01:38:32.806223+11:00",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "name": "notebook_page",
+    "url": "https://www.kaggle.com/code/sumedh1507/bnpl-credit-risk-insights",
+    "accessed_at": "2026-11-05T01:38:33.148905+11:00",
+    "error": "HTTP Error 404: Not Found"
+  }
+]

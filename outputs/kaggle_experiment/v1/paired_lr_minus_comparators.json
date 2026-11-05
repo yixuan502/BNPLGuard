@@ -1,0 +1,48 @@
+{
+  "dummy": {
+    "average_precision": {
+      "lower": 0.14970583712945984,
+      "upper": 0.20846484228988948,
+      "valid_replicates": 1000,
+      "invalid_replicates": 0,
+      "reason": null
+    },
+    "roc_auc": {
+      "lower": 0.1857591476476635,
+      "upper": 0.22903636089189286,
+      "valid_replicates": 1000,
+      "invalid_replicates": 0,
+      "reason": null
+    },
+    "brier": {
+      "lower": -0.03708276637574685,
+      "upper": -0.024430237855680666,
+      "valid_replicates": 1000,
+      "invalid_replicates": 0,
+      "reason": null
+    }
+  },
+  "random_forest": {
+    "average_precision": {
+      "lower": -0.027816766242880844,
+      "upper": 0.028734116264751426,
+      "valid_replicates": 1000,
+      "invalid_replicates": 0,
+      "reason": null
+    },
+    "roc_auc": {
+      "lower": -0.005752469046238184,
+      "upper": 0.026905093946682557,
+      "valid_replicates": 1000,
+      "invalid_replicates": 0,
+      "reason": null
+    },
+    "brier": {
+      "lower": -0.0034024025367009976,
+      "upper": 0.004771410149947884,
+      "valid_replicates": 1000,
+      "invalid_replicates": 0,
+      "reason": null
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "frozen_at": "2026-11-05T03:25:03.016869+11:00",
+  "selected_model": "random_forest",
+  "threshold": 0.5,
+  "calibration": "none",
+  "features": [
+    "age",
+    "monthly_income",
+    "credit_score",
+    "purchase_amount",
+    "app_usage_frequency",
+    "debt_to_income_ratio",
+    "employment_type",
+    "product_category",
+    "location",
+    "bnpl_installments"
+  ],
+  "protocol_sha256": "4c27bbc1ca37565f617edc0d0ee0e26641589aeb27d40d637b220e9c2d7a5941",
+  "source_sha256": "f6fbf3e98108c414d8eead425685a4e2c37bf9b5d9275c94a3906193c7a5ae07",
+  "schema_sha256": "aeb9dd2313622190d918b7026df22a95d2f0b552a6e81b5b355a94b799e3595f",
+  "data_sha256": "780cdb1eec43519b0764059563d89258ef1d9e4cef3b1ffdeab9622d6976b1bd",
+  "split_sha256": "68645564313290e0e82b977ae7981e160973b47447a46fcafd517073b5ae12f9",
+  "run_dir": "models/kaggle/exploratory_v1",
+  "output_dir": "outputs/kaggle_experiment/v1",
+  "artifact_sha256": {
+    "dummy": "4fb18b8b28413db992bafbc55691dcdd5ea75a51d7e92dc28d5a7535b911ee97",
+    "logistic_regression": "74740066f6cd0e78fba9d97f1ebbd807081ea7490aa348b74b2f8da57528c647",
+    "random_forest": "3170af822fb033c9e44c75a619fc261b855f0a21304f1960c7f3ac26097b8cf3"
+  },
+  "comparators_prespecified": [
+    "dummy",
+    "logistic_regression",
+    "random_forest"
+  ],
+  "selection_rule": {
+    "ap_tolerance": 0.01,
+    "brier_tolerance": 0.005,
+    "steps": [
+      "Validation AP at least maximum minus AP tolerance",
+      "Among AP-eligible candidates, Brier at most minimum plus Brier tolerance",
+      "Prefer dummy, then logistic_regression, then random_forest"
+    ],
+    "test_use": "No selection, threshold tuning, recalibration or refit after frozen.json is written"
+  },
+  "parameters": {
+    "dummy": {},
+    "logistic_regression": {
+      "C": 10.0
+    },
+    "random_forest": {
+      "n_estimators": 200,
+      "max_depth": null,
+      "min_samples_leaf": 10
+    }
+  },
+  "fit_population": "train only",
+  "test_evaluated_at_freeze": false
+}

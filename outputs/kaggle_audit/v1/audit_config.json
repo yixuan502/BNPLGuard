@@ -1,0 +1,25 @@
+{
+  "raw_unchanged": true,
+  "fit_models": false,
+  "date_parser": "strict YYYY-MM-DD",
+  "iqr_rule": "Q1-1.5IQR or Q3+1.5IQR; descriptive only",
+  "arithmetic_tolerance": 1e-08,
+  "sentinel_candidates": [
+    "",
+    "-1",
+    "999",
+    "9999",
+    "missing",
+    "n/a",
+    "na",
+    "none",
+    "not available",
+    "null",
+    "unk",
+    "unknown"
+  ],
+  "sentinel_policy": "Report only; semantics unknown",
+  "chart_units": "record counts and recorded values; no currency comparisons",
+  "label_groups": "Predefined diagnostic bins in label_groups; no threshold optimization or classifier fitting",
+  "source_refresh": "not automatic; stored access records/evidence reused"
+}

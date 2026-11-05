@@ -1,0 +1,10 @@
+{
+  "n": 1270,
+  "mean_prediction": 0.4010835866162098,
+  "observed_positive_rate": 0.38661417322834646,
+  "mean_prediction_minus_prevalence": 0.014469413387863339,
+  "equal_width_binned_absolute_gap": 0.031337444049436544,
+  "empty_bins": 0,
+  "small_bins": [],
+  "note": "Binned absolute gap depends on binning; not a calibration hypothesis test or certificate."
+}

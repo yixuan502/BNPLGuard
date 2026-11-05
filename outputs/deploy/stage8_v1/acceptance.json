@@ -1,0 +1,72 @@
+{
+  "stage": "8",
+  "status": "public_deployed_anonymous_acceptance_passed",
+  "repository": "https://github.com/yixuan502/BNPLGuard",
+  "repository_visibility": "PRIVATE",
+  "app_release_commit": "ffa92490dcf1c38793afe7d6313ae02beddc63e5",
+  "branch": "main",
+  "entrypoint": "app.py",
+  "python": "3.13",
+  "local_url": "http://127.0.0.1:8501",
+  "local_full_tests": 154,
+  "protected_unchanged": 192,
+  "github_checkout_smoke": "PASS",
+  "github_checkout_smoke_seconds": 81.745,
+  "file_count": 99,
+  "public_url": "https://bnplguard-yixuan502.streamlit.app/",
+  "online_acceptance": "NOT YET PERFORMED",
+  "llm": "disabled",
+  "kaggle": "report appendix only",
+  "pending": [],
+  "current_repository_commit": "771aadd7b8c15de4c972d9b634f01e50ce9f0eb2",
+  "local_browser_after_final_restart": {
+    "Screen": "fictional submission 83.85%, eight SHAP bars and matching offline template",
+    "Stress": "five signed bars 900/700/0/-200/1100 AUD; current RTI 24.44%, coverage 0.278 months",
+    "Explain": "saved global importance and submitted-case Local probability 83.85%",
+    "Model": "saved AP 0.7634, ROC-AUC 0.8432 and Brier 0.1573 loaded",
+    "scope": "Actual local browser interaction; no public Cloud acceptance inferred"
+  },
+  "http_checks": {
+    "/": 200,
+    "/_stcore/health": 200
+  },
+  "cloud_python_setting": "3.13",
+  "initial_deployed_commit": "c23178cd823ae6d70b4f2cfdb11576bad6793670",
+  "cloud_dependency_manager": "uv-sync /mount/src/bnplguard/uv.lock",
+  "application_sharing": "public and searchable",
+  "anonymous_browser": "Separate in-app browser; no Cloud login, no invitation/owner controls; fresh second viewer session blank",
+  "online_areas": [
+    "Screen fictional probability/SHAP/template",
+    "Stress five signed buffers and combined interpretation",
+    "Explain Global/Local/Scenario",
+    "Model metrics/ROC/PR/reliability/groups/weights/context/appendix"
+  ],
+  "online_probability_display": "83.85%",
+  "online_simulator_buffers_aud": [
+    900,
+    700,
+    0,
+    -200,
+    1100
+  ],
+  "online_shap_max_error": 6.661338147750939e-16,
+  "not_tested": [
+    "Physical devices",
+    "Additional browsers/networks",
+    "Remote fault injection/load testing",
+    "Real-user study"
+  ],
+  "handoff": [
+    "Instructor source-repository access if required",
+    "Stage-nine consented user feedback"
+  ],
+  "deployed_commit": "771aadd7b8c15de4c972d9b634f01e50ce9f0eb2",
+  "cloud_postpush_update_log": "4 November 2026 23:44:22 UTC pull; 23:44:25 UTC Updated app",
+  "remote_main_sha_verified": true,
+  "postpush_anonymous_check": "Fresh anonymous reload: Screen ready, no login prompt/owner controls, empty initial result",
+  "runtime_diff_from_initial_accepted_commit": "none",
+  "tracked_files_exact_allowlist": 99,
+  "final_package_tests": "3 passed in 0.17s",
+  "git_worktree": "clean",
+  "stage8_complete": true
+}

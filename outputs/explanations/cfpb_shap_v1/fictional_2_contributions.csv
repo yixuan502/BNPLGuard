@@ -1,0 +1,9 @@
+feature,label,raw_code,raw_label,imputed,effective_encoded_category,contribution_log_odds,contribution_display,direction
+PPINCIMP,Household income (panel-data variable; original panel question not reproduced in Appendix A),6.0,"$60,000 to $74,999",False,6.0,0.02067598622610227,+0.0207 log-odds,increase
+SAVINGSRANGES,"How much money do you have in savings today (in cash, checking, and savings account balances)?",6.0,"$20,000-74,999",False,6.0,-0.8310233206957475,-0.8310 log-odds,decrease
+EMPLOY,Which one of the following would you say is your primary employment or work status?,6.0,"Permanently sick, disabled or unable to work",False,4.0,-0.0089428403967041,-0.0089 log-odds,decrease
+VOLATILITY,"Which of the following best describes how your household’s income changes from month to month, if at all?",3.0,Often varies quite a bit month to month,False,3.0,0.7292081403337095,+0.7292 log-odds,increase
+EARNERS,How many people currently contribute to the income used to pay bills for your household?,3.0,More than two,False,3.0,0.17680909942222278,+0.1768 log-odds,increase
+HOUSING,Which one of the following best describes your housing situation?,3.0,Do not currently own or rent,False,3.0,-0.015794291764044163,-0.0158 log-odds,decrease
+PRODHAVE_8,Which of the following financial products and services do you currently have? Student/Education Loan (for yourself or someone else),1.0,Yes,False,1.0,0.16518176741807394,+0.1652 log-odds,increase
+PPHHSIZE,Household size (panel-data variable; original panel question not reproduced in Appendix A),5.0,5+,False,5.0,0.2817611695222323,+0.2818 log-odds,increase

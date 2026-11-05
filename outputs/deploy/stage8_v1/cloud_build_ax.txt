@@ -1,0 +1,147 @@
+Browser tab: 551733675, Title: "Streamlit", URL: "https://bnplguard-yixuan502.streamlit.app/".
+0 AXWebArea Streamlit, URL: bnplguard-yixuan502.streamlit.app/
+	1 container
+		2 container appLoadingSpinner
+		3 container
+			4 container
+				5 text [     UTC     ]  Logs for bnplguard-yixuan502.streamlit.app/
+			6 text ────────────────────────────────────────────────────────────────────────────────────────
+			7 container
+				8 text [23:34:51]  🚀 Starting up repository: 'bnplguard', branch: 'main', main module: 'app.py'
+			9 container
+				10 text [23:34:51]  🐙 Cloning repository...
+			11 container
+				12 text [23:34:53]  🐙 Cloning into '/mount/src/bnplguard'...
+
+			13 container
+				14 text [23:34:53]  🐙 Cloned repository!
+			15 container
+				16 text [23:34:53]  🐙 Pulling code changes from Github...
+			17 container
+				18 text [23:34:54]  📦 Processing dependencies...
+			19 text Downloading kiwisolver (1.4MiB)
+			20 text Downloading pydeck (10.9MiB)
+			21 text Downloading pillow (6.8MiB)
+			22 text Downloading streamlit (9.9MiB)[2026-11-04 23:34:54.513631] 
+			23 text Downloading scipy (33.7MiB)
+			24 text Downloading matplotlib (9.4MiB)
+			25 text Downloading fonttools (5.2MiB)
+			26 text Downloading pyarrow (52.5MiB)
+			27 text Downloading numpy (15.9MiB)
+			28 text Downloading pandas (11.4MiB)
+			29 text Downloading scikit-learn (8.7MiB)
+			30 text  Downloaded kiwisolver
+			31 text  Downloaded fonttools
+			32 text  Downloaded pillow
+			33 text  Downloaded scikit-learn
+			34 text  Downloaded streamlit
+			35 text  Downloaded pydeck
+			36 text  Downloaded [2026-11-04 23:34:55.287357] matplotlib
+			37 text  Downloaded pandas
+			38 text  Downloaded numpy
+			39 text  Downloaded scipy
+			40 text  Downloaded pyarrow
+			41 text Prepared 47 packages in 1.48s
+			42 text Installed 47 packages in 166ms
+			43 text  + altair==6.3.0
+			44 text  + anyio==4.16.0
+			45 text  + attrs==26.1.0
+			46 text  + charset-normalizer==3.5.2
+			47 text  + click==8.5.0
+			48 text  + cloudpickle==3.1.2
+			49 text  + contourpy==1.4.0
+			50 text  + cycler==0.12.1
+			51 text  + fonttools==4.68.0
+			52 text  + h11==0.16.0
+			53 text  + idna==3.20
+			54 text  + itsdangerous==2.2.0
+			55 text  + jinja2==3.1.6
+			56 text  + joblib==1.6.0
+			57 text  + jsonschema==4.26.0
+			58 text  + jsonschema-specifications==2025.9.1
+			59 text  + kiwisolver==1[2026-11-04 23:34:56.046607] .5.1
+			60 text  + markupsafe==3.0.4
+			61 text  + matplotlib==3.11.2
+			62 text  + narwhals==2.28.0
+			63 text  + numpy==2.5.4
+			64 text  + packaging==26.3
+			65 text  + pandas==3.1.0
+			66 text  + pillow==13.0.0
+			67 text  + protobuf==7.36.2
+			68 text  + pyarrow==26.0.1
+			69 text  + pydeck==0.9.3
+			70 text  + pyparsing==3.3.3
+			71 text  + python-dateutil==4.0.0
+			72 text  + python-multipart==0.0.33
+			73 text  + referencing==0.37.0
+			74 text  + requests==2.34.2
+			75 text  + rpds-py==2026.9.1
+			76 text  + scikit-learn==1.9.1
+			77 text  + scipy==1.18.1
+			78 text  + shap==0.54.1
+			79 text  + slicer==0.0.8
+			80 text  + starlette==1.10.0
+			81 text  + streamlit==1.66.1
+			82 text  + threadpoolctl==3.7.0
+			83 text  + tqdm==4.70.1
+			84 text  + typing-extensions==4.16.0
+			85 text  + tzdata==2026.6
+			86 text  + urllib3==2.8.0
+			87 text  + uvicorn==0.54.0
+			88 text  + watchdog==6.0.0
+			89 text  + websockets==17.4
+			90 text Collecting certifi>=2026.10.19
+			91 text   Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+			92 text Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+			93 text Installing collected packages: certifi
+			94 text   Attempting uninstall: certifi
+			95 text     Found existing installation: certifi 2026.10.23
+			96 text     Uninstalling certifi-2026.10.23:
+			97 text       Successfully uninstalled certifi-2026.10.23
+			98 text Successfully installed certifi-2026.10.23
+			99 text Collecting pip>=26.2.2
+			100 text   Downloading pip-26.3-py3-none-any.whl.metadata (4.6 kB)
+			101 text Downloading pip-26.3-py3-none-any.whl (2.0 MB)
+			102 text    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 79.3 MB/s  0:00:00[2026-11-04 23:34:58.034897] 
+			103 text Installing collected packages: pip
+			104 text   Attempting uninstall: pip
+			105 text     Found existing installation: pip 26.2.2
+			106 text     Uninstalling pip-26.2.2:
+			107 text       Successfully uninstalled pip-26.2.2
+			108 text Successfully installed pip-26.3
+			109 container
+				110 text [23:35:00]  🐍 Python dependencies were installed from  /mount/src/bnplguard/uv.lock  using  uv-sync .
+			111 container
+				112 text [23:35:00]  📦 WARN: More than one requirements file detected in the repository. Available options:  uv-sync /mount/src/bnplguard/uv.lock, uv /mount/src/bnplguard/requirements.txt, poetry /mount/src/bnplguard/pyproject.toml . Used:  uv-sync  with  /mount/src/bnplguard/uv.lock
+			113 text Check if streamlit is installed
+			114 text Streamlit is already installed
+			115 text Collecting certifi>=2026.10.19
+			116 text   Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+			117 text Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+			118 text Installing collected packages: certifi
+			119 text   Attempting uninstall: certifi
+			120 text     Found existing installation: certifi 2026.10.23
+			121 text     Uninstalling certifi-2026.10.23:
+			122 text       Successfully uninstalled certifi-2026.10.23
+			123 text Successfully installed certifi-2026.10.23
+			124 text Collecting pip>=26.2.2
+			125 text   Downloading pip-26.3-py3-none-any.whl.metadata (4.6 kB)
+			126 text Downloading pip-26.3-py3-none-any.whl (2.0 MB)
+			127 text    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 87.8 MB/s  0:00:00[2026-11-04 23:35:02.367402] 
+			128 text Installing collected packages: pip
+			129 text   Attempting uninstall: pip
+			130 text     Found existing installation: pip 26.3
+			131 text     Uninstalling pip-26.3:
+			132 text       Successfully uninstalled pip-26.3
+			133 text Successfully installed pip-26.3
+			134 container
+				135 text [23:35:04]  📦 Processed dependencies!
+			136 text 2026-11-04 23:35:06.311 Uvicorn server started on 127.0.0.1:8501
+		137 container
+			138 text main
+			139 text yixuan502/bnplguard/main/app.py
+			140 pop up button (collapsed) Secondary Actions: Expand
+				141 image
+			142 button Close manage app panel
+				143 image
+	144 

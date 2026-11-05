@@ -1,0 +1,69 @@
+{
+  "version": "kaggle-exploratory-v1",
+  "sealed_at": "2026-11-05T03:22:56.941337+11:00",
+  "objective": "Exploratory classification of the recorded default_flag label in the Kaggle dataset.",
+  "data": "data/raw/kaggle_bnpl/Buy_Now_Pay_Later_BNPL_CreditRisk_Dataset.csv",
+  "data_sha256": "780cdb1eec43519b0764059563d89258ef1d9e4cef3b1ffdeab9622d6976b1bd",
+  "schema_sha256": "aeb9dd2313622190d918b7026df22a95d2f0b552a6e81b5b355a94b799e3595f",
+  "seed": 42,
+  "fractions": [
+    0.6,
+    0.2,
+    0.2
+  ],
+  "split_file": "data/splits/kaggle_split_ids_v1.json",
+  "cv_folds": 4,
+  "lr_C": [
+    0.1,
+    1.0,
+    10.0
+  ],
+  "rf_grid": {
+    "n_estimators": [
+      200
+    ],
+    "max_depth": [
+      6,
+      null
+    ],
+    "min_samples_leaf": [
+      10,
+      30
+    ]
+  },
+  "calibration": "none; no optional calibration search in this bounded experiment",
+  "threshold": 0.5,
+  "family_search_rule": "Maximize mean training-CV AP within family; tie order is declared parameter order",
+  "selection_rule": {
+    "ap_tolerance": 0.01,
+    "brier_tolerance": 0.005,
+    "steps": [
+      "Validation AP at least maximum minus AP tolerance",
+      "Among AP-eligible candidates, Brier at most minimum plus Brier tolerance",
+      "Prefer dummy, then logistic_regression, then random_forest"
+    ],
+    "test_use": "No selection, threshold tuning, recalibration or refit after frozen.json is written"
+  },
+  "models": [
+    "dummy",
+    "logistic_regression",
+    "random_forest"
+  ],
+  "bootstrap": {
+    "replicates": 1000,
+    "seed": 20261105,
+    "method": "Paired unstratified record bootstrap, percentile 95%, fixed fitted models",
+    "minimum_valid_fraction": 0.9
+  },
+  "report_metrics": [
+    "accuracy",
+    "precision",
+    "recall",
+    "f1",
+    "roc_auc",
+    "average_precision",
+    "brier"
+  ],
+  "fit_population": "Training only; no train+validation refit",
+  "presentation_gate": "Default appendix-only; no personal credit prediction interface without provenance/timing evidence"
+}

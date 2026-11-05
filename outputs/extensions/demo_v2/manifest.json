@@ -1,0 +1,11 @@
+{
+  "fictional_inputs_only": true,
+  "live_llm_called": false,
+  "adapter_status": "LLM adapter prepared, not live-tested",
+  "files_sha256": {
+    "cfpb.json": "a94bf671535923a672c284eb54c5a2465a1301dbce721edfced238f79dddc7ba",
+    "explanation.json": "708fafe4bb5d6af69a56fac2eaa869c1b93b5788ff56db5b8d1cffea5832d6fd",
+    "explanation.txt": "f56491b07939274bb86275e30f47abb227cbd0d58b8add93a5be9cb5bb83ec4d",
+    "simulation.json": "6d78fc813d32ff87bc256899d754116289b65252e8de642c06c34f18aac87733"
+  }
+}

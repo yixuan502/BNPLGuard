@@ -1,0 +1,47 @@
+{
+  "checked_on": "2026-11-04",
+  "survey_year": 2016,
+  "release": "September 2017",
+  "landing_url": "https://www.consumerfinance.gov/data-research/financial-well-being-survey-data/",
+  "csv_url_previously_published": "https://files.consumerfinance.gov/f/documents/NFWBS_PUF_2016_data.csv",
+  "codebook_current_url": "https://www.consumerfinance.gov/documents/5586/cfpb_nfwbs-puf-codebook.pdf",
+  "guide_current_url": "https://www.consumerfinance.gov/documents/5588/cfpb_nfwbs-puf-user-guide.pdf",
+  "local_csv_sha256": "3680d33576549a99a8dfd7f99d5661a36a8fc1aac0d66f2bf2ec5524695304d8",
+  "local_download_date": "unknown: user supplied; filesystem mtime is not download evidence",
+  "remote_csv_redownloaded": false,
+  "byte_identity_to_current_server": "not checked; no official SHA256 available from reviewed landing page",
+  "verification": "official release and filename linkage; 6394 x 217; local Codebook September 2017; exact label/model-feature frequencies checked",
+  "usage": "Official public-use file intended for research, no respondent PII per CFPB. No separate dataset license identified in reviewed materials; do not automatically republish raw data or course PDFs. Cite CFPB.",
+  "local_documents": {
+    "cfpb_nfwbs-puf-user-guide.pdf": {
+      "sha256": "8df3a15b3f9f6b00ac45abbbe5758ee3d1185b80a00e06843d82806ff6df0de6",
+      "bytes": 626183,
+      "acquisition": "downloaded 2026-11-04"
+    },
+    "marking-criteria-a-tech-team.pdf": {
+      "sha256": "a3e7fa3fd9f50d42bf00c55d16e524d585bc38303a426c85f570a286ccf72c87",
+      "bytes": 64188,
+      "acquisition": "user supplied; original download date unknown"
+    },
+    "project-a-tech-team.pdf": {
+      "sha256": "e6dd8376d16db0bd08141a681a6b6db87cf07d14d84562426559a787ca0b0e86",
+      "bytes": 69965,
+      "acquisition": "user supplied; original download date unknown"
+    },
+    "cfpb_nfwbs-puf-codebook.pdf": {
+      "sha256": "df471d78a56cb77ee71e3c69f529343c794df68579c40864bcde3d984eae7e48",
+      "bytes": 1024421,
+      "acquisition": "user supplied; original download date unknown"
+    }
+  },
+  "http_head": {
+    "status": 200,
+    "content_length": 2992071,
+    "same_length_as_local": true,
+    "last_modified": "Tue, 17 Mar 2026 19:36:12 GMT",
+    "etag": "cd60171e89e30ae55df29c8954d2f7b4",
+    "local_md5": "ec34fea39187e85d8c1b680097f38748",
+    "etag_equals_local_md5": false,
+    "interpretation": "ETag checksum semantics unknown. Unequal values do not prove which bytes differ; byte identity remains unverified. HTTP modification date does not identify a new survey wave."
+  }
+}

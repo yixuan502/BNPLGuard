@@ -1,0 +1,33 @@
+{
+  "evaluated_at": "2026-11-05T03:28:09.087262+11:00",
+  "selected_model": "random_forest",
+  "frozen_sha256": "daa8481972a6efc98c7f7fbbd4371570af4ddd1740b416f521f86aa24791e8a4",
+  "test_policy": "All prespecified models evaluated; no post-test reselection/refit/calibration/threshold change",
+  "uncertainty": {
+    "replicates": 1000,
+    "seed": 20261105,
+    "method": "Paired unstratified record bootstrap, percentile 95%, fixed fitted models",
+    "minimum_valid_fraction": 0.9
+  },
+  "files_sha256": {
+    "test_curves.png": "62b087b721895a548d7be64efd6b222965210ecb5fc5e5fa6f5f7556cb6faaa9",
+    "training_cv_search.csv": "ba2e77b03c50a333b1599fc4a1ce650c3fce32a876ef2da8eda95dabeec6a76b",
+    "validation_predictions.csv": "7bdb1441aafc5d175cc17fdda39318db78bf3c9e907ccab17492a35f895fca37",
+    "protocol_before_training.json": "4c27bbc1ca37565f617edc0d0ee0e26641589aeb27d40d637b220e9c2d7a5941",
+    "development_metrics.json": "8db12e332d1fd5a041aa1b9c5428e8493ef2f6ab04f7698eb0165426e10a566c",
+    "paired_lr_minus_comparators.json": "62e8ea35df74374b7e455311f017ed6e5191a55db8fd1e4494bf97ec7b3e47cb",
+    "bootstrap_draws.csv": "37a553359f359d26e4973f4113b4094948134b49316dc1052342b24fe08bc2c1",
+    "bootstrap_intervals.json": "03da50af5977a0f8844d7d7b09fd9e62c37ca491a3bd7204433ba2672614f20f",
+    "sample_flow.json": "4f965a433b86d8858b6fd6c8d1a4d3d62bcff0eb52b3d1c1cbd420bde05f348f",
+    "split_accounting.json": "6d53e52a741d40e2d5fa8654a45bdfb636f0a09176b5fc2c88de7cedee1d0315",
+    "test_predictions.csv": "3dcba80d6456c5c0f3412baa56dee2010ac40d418facb62f39cc650af2ed400f",
+    "bootstrap_indices.npz": "ebdeeb2d3ac342b47a2773d1e39120d56a3448dc1fea9ff6a832156201e84e40",
+    "test_metrics.json": "4bbcf9f5d2a67b9fe619a9f64bcf807f7fcbafad1df5ad1c50e9ead9a3be74e0",
+    "validation_comparison.csv": "c285fc4998319ad07acf533cdfd48fa31ebf6fcdbb5069ed682300df2f00f83f",
+    "test_calibration_bins.csv": "71fbe487ef1931cf9a2e0b396e226764ebfd24726b0cd34073a9980b24e05b13",
+    "test_confusion_matrices.png": "c720414b5f7d06062eba8f92f184a894ac9b9154c99311d4c4acf540ca675124",
+    "freeze_receipt.json": "3fafa2b7d9762a95e019c4ee33e311d4c5360787d2f41ef6c31899ae127cfd9b",
+    "feature_schema.json": "aeb9dd2313622190d918b7026df22a95d2f0b552a6e81b5b355a94b799e3595f",
+    "test_comparison.csv": "b643099384fce1f7bc8b9aea2b59ea7a3fe9067724e53ec0755635bf380100b4"
+  }
+}

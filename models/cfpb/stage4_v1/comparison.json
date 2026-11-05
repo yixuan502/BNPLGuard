@@ -1,0 +1,467 @@
+{
+  "dummy": {
+    "validation": {
+      "n": 1270,
+      "positive_rate": 0.38661417322834646,
+      "threshold": 0.5,
+      "accuracy": 0.6133858267716535,
+      "precision": null,
+      "precision_note": "N/A: no predicted positives",
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.5,
+      "average_precision": 0.38661417322834646,
+      "brier": 0.23714372317633525,
+      "confusion_matrix_tn_fp_fn_tp": [
+        779,
+        0,
+        491,
+        0
+      ]
+    },
+    "train_apparent": {
+      "n": 3810,
+      "positive_rate": 0.3863517060367454,
+      "threshold": 0.5,
+      "accuracy": 0.6136482939632546,
+      "precision": null,
+      "precision_note": "N/A: no predicted positives",
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.5,
+      "average_precision": 0.3863517060367454,
+      "brier": 0.2370840652792416,
+      "confusion_matrix_tn_fp_fn_tp": [
+        2338,
+        0,
+        1472,
+        0
+      ]
+    },
+    "validation_finalwt_sensitivity": {
+      "n": 1270,
+      "positive_rate": 0.4219260208296375,
+      "threshold": 0.5,
+      "accuracy": 0.5780739791703626,
+      "precision": null,
+      "precision_note": "N/A: no predicted positives",
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.5,
+      "average_precision": 0.4219260208296377,
+      "brier": 0.24516998564948958,
+      "confusion_matrix_tn_fp_fn_tp": [
+        740.1403871432515,
+        0.0,
+        540.2154389492549,
+        0.0
+      ]
+    },
+    "validation_log_loss": 0.6672095912752742,
+    "validation_mean_probability": 0.3863517060367454,
+    "ap_train_minus_validation": -0.0002624671916010568,
+    "brier_validation_minus_train": 5.965789709364011e-05,
+    "training_cv_stability": {
+      "ap": {
+        "mean": 0.3863517060367454,
+        "sd": 0.0004546065111729457,
+        "folds": [
+          0.38661417322834646,
+          0.38661417322834646,
+          0.3858267716535433
+        ]
+      },
+      "auc": {
+        "mean": 0.5,
+        "sd": 0.0,
+        "folds": [
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "brier": {
+        "mean": -0.23708423750180838,
+        "sd": 0.00010318135972093028,
+        "folds": [
+          -0.23714380928761858,
+          -0.23714380928761858,
+          -0.2369650939301879
+        ]
+      },
+      "brier_note": "Values above use sklearn negative-Brier scoring; positive Brier is in stability.csv."
+    }
+  },
+  "logistic_regression": {
+    "validation": {
+      "n": 1270,
+      "positive_rate": 0.38661417322834646,
+      "threshold": 0.5,
+      "accuracy": 0.7661417322834646,
+      "precision": 0.7245370370370371,
+      "precision_note": null,
+      "recall": 0.6374745417515275,
+      "f1": 0.6782231852654388,
+      "roc_auc": 0.8169463696995207,
+      "average_precision": 0.7208572712242223,
+      "brier": 0.16739607438010615,
+      "confusion_matrix_tn_fp_fn_tp": [
+        660,
+        119,
+        178,
+        313
+      ]
+    },
+    "train_apparent": {
+      "n": 3810,
+      "positive_rate": 0.3863517060367454,
+      "threshold": 0.5,
+      "accuracy": 0.7805774278215223,
+      "precision": 0.7564516129032258,
+      "precision_note": null,
+      "recall": 0.6372282608695652,
+      "f1": 0.6917404129793511,
+      "roc_auc": 0.8418233893238368,
+      "average_precision": 0.7669448083758134,
+      "brier": 0.15513324919573976,
+      "confusion_matrix_tn_fp_fn_tp": [
+        2036,
+        302,
+        534,
+        938
+      ]
+    },
+    "validation_finalwt_sensitivity": {
+      "n": 1270,
+      "positive_rate": 0.4219260208296375,
+      "threshold": 0.5,
+      "accuracy": 0.7584348966937859,
+      "precision": 0.7310120339149043,
+      "precision_note": null,
+      "recall": 0.6763415259768771,
+      "f1": 0.7026149058996732,
+      "roc_auc": 0.8127957939375099,
+      "average_precision": 0.7294595341215131,
+      "brier": 0.17339550615935193,
+      "confusion_matrix_tn_fp_fn_tp": [
+        605.6964043585494,
+        134.44398278470243,
+        174.84530461404708,
+        365.3701343352076
+      ]
+    },
+    "validation_log_loss": 0.5108497969886429,
+    "validation_mean_probability": 0.39680936869287986,
+    "ap_train_minus_validation": 0.046087537151591085,
+    "brier_validation_minus_train": 0.012262825184366388,
+    "training_cv_stability": {
+      "ap": {
+        "mean": 0.7594639203248276,
+        "sd": 0.011591627855486727,
+        "folds": [
+          0.7476144004387815,
+          0.7707791807263187,
+          0.7599981798093824
+        ]
+      },
+      "auc": {
+        "mean": 0.8343618695797778,
+        "sd": 0.0028176493487887047,
+        "folds": [
+          0.8365456261487259,
+          0.8353586639092889,
+          0.8311813186813186
+        ]
+      },
+      "brier": {
+        "mean": -0.15849228352639966,
+        "sd": 0.0017323708458338546,
+        "folds": [
+          -0.1585333548467636,
+          -0.15673974220586961,
+          -0.16020375352656577
+        ]
+      },
+      "brier_note": "Values above use sklearn negative-Brier scoring; positive Brier is in stability.csv."
+    }
+  },
+  "random_forest": {
+    "validation": {
+      "n": 1270,
+      "positive_rate": 0.38661417322834646,
+      "threshold": 0.5,
+      "accuracy": 0.7519685039370079,
+      "precision": 0.7268041237113402,
+      "precision_note": null,
+      "recall": 0.5743380855397149,
+      "f1": 0.6416382252559727,
+      "roc_auc": 0.8127632428645006,
+      "average_precision": 0.7173246368205414,
+      "brier": 0.17367717590517467,
+      "confusion_matrix_tn_fp_fn_tp": [
+        673,
+        106,
+        209,
+        282
+      ]
+    },
+    "train_apparent": {
+      "n": 3810,
+      "positive_rate": 0.3863517060367454,
+      "threshold": 0.5,
+      "accuracy": 0.7716535433070866,
+      "precision": 0.7668439716312057,
+      "precision_note": null,
+      "recall": 0.5876358695652174,
+      "f1": 0.6653846153846154,
+      "roc_auc": 0.8381764712035557,
+      "average_precision": 0.7718337753935753,
+      "brier": 0.16497583653614192,
+      "confusion_matrix_tn_fp_fn_tp": [
+        2075,
+        263,
+        607,
+        865
+      ]
+    },
+    "validation_finalwt_sensitivity": {
+      "n": 1270,
+      "positive_rate": 0.4219260208296375,
+      "threshold": 0.5,
+      "accuracy": 0.739307495629855,
+      "precision": 0.7245019569701623,
+      "precision_note": null,
+      "recall": 0.616607002189515,
+      "f1": 0.6662142948440614,
+      "roc_auc": 0.8062156633602492,
+      "average_precision": 0.7283747812216264,
+      "brier": 0.1807152646643539,
+      "confusion_matrix_tn_fp_fn_tp": [
+        613.4760369565521,
+        126.6643501866996,
+        207.11481660226175,
+        333.1006223469931
+      ]
+    },
+    "validation_log_loss": 0.525512337580441,
+    "validation_mean_probability": 0.3925421410649558,
+    "ap_train_minus_validation": 0.054509138573033966,
+    "brier_validation_minus_train": 0.008701339369032751,
+    "training_cv_stability": {
+      "ap": {
+        "mean": 0.7506104071116106,
+        "sd": 0.010750108408794562,
+        "folds": [
+          0.7444095679863266,
+          0.7630235613106306,
+          0.7443980920378744
+        ]
+      },
+      "auc": {
+        "mean": 0.827677435835707,
+        "sd": 0.0102517249982668,
+        "folds": [
+          0.8371025049086379,
+          0.8291676361934592,
+          0.8167621664050235
+        ]
+      },
+      "brier": {
+        "mean": -0.16877162587746472,
+        "sd": 0.001874392834838462,
+        "folds": [
+          -0.16769347438140048,
+          -0.16768541995361821,
+          -0.17093598329737547
+        ]
+      },
+      "brier_note": "Values above use sklearn negative-Brier scoring; positive Brier is in stability.csv."
+    }
+  },
+  "logistic_sigmoid": {
+    "validation": {
+      "n": 1270,
+      "positive_rate": 0.38661417322834646,
+      "threshold": 0.5,
+      "accuracy": 0.7653543307086614,
+      "precision": 0.7249417249417249,
+      "precision_note": null,
+      "recall": 0.6334012219959266,
+      "f1": 0.6760869565217391,
+      "roc_auc": 0.8169463696995207,
+      "average_precision": 0.7208572712242223,
+      "brier": 0.16728131784039177,
+      "confusion_matrix_tn_fp_fn_tp": [
+        661,
+        118,
+        180,
+        311
+      ]
+    },
+    "train_apparent": {
+      "n": 3810,
+      "positive_rate": 0.3863517060367454,
+      "threshold": 0.5,
+      "accuracy": 0.7795275590551181,
+      "precision": 0.7560777957860616,
+      "precision_note": null,
+      "recall": 0.6338315217391305,
+      "f1": 0.6895787139689579,
+      "roc_auc": 0.8418233893238368,
+      "average_precision": 0.7669448083758134,
+      "brier": 0.15523045078034653,
+      "confusion_matrix_tn_fp_fn_tp": [
+        2037,
+        301,
+        539,
+        933
+      ]
+    },
+    "validation_finalwt_sensitivity": {
+      "n": 1270,
+      "positive_rate": 0.4219260208296375,
+      "threshold": 0.5,
+      "accuracy": 0.7588158876048995,
+      "precision": 0.7325179569167999,
+      "precision_note": null,
+      "recall": 0.6747677774857761,
+      "f1": 0.7024579325633584,
+      "roc_auc": 0.8127957939375099,
+      "average_precision": 0.7294595341215131,
+      "brier": 0.1732830366356336,
+      "confusion_matrix_tn_fp_fn_tp": [
+        607.0343715231979,
+        133.10601562005385,
+        175.695467845963,
+        364.5199711032917
+      ]
+    },
+    "validation_log_loss": 0.5100202782098007,
+    "validation_mean_probability": 0.3967182991954808,
+    "ap_train_minus_validation": 0.046087537151591085,
+    "brier_validation_minus_train": 0.01205086706004524,
+    "training_cv_stability": {
+      "ap": {
+        "mean": 0.7594639203248276,
+        "sd": 0.011591627855486727,
+        "folds": [
+          0.7476144004387815,
+          0.7707791807263187,
+          0.7599981798093824
+        ]
+      },
+      "auc": {
+        "mean": 0.8343618695797778,
+        "sd": 0.0028176493487887047,
+        "folds": [
+          0.8365456261487259,
+          0.8353586639092889,
+          0.8311813186813186
+        ]
+      },
+      "brier": {
+        "mean": -0.15853948406278717,
+        "sd": 0.001665544390140213,
+        "folds": [
+          -0.15860697243742436,
+          -0.15684122129491918,
+          -0.16017025845601796
+        ]
+      },
+      "brier_note": "Values above use sklearn negative-Brier scoring; positive Brier is in stability.csv."
+    }
+  },
+  "forest_sigmoid": {
+    "validation": {
+      "n": 1270,
+      "positive_rate": 0.38661417322834646,
+      "threshold": 0.5,
+      "accuracy": 0.7645669291338583,
+      "precision": 0.7253521126760564,
+      "precision_note": null,
+      "recall": 0.6293279022403259,
+      "f1": 0.6739367502726281,
+      "roc_auc": 0.8127632428645006,
+      "average_precision": 0.7173246368205414,
+      "brier": 0.16961049940550518,
+      "confusion_matrix_tn_fp_fn_tp": [
+        662,
+        117,
+        182,
+        309
+      ]
+    },
+    "train_apparent": {
+      "n": 3810,
+      "positive_rate": 0.3863517060367454,
+      "threshold": 0.5,
+      "accuracy": 0.778740157480315,
+      "precision": 0.7554833468724614,
+      "precision_note": null,
+      "recall": 0.6317934782608695,
+      "f1": 0.6881243063263041,
+      "roc_auc": 0.8381764712035557,
+      "average_precision": 0.7718337753935753,
+      "brier": 0.15681650809057876,
+      "confusion_matrix_tn_fp_fn_tp": [
+        2037,
+        301,
+        542,
+        930
+      ]
+    },
+    "validation_finalwt_sensitivity": {
+      "n": 1270,
+      "positive_rate": 0.4219260208296375,
+      "threshold": 0.5,
+      "accuracy": 0.7536815883698145,
+      "precision": 0.7242460952911159,
+      "precision_note": null,
+      "recall": 0.6721068127559189,
+      "f1": 0.6972030236078901,
+      "roc_auc": 0.8062156633602492,
+      "average_precision": 0.7283747812216264,
+      "brier": 0.17698352734273146,
+      "confusion_matrix_tn_fp_fn_tp": [
+        601.8981358142227,
+        138.24225132902907,
+        177.13296207553128,
+        363.0824768737234
+      ]
+    },
+    "validation_log_loss": 0.5144960150194551,
+    "validation_mean_probability": 0.395680290919734,
+    "ap_train_minus_validation": 0.054509138573033966,
+    "brier_validation_minus_train": 0.012793991314926423,
+    "training_cv_stability": {
+      "ap": {
+        "mean": 0.7506104071116106,
+        "sd": 0.010750108408794562,
+        "folds": [
+          0.7444095679863266,
+          0.7630235613106306,
+          0.7443980920378744
+        ]
+      },
+      "auc": {
+        "mean": 0.827677435835707,
+        "sd": 0.0102517249982668,
+        "folds": [
+          0.8371025049086379,
+          0.8291676361934592,
+          0.8167621664050235
+        ]
+      },
+      "brier": {
+        "mean": -0.16188444362301327,
+        "sd": 0.004067414909315663,
+        "folds": [
+          -0.15875839712988798,
+          -0.1604118880060578,
+          -0.16648304573309397
+        ]
+      },
+      "brier_note": "Values above use sklearn negative-Brier scoring; positive Brier is in stability.csv."
+    }
+  }
+}

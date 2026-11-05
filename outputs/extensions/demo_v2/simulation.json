@@ -1,0 +1,832 @@
+{
+  "status": "ok",
+  "errors": [],
+  "calculation_type": "deterministic_monthly_financial_calculation",
+  "currency": "AUD",
+  "original_inputs": {
+    "I": "4500",
+    "E": "2500",
+    "D": "700",
+    "B0": "400",
+    "Bnew": "200",
+    "S": "1000",
+    "currency": "AUD"
+  },
+  "settings": {
+    "income_drop_fraction": "0.2",
+    "income_drop_percent": "20",
+    "bnpl_reduction": "200"
+  },
+  "baseline": "current",
+  "delta_convention": "scenario minus current; ratio deltas are absolute ratio changes, not relative percentage changes",
+  "numeric_serialization": "Decimal strings rounded to 28 significant digits; arithmetic is exact rational. UI values are formatted separately.",
+  "limitations": [
+    "Monthly simplified model: no dated payment calendar, instalment schedule, fees, interest accrual or changes in contract balances are modeled.",
+    "Savings S is held fixed across scenarios; the model does not simulate repeated monthly depletion.",
+    "Income shocks and BNPL reductions are user assumptions, not forecasts or regulatory thresholds.",
+    "No model score, survey code, credit decision, safe borrowing limit or default probability is calculated."
+  ],
+  "scenarios": [
+    {
+      "key": "current",
+      "title": "Current",
+      "status": "ok",
+      "effective_inputs": {
+        "I": "4500",
+        "E": "2500",
+        "D": "700",
+        "B0": "400",
+        "Bnew": "0",
+        "S": "1000",
+        "currency": "AUD"
+      },
+      "metrics": {
+        "total_bnpl": {
+          "status": "ok",
+          "value": "400",
+          "unit": "AUD",
+          "reason": null
+        },
+        "total_repayments": {
+          "status": "ok",
+          "value": "1100",
+          "unit": "AUD",
+          "reason": null
+        },
+        "monthly_outflows": {
+          "status": "ok",
+          "value": "3600",
+          "unit": "AUD",
+          "reason": null
+        },
+        "cash_buffer": {
+          "status": "ok",
+          "value": "900",
+          "unit": "AUD",
+          "reason": null
+        },
+        "repayment_to_income": {
+          "status": "ok",
+          "value": "0.2444444444444444444444444444",
+          "unit": "ratio",
+          "reason": null
+        },
+        "savings_coverage": {
+          "status": "ok",
+          "value": "0.2777777777777777777777777778",
+          "unit": "months",
+          "reason": null
+        }
+      },
+      "delta_from_current": {
+        "total_bnpl": {
+          "status": "ok",
+          "value": "0",
+          "unit": "AUD",
+          "reason": null
+        },
+        "total_repayments": {
+          "status": "ok",
+          "value": "0",
+          "unit": "AUD",
+          "reason": null
+        },
+        "monthly_outflows": {
+          "status": "ok",
+          "value": "0",
+          "unit": "AUD",
+          "reason": null
+        },
+        "cash_buffer": {
+          "status": "ok",
+          "value": "0",
+          "unit": "AUD",
+          "reason": null
+        },
+        "repayment_to_income": {
+          "status": "ok",
+          "value": "0",
+          "unit": "ratio",
+          "reason": null
+        },
+        "savings_coverage": {
+          "status": "ok",
+          "value": "0",
+          "unit": "months",
+          "reason": null
+        }
+      },
+      "display": {
+        "total_bnpl": {
+          "text": "AUD 400.00",
+          "reason": null
+        },
+        "total_repayments": {
+          "text": "AUD 1,100.00",
+          "reason": null
+        },
+        "monthly_outflows": {
+          "text": "AUD 3,600.00",
+          "reason": null
+        },
+        "cash_buffer": {
+          "text": "AUD 900.00",
+          "reason": null
+        },
+        "repayment_to_income": {
+          "text": "24.44%",
+          "reason": null
+        },
+        "savings_coverage": {
+          "text": "0.278 months",
+          "reason": null
+        }
+      },
+      "delta_display": {
+        "total_bnpl": {
+          "text": "AUD 0.00",
+          "reason": null
+        },
+        "total_repayments": {
+          "text": "AUD 0.00",
+          "reason": null
+        },
+        "monthly_outflows": {
+          "text": "AUD 0.00",
+          "reason": null
+        },
+        "cash_buffer": {
+          "text": "AUD 0.00",
+          "reason": null
+        },
+        "repayment_to_income": {
+          "text": "0.00 percentage points",
+          "reason": null
+        },
+        "savings_coverage": {
+          "text": "0.000 months",
+          "reason": null
+        }
+      },
+      "applied_changes_from_current": {
+        "income_change": "0",
+        "added_bnpl": "0",
+        "existing_bnpl_reduction": "0"
+      },
+      "assumptions": [
+        "All amounts use one currency and a monthly time unit; no foreign-exchange conversion is performed.",
+        "Income is monthly after-tax income. E excludes every repayment already counted in D, B0 or Bnew.",
+        "D contains non-BNPL repayments only; B0 and Bnew contain BNPL repayments only.",
+        "Emergency savings coverage assumes no new income and unchanged expenses and repayments; it is not actual time until funds run out.",
+        "A positive monthly buffer does not guarantee enough cash on each payment due date.",
+        "These are deterministic scenario calculations, not empirical model results or BNPL default probabilities.",
+        "Proposed Bnew is excluded; all other submitted amounts are retained."
+      ],
+      "messages": []
+    },
+    {
+      "key": "added_bnpl",
+      "title": "Added BNPL",
+      "status": "ok",
+      "effective_inputs": {
+        "I": "4500",
+        "E": "2500",
+        "D": "700",
+        "B0": "400",
+        "Bnew": "200",
+        "S": "1000",
+        "currency": "AUD"
+      },
+      "metrics": {
+        "total_bnpl": {
+          "status": "ok",
+          "value": "600",
+          "unit": "AUD",
+          "reason": null
+        },
+        "total_repayments": {
+          "status": "ok",
+          "value": "1300",
+          "unit": "AUD",
+          "reason": null
+        },
+        "monthly_outflows": {
+          "status": "ok",
+          "value": "3800",
+          "unit": "AUD",
+          "reason": null
+        },
+        "cash_buffer": {
+          "status": "ok",
+          "value": "700",
+          "unit": "AUD",
+          "reason": null
+        },
+        "repayment_to_income": {
+          "status": "ok",
+          "value": "0.2888888888888888888888888889",
+          "unit": "ratio",
+          "reason": null
+        },
+        "savings_coverage": {
+          "status": "ok",
+          "value": "0.2631578947368421052631578947",
+          "unit": "months",
+          "reason": null
+        }
+      },
+      "delta_from_current": {
+        "total_bnpl": {
+          "status": "ok",
+          "value": "200",
+          "unit": "AUD",
+          "reason": null
+        },
+        "total_repayments": {
+          "status": "ok",
+          "value": "200",
+          "unit": "AUD",
+          "reason": null
+        },
+        "monthly_outflows": {
+          "status": "ok",
+          "value": "200",
+          "unit": "AUD",
+          "reason": null
+        },
+        "cash_buffer": {
+          "status": "ok",
+          "value": "-200",
+          "unit": "AUD",
+          "reason": null
+        },
+        "repayment_to_income": {
+          "status": "ok",
+          "value": "0.04444444444444444444444444444",
+          "unit": "ratio",
+          "reason": null
+        },
+        "savings_coverage": {
+          "status": "ok",
+          "value": "-0.01461988304093567251461988304",
+          "unit": "months",
+          "reason": null
+        }
+      },
+      "display": {
+        "total_bnpl": {
+          "text": "AUD 600.00",
+          "reason": null
+        },
+        "total_repayments": {
+          "text": "AUD 1,300.00",
+          "reason": null
+        },
+        "monthly_outflows": {
+          "text": "AUD 3,800.00",
+          "reason": null
+        },
+        "cash_buffer": {
+          "text": "AUD 700.00",
+          "reason": null
+        },
+        "repayment_to_income": {
+          "text": "28.89%",
+          "reason": null
+        },
+        "savings_coverage": {
+          "text": "0.263 months",
+          "reason": null
+        }
+      },
+      "delta_display": {
+        "total_bnpl": {
+          "text": "AUD 200.00",
+          "reason": null
+        },
+        "total_repayments": {
+          "text": "AUD 200.00",
+          "reason": null
+        },
+        "monthly_outflows": {
+          "text": "AUD 200.00",
+          "reason": null
+        },
+        "cash_buffer": {
+          "text": "AUD -200.00",
+          "reason": null
+        },
+        "repayment_to_income": {
+          "text": "4.44 percentage points",
+          "reason": null
+        },
+        "savings_coverage": {
+          "text": "-0.015 months",
+          "reason": null
+        }
+      },
+      "applied_changes_from_current": {
+        "income_change": "0",
+        "added_bnpl": "200",
+        "existing_bnpl_reduction": "0"
+      },
+      "assumptions": [
+        "All amounts use one currency and a monthly time unit; no foreign-exchange conversion is performed.",
+        "Income is monthly after-tax income. E excludes every repayment already counted in D, B0 or Bnew.",
+        "D contains non-BNPL repayments only; B0 and Bnew contain BNPL repayments only.",
+        "Emergency savings coverage assumes no new income and unchanged expenses and repayments; it is not actual time until funds run out.",
+        "A positive monthly buffer does not guarantee enough cash on each payment due date.",
+        "These are deterministic scenario calculations, not empirical model results or BNPL default probabilities.",
+        "Apply proposed Bnew to current; income and all other amounts are unchanged."
+      ],
+      "messages": []
+    },
+    {
+      "key": "income_shock",
+      "title": "Income shock",
+      "status": "ok",
+      "effective_inputs": {
+        "I": "3600",
+        "E": "2500",
+        "D": "700",
+        "B0": "400",
+        "Bnew": "0",
+        "S": "1000",
+        "currency": "AUD"
+      },
+      "metrics": {
+        "total_bnpl": {
+          "status": "ok",
+          "value": "400",
+          "unit": "AUD",
+          "reason": null
+        },
+        "total_repayments": {
+          "status": "ok",
+          "value": "1100",
+          "unit": "AUD",
+          "reason": null
+        },
+        "monthly_outflows": {
+          "status": "ok",
+          "value": "3600",
+          "unit": "AUD",
+          "reason": null
+        },
+        "cash_buffer": {
+          "status": "ok",
+          "value": "0",
+          "unit": "AUD",
+          "reason": null
+        },
+        "repayment_to_income": {
+          "status": "ok",
+          "value": "0.3055555555555555555555555556",
+          "unit": "ratio",
+          "reason": null
+        },
+        "savings_coverage": {
+          "status": "ok",
+          "value": "0.2777777777777777777777777778",
+          "unit": "months",
+          "reason": null
+        }
+      },
+      "delta_from_current": {
+        "total_bnpl": {
+          "status": "ok",
+          "value": "0",
+          "unit": "AUD",
+          "reason": null
+        },
+        "total_repayments": {
+          "status": "ok",
+          "value": "0",
+          "unit": "AUD",
+          "reason": null
+        },
+        "monthly_outflows": {
+          "status": "ok",
+          "value": "0",
+          "unit": "AUD",
+          "reason": null
+        },
+        "cash_buffer": {
+          "status": "ok",
+          "value": "-900",
+          "unit": "AUD",
+          "reason": null
+        },
+        "repayment_to_income": {
+          "status": "ok",
+          "value": "0.06111111111111111111111111111",
+          "unit": "ratio",
+          "reason": null
+        },
+        "savings_coverage": {
+          "status": "ok",
+          "value": "0",
+          "unit": "months",
+          "reason": null
+        }
+      },
+      "display": {
+        "total_bnpl": {
+          "text": "AUD 400.00",
+          "reason": null
+        },
+        "total_repayments": {
+          "text": "AUD 1,100.00",
+          "reason": null
+        },
+        "monthly_outflows": {
+          "text": "AUD 3,600.00",
+          "reason": null
+        },
+        "cash_buffer": {
+          "text": "AUD 0.00",
+          "reason": null
+        },
+        "repayment_to_income": {
+          "text": "30.56%",
+          "reason": null
+        },
+        "savings_coverage": {
+          "text": "0.278 months",
+          "reason": null
+        }
+      },
+      "delta_display": {
+        "total_bnpl": {
+          "text": "AUD 0.00",
+          "reason": null
+        },
+        "total_repayments": {
+          "text": "AUD 0.00",
+          "reason": null
+        },
+        "monthly_outflows": {
+          "text": "AUD 0.00",
+          "reason": null
+        },
+        "cash_buffer": {
+          "text": "AUD -900.00",
+          "reason": null
+        },
+        "repayment_to_income": {
+          "text": "6.11 percentage points",
+          "reason": null
+        },
+        "savings_coverage": {
+          "text": "0.000 months",
+          "reason": null
+        }
+      },
+      "applied_changes_from_current": {
+        "income_change": "-900",
+        "added_bnpl": "0",
+        "existing_bnpl_reduction": "0"
+      },
+      "assumptions": [
+        "All amounts use one currency and a monthly time unit; no foreign-exchange conversion is performed.",
+        "Income is monthly after-tax income. E excludes every repayment already counted in D, B0 or Bnew.",
+        "D contains non-BNPL repayments only; B0 and Bnew contain BNPL repayments only.",
+        "Emergency savings coverage assumes no new income and unchanged expenses and repayments; it is not actual time until funds run out.",
+        "A positive monthly buffer does not guarantee enough cash on each payment due date.",
+        "These are deterministic scenario calculations, not empirical model results or BNPL default probabilities.",
+        "Apply income_drop to original income I; proposed Bnew remains excluded."
+      ],
+      "messages": [
+        {
+          "code": "zero_cash_buffer",
+          "message": "Income exactly matches the listed monthly outflows; no monthly cash buffer remains."
+        }
+      ]
+    },
+    {
+      "key": "added_bnpl_income_shock",
+      "title": "Added BNPL + income shock",
+      "status": "ok",
+      "effective_inputs": {
+        "I": "3600",
+        "E": "2500",
+        "D": "700",
+        "B0": "400",
+        "Bnew": "200",
+        "S": "1000",
+        "currency": "AUD"
+      },
+      "metrics": {
+        "total_bnpl": {
+          "status": "ok",
+          "value": "600",
+          "unit": "AUD",
+          "reason": null
+        },
+        "total_repayments": {
+          "status": "ok",
+          "value": "1300",
+          "unit": "AUD",
+          "reason": null
+        },
+        "monthly_outflows": {
+          "status": "ok",
+          "value": "3800",
+          "unit": "AUD",
+          "reason": null
+        },
+        "cash_buffer": {
+          "status": "ok",
+          "value": "-200",
+          "unit": "AUD",
+          "reason": null
+        },
+        "repayment_to_income": {
+          "status": "ok",
+          "value": "0.3611111111111111111111111111",
+          "unit": "ratio",
+          "reason": null
+        },
+        "savings_coverage": {
+          "status": "ok",
+          "value": "0.2631578947368421052631578947",
+          "unit": "months",
+          "reason": null
+        }
+      },
+      "delta_from_current": {
+        "total_bnpl": {
+          "status": "ok",
+          "value": "200",
+          "unit": "AUD",
+          "reason": null
+        },
+        "total_repayments": {
+          "status": "ok",
+          "value": "200",
+          "unit": "AUD",
+          "reason": null
+        },
+        "monthly_outflows": {
+          "status": "ok",
+          "value": "200",
+          "unit": "AUD",
+          "reason": null
+        },
+        "cash_buffer": {
+          "status": "ok",
+          "value": "-1100",
+          "unit": "AUD",
+          "reason": null
+        },
+        "repayment_to_income": {
+          "status": "ok",
+          "value": "0.1166666666666666666666666667",
+          "unit": "ratio",
+          "reason": null
+        },
+        "savings_coverage": {
+          "status": "ok",
+          "value": "-0.01461988304093567251461988304",
+          "unit": "months",
+          "reason": null
+        }
+      },
+      "display": {
+        "total_bnpl": {
+          "text": "AUD 600.00",
+          "reason": null
+        },
+        "total_repayments": {
+          "text": "AUD 1,300.00",
+          "reason": null
+        },
+        "monthly_outflows": {
+          "text": "AUD 3,800.00",
+          "reason": null
+        },
+        "cash_buffer": {
+          "text": "AUD -200.00",
+          "reason": null
+        },
+        "repayment_to_income": {
+          "text": "36.11%",
+          "reason": null
+        },
+        "savings_coverage": {
+          "text": "0.263 months",
+          "reason": null
+        }
+      },
+      "delta_display": {
+        "total_bnpl": {
+          "text": "AUD 200.00",
+          "reason": null
+        },
+        "total_repayments": {
+          "text": "AUD 200.00",
+          "reason": null
+        },
+        "monthly_outflows": {
+          "text": "AUD 200.00",
+          "reason": null
+        },
+        "cash_buffer": {
+          "text": "AUD -1,100.00",
+          "reason": null
+        },
+        "repayment_to_income": {
+          "text": "11.67 percentage points",
+          "reason": null
+        },
+        "savings_coverage": {
+          "text": "-0.015 months",
+          "reason": null
+        }
+      },
+      "applied_changes_from_current": {
+        "income_change": "-900",
+        "added_bnpl": "200",
+        "existing_bnpl_reduction": "0"
+      },
+      "assumptions": [
+        "All amounts use one currency and a monthly time unit; no foreign-exchange conversion is performed.",
+        "Income is monthly after-tax income. E excludes every repayment already counted in D, B0 or Bnew.",
+        "D contains non-BNPL repayments only; B0 and Bnew contain BNPL repayments only.",
+        "Emergency savings coverage assumes no new income and unchanged expenses and repayments; it is not actual time until funds run out.",
+        "A positive monthly buffer does not guarantee enough cash on each payment due date.",
+        "These are deterministic scenario calculations, not empirical model results or BNPL default probabilities.",
+        "Apply both proposed Bnew and income_drop to current in this explicitly combined scenario."
+      ],
+      "messages": [
+        {
+          "code": "negative_cash_flow",
+          "message": "Under these assumptions, monthly expenses and repayments exceed income."
+        }
+      ]
+    },
+    {
+      "key": "reduced_existing_bnpl",
+      "title": "Reduced existing BNPL",
+      "status": "ok",
+      "effective_inputs": {
+        "I": "4500",
+        "E": "2500",
+        "D": "700",
+        "B0": "200",
+        "Bnew": "0",
+        "S": "1000",
+        "currency": "AUD"
+      },
+      "metrics": {
+        "total_bnpl": {
+          "status": "ok",
+          "value": "200",
+          "unit": "AUD",
+          "reason": null
+        },
+        "total_repayments": {
+          "status": "ok",
+          "value": "900",
+          "unit": "AUD",
+          "reason": null
+        },
+        "monthly_outflows": {
+          "status": "ok",
+          "value": "3400",
+          "unit": "AUD",
+          "reason": null
+        },
+        "cash_buffer": {
+          "status": "ok",
+          "value": "1100",
+          "unit": "AUD",
+          "reason": null
+        },
+        "repayment_to_income": {
+          "status": "ok",
+          "value": "0.2",
+          "unit": "ratio",
+          "reason": null
+        },
+        "savings_coverage": {
+          "status": "ok",
+          "value": "0.2941176470588235294117647059",
+          "unit": "months",
+          "reason": null
+        }
+      },
+      "delta_from_current": {
+        "total_bnpl": {
+          "status": "ok",
+          "value": "-200",
+          "unit": "AUD",
+          "reason": null
+        },
+        "total_repayments": {
+          "status": "ok",
+          "value": "-200",
+          "unit": "AUD",
+          "reason": null
+        },
+        "monthly_outflows": {
+          "status": "ok",
+          "value": "-200",
+          "unit": "AUD",
+          "reason": null
+        },
+        "cash_buffer": {
+          "status": "ok",
+          "value": "200",
+          "unit": "AUD",
+          "reason": null
+        },
+        "repayment_to_income": {
+          "status": "ok",
+          "value": "-0.04444444444444444444444444444",
+          "unit": "ratio",
+          "reason": null
+        },
+        "savings_coverage": {
+          "status": "ok",
+          "value": "0.01633986928104575163398692810",
+          "unit": "months",
+          "reason": null
+        }
+      },
+      "display": {
+        "total_bnpl": {
+          "text": "AUD 200.00",
+          "reason": null
+        },
+        "total_repayments": {
+          "text": "AUD 900.00",
+          "reason": null
+        },
+        "monthly_outflows": {
+          "text": "AUD 3,400.00",
+          "reason": null
+        },
+        "cash_buffer": {
+          "text": "AUD 1,100.00",
+          "reason": null
+        },
+        "repayment_to_income": {
+          "text": "20.00%",
+          "reason": null
+        },
+        "savings_coverage": {
+          "text": "0.294 months",
+          "reason": null
+        }
+      },
+      "delta_display": {
+        "total_bnpl": {
+          "text": "AUD -200.00",
+          "reason": null
+        },
+        "total_repayments": {
+          "text": "AUD -200.00",
+          "reason": null
+        },
+        "monthly_outflows": {
+          "text": "AUD -200.00",
+          "reason": null
+        },
+        "cash_buffer": {
+          "text": "AUD 200.00",
+          "reason": null
+        },
+        "repayment_to_income": {
+          "text": "-4.44 percentage points",
+          "reason": null
+        },
+        "savings_coverage": {
+          "text": "0.016 months",
+          "reason": null
+        }
+      },
+      "applied_changes_from_current": {
+        "income_change": "0",
+        "added_bnpl": "0",
+        "existing_bnpl_reduction": "200"
+      },
+      "assumptions": [
+        "All amounts use one currency and a monthly time unit; no foreign-exchange conversion is performed.",
+        "Income is monthly after-tax income. E excludes every repayment already counted in D, B0 or Bnew.",
+        "D contains non-BNPL repayments only; B0 and Bnew contain BNPL repayments only.",
+        "Emergency savings coverage assumes no new income and unchanged expenses and repayments; it is not actual time until funds run out.",
+        "A positive monthly buffer does not guarantee enough cash on each payment due date.",
+        "These are deterministic scenario calculations, not empirical model results or BNPL default probabilities.",
+        "Subtract the user-selected reduction from B0; income is unchanged and proposed Bnew is excluded.",
+        "This is a user-defined hypothetical assumption, not permission to reduce or change contractual repayments."
+      ],
+      "messages": [
+        {
+          "code": "hypothetical_reduction",
+          "message": "The reduction is a hypothetical input; it does not change contractual payment obligations."
+        }
+      ]
+    }
+  ]
+}

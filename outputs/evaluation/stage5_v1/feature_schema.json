@@ -1,0 +1,208 @@
+{
+  "version": "cfpb-v1",
+  "features": {
+    "PPINCIMP": {
+      "labels": {
+        "1": "Less than $20,000",
+        "2": "$20,000 to $29,999",
+        "3": "$30,000 to $39,999",
+        "4": "$40,000 to $49,999",
+        "5": "$50,000 to $59,999",
+        "6": "$60,000 to $74,999",
+        "7": "$75,000 to $99,999",
+        "8": "$100,000 to $149,999",
+        "9": "$150,000 or more"
+      },
+      "missing_codes": {},
+      "question": "Household income (panel-data variable; original panel question not reproduced in Appendix A)",
+      "codebook_pdf_pages": [
+        79
+      ],
+      "guide_pdf_pages": [
+        66
+      ],
+      "reason": "Household resources; categorical USD annual household income, not monthly individual AUD.",
+      "sensitive": false,
+      "available_at_screening": "Self-reported contemporaneous input; not verified at credit application time",
+      "app_prompt": "Select your annual household income band in USD.",
+      "original_question_status": "Panel question unavailable; label and public-use coding verified",
+      "income_unit_source": "CFPB Financial Well-Being in America, September 2017, printed page 92: Self-reported annual household income from GfK panel data. https://www.consumerfinance.gov/documents/5606/201709_cfpb_financial-well-being-in-America.pdf"
+    },
+    "SAVINGSRANGES": {
+      "labels": {
+        "1": "$0",
+        "2": "$1-99",
+        "3": "$100-999",
+        "4": "$1,000-4,999",
+        "5": "$5,000-19,999",
+        "6": "$20,000-74,999",
+        "7": "$75,000 or more"
+      },
+      "missing_codes": {
+        "-1": "Refused",
+        "98": "I do not know",
+        "99": "Prefer not to say"
+      },
+      "question": "How much money do you have in savings today (in cash, checking, and savings account balances)?",
+      "codebook_pdf_pages": [
+        45,
+        46
+      ],
+      "guide_pdf_pages": [
+        55,
+        84
+      ],
+      "reason": "Liquidity buffer; legitimate contemporary association, not a future predictor. Public-use bands differ from original survey.",
+      "sensitive": false,
+      "available_at_screening": "Self-reported contemporaneous input; not verified at credit application time",
+      "app_prompt": "How much money do you have in savings today (in cash, checking, and savings account balances)?"
+    },
+    "EMPLOY": {
+      "labels": {
+        "1": "Self-employed",
+        "2": "Full-time employee or military",
+        "3": "Part-time employee or military",
+        "4": "Homemaker",
+        "5": "Full-time student",
+        "6": "Permanently sick, disabled or unable to work",
+        "7": "Unemployed or temporarily laid off",
+        "8": "Retired"
+      },
+      "missing_codes": {
+        "99": "Refused"
+      },
+      "question": "Which one of the following would you say is your primary employment or work status?",
+      "codebook_pdf_pages": [
+        75,
+        76
+      ],
+      "guide_pdf_pages": [
+        59,
+        60,
+        97
+      ],
+      "reason": "Income-source structure. Collapse codes 4–8 to one not-in-paid-employment category to avoid distinct disability/retirement indicators.",
+      "sensitive": true,
+      "available_at_screening": "Self-reported contemporaneous input; not verified at credit application time",
+      "app_prompt": "Primary work status: self-employed, full-time, part-time, or not in paid employment; prefer not to say.",
+      "transform": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "4",
+        "6": "4",
+        "7": "4",
+        "8": "4"
+      },
+      "sensitivity_note": "Raw code 6 reveals health/disability and code 8 proxies age. Neither distinction retained by model; employment still a sensitive proxy. Fairness audit pending."
+    },
+    "VOLATILITY": {
+      "labels": {
+        "1": "Roughly the same each month",
+        "2": "Roughly the same most months, with unusually high or low months",
+        "3": "Often varies quite a bit month to month"
+      },
+      "missing_codes": {
+        "-1": "Refused"
+      },
+      "question": "Which of the following best describes how your household’s income changes from month to month, if at all?",
+      "codebook_pdf_pages": [
+        48,
+        49
+      ],
+      "guide_pdf_pages": [
+        86
+      ],
+      "reason": "Income predictability; not a bill-payment outcome.",
+      "sensitive": false,
+      "available_at_screening": "Self-reported contemporaneous input; not verified at credit application time",
+      "app_prompt": "Which of the following best describes how your household’s income changes from month to month, if at all?"
+    },
+    "EARNERS": {
+      "labels": {
+        "1": "One",
+        "2": "Two",
+        "3": "More than two"
+      },
+      "missing_codes": {
+        "-1": "Refused"
+      },
+      "question": "How many people currently contribute to the income used to pay bills for your household?",
+      "codebook_pdf_pages": [
+        48
+      ],
+      "guide_pdf_pages": [
+        86
+      ],
+      "reason": "Income support count; not household size and not exact count above two.",
+      "sensitive": false,
+      "available_at_screening": "Self-reported contemporaneous input; not verified at credit application time",
+      "app_prompt": "How many people currently contribute to the income used to pay bills for your household?"
+    },
+    "HOUSING": {
+      "labels": {
+        "1": "Own my home",
+        "2": "Rent",
+        "3": "Do not currently own or rent"
+      },
+      "missing_codes": {
+        "-1": "Refused"
+      },
+      "question": "Which one of the following best describes your housing situation?",
+      "codebook_pdf_pages": [
+        43
+      ],
+      "guide_pdf_pages": [
+        82
+      ],
+      "reason": "Housing context, not a mortgage payment amount.",
+      "sensitive": false,
+      "available_at_screening": "Self-reported contemporaneous input; not verified at credit application time",
+      "app_prompt": "Which one of the following best describes your housing situation?"
+    },
+    "PRODHAVE_8": {
+      "labels": {
+        "0": "No",
+        "1": "Yes"
+      },
+      "missing_codes": {},
+      "question": "Which of the following financial products and services do you currently have? Student/Education Loan (for yourself or someone else)",
+      "codebook_pdf_pages": [
+        47
+      ],
+      "guide_pdf_pages": [
+        85
+      ],
+      "reason": "Student-loan obligation indicator; no amount or delinquency inference. Unchecked survey checkbox coded 0, not verified absence of debt.",
+      "sensitive": false,
+      "available_at_screening": "Self-reported contemporaneous input; not verified at credit application time",
+      "app_prompt": "Which of the following financial products and services do you currently have? Student/Education Loan (for yourself or someone else)"
+    },
+    "PPHHSIZE": {
+      "labels": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5+"
+      },
+      "missing_codes": {},
+      "question": "Household size (panel-data variable; original panel question not reproduced in Appendix A)",
+      "codebook_pdf_pages": [
+        79
+      ],
+      "guide_pdf_pages": [
+        65,
+        66
+      ],
+      "reason": "Resource-sharing context; top-coded five-plus, encoded categorically.",
+      "sensitive": false,
+      "available_at_screening": "Self-reported contemporaneous input; not verified at credit application time",
+      "app_prompt": "How many people live in your household? 1, 2, 3, 4, 5+.",
+      "original_question_status": "Panel question unavailable; public-use label/coding verified"
+    }
+  },
+  "preprocessing": "explicit special codes -> NaN -> training-mode imputation -> one-hot; categorical for every feature",
+  "strict_raw_validation": true
+}

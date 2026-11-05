@@ -1,0 +1,37 @@
+Using CPython 3.13.13 interpreter at: /Library/Frameworks/Python.framework/Versions/3.13/bin/python3.13
+Creating virtual environment at: .venv
+Installed 51 packages in 303ms
+2026-11-05 10:23:54.612 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+Matplotlib is building the font cache; this may take a moment.
+{
+  "status": "PASS",
+  "elapsed_seconds": 81.745,
+  "runtime_root": "/Users/oneone/Desktop/BNPLGuard/deployment/github_checkout_v1",
+  "raw_csv_present": false,
+  "screen_probability": 0.8384946129177755,
+  "shap_errors": {
+    "encoded_additivity_absolute": 6.661338147750939e-16,
+    "raw_group_additivity_absolute": 2.220446049250313e-16,
+    "grouping_absolute": 4.440892098500626e-16,
+    "probability_absolute": 1.1102230246251565e-16
+  },
+  "simulator_buffers": [
+    "900",
+    "700",
+    "0",
+    "-200",
+    "1100"
+  ],
+  "model_metrics": [
+    "0.7634",
+    "0.8432",
+    "0.1573"
+  ],
+  "areas": [
+    "Screen",
+    "Stress",
+    "Explain",
+    "Model"
+  ],
+  "llm": "disabled"
+}

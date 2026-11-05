@@ -1,0 +1,309 @@
+{
+  "status": "ok",
+  "kind": "cfpb_frozen_lr_local_explanation",
+  "title": "Contributions to this model estimate",
+  "label_meaning": "Self-reported difficulty covering expenses and paying all bills in a typical month (ENDSMeet codes 2/3 versus 1).",
+  "positive_class": 1,
+  "probability": 0.44879158794041607,
+  "probability_display": "44.88%",
+  "threshold": 0.5,
+  "threshold_display": "0.5",
+  "classification": 0,
+  "classification_text": "Class 0 at the fixed reference threshold",
+  "decision_function": -0.20555437035472465,
+  "base_value_log_odds": -0.7234300804205697,
+  "contribution_sum_log_odds": 0.5178757100658451,
+  "reconstructed_probability": 0.44879158794041607,
+  "contributions": [
+    {
+      "feature": "PPINCIMP",
+      "label": "Household income (panel-data variable; original panel question not reproduced in Appendix A)",
+      "raw_code": 6.0,
+      "raw_label": "$60,000 to $74,999",
+      "imputed": false,
+      "effective_encoded_category": 6.0,
+      "contribution_log_odds": 0.02067598622610227,
+      "contribution_display": "+0.0207 log-odds",
+      "direction": "increase"
+    },
+    {
+      "feature": "SAVINGSRANGES",
+      "label": "How much money do you have in savings today (in cash, checking, and savings account balances)?",
+      "raw_code": 6.0,
+      "raw_label": "$20,000-74,999",
+      "imputed": false,
+      "effective_encoded_category": 6.0,
+      "contribution_log_odds": -0.8310233206957475,
+      "contribution_display": "-0.8310 log-odds",
+      "direction": "decrease"
+    },
+    {
+      "feature": "EMPLOY",
+      "label": "Which one of the following would you say is your primary employment or work status?",
+      "raw_code": 6.0,
+      "raw_label": "Permanently sick, disabled or unable to work",
+      "imputed": false,
+      "effective_encoded_category": 4.0,
+      "contribution_log_odds": -0.0089428403967041,
+      "contribution_display": "-0.0089 log-odds",
+      "direction": "decrease"
+    },
+    {
+      "feature": "VOLATILITY",
+      "label": "Which of the following best describes how your household’s income changes from month to month, if at all?",
+      "raw_code": 3.0,
+      "raw_label": "Often varies quite a bit month to month",
+      "imputed": false,
+      "effective_encoded_category": 3.0,
+      "contribution_log_odds": 0.7292081403337095,
+      "contribution_display": "+0.7292 log-odds",
+      "direction": "increase"
+    },
+    {
+      "feature": "EARNERS",
+      "label": "How many people currently contribute to the income used to pay bills for your household?",
+      "raw_code": 3.0,
+      "raw_label": "More than two",
+      "imputed": false,
+      "effective_encoded_category": 3.0,
+      "contribution_log_odds": 0.17680909942222278,
+      "contribution_display": "+0.1768 log-odds",
+      "direction": "increase"
+    },
+    {
+      "feature": "HOUSING",
+      "label": "Which one of the following best describes your housing situation?",
+      "raw_code": 3.0,
+      "raw_label": "Do not currently own or rent",
+      "imputed": false,
+      "effective_encoded_category": 3.0,
+      "contribution_log_odds": -0.015794291764044163,
+      "contribution_display": "-0.0158 log-odds",
+      "direction": "decrease"
+    },
+    {
+      "feature": "PRODHAVE_8",
+      "label": "Which of the following financial products and services do you currently have? Student/Education Loan (for yourself or someone else)",
+      "raw_code": 1.0,
+      "raw_label": "Yes",
+      "imputed": false,
+      "effective_encoded_category": 1.0,
+      "contribution_log_odds": 0.16518176741807394,
+      "contribution_display": "+0.1652 log-odds",
+      "direction": "increase"
+    },
+    {
+      "feature": "PPHHSIZE",
+      "label": "Household size (panel-data variable; original panel question not reproduced in Appendix A)",
+      "raw_code": 5.0,
+      "raw_label": "5+",
+      "imputed": false,
+      "effective_encoded_category": 5.0,
+      "contribution_log_odds": 0.2817611695222323,
+      "contribution_display": "+0.2818 log-odds",
+      "direction": "increase"
+    }
+  ],
+  "encoded_contributions": [
+    {
+      "encoded_feature": "PPINCIMP_1.0",
+      "raw_feature": "PPINCIMP",
+      "contribution_log_odds": -0.053557815802162484
+    },
+    {
+      "encoded_feature": "PPINCIMP_2.0",
+      "raw_feature": "PPINCIMP",
+      "contribution_log_odds": -0.05596443076741467
+    },
+    {
+      "encoded_feature": "PPINCIMP_3.0",
+      "raw_feature": "PPINCIMP",
+      "contribution_log_odds": -0.02802539600880203
+    },
+    {
+      "encoded_feature": "PPINCIMP_4.0",
+      "raw_feature": "PPINCIMP",
+      "contribution_log_odds": -0.005984786631112313
+    },
+    {
+      "encoded_feature": "PPINCIMP_5.0",
+      "raw_feature": "PPINCIMP",
+      "contribution_log_odds": 0.007326887173592518
+    },
+    {
+      "encoded_feature": "PPINCIMP_6.0",
+      "raw_feature": "PPINCIMP",
+      "contribution_log_odds": -0.09134140393437291
+    },
+    {
+      "encoded_feature": "PPINCIMP_7.0",
+      "raw_feature": "PPINCIMP",
+      "contribution_log_odds": 0.04782816595030985
+    },
+    {
+      "encoded_feature": "PPINCIMP_8.0",
+      "raw_feature": "PPINCIMP",
+      "contribution_log_odds": 0.08555142633018249
+    },
+    {
+      "encoded_feature": "PPINCIMP_9.0",
+      "raw_feature": "PPINCIMP",
+      "contribution_log_odds": 0.11484333991588182
+    },
+    {
+      "encoded_feature": "SAVINGSRANGES_1.0",
+      "raw_feature": "SAVINGSRANGES",
+      "contribution_log_odds": -0.09690656154589472
+    },
+    {
+      "encoded_feature": "SAVINGSRANGES_2.0",
+      "raw_feature": "SAVINGSRANGES",
+      "contribution_log_odds": -0.0950467118704376
+    },
+    {
+      "encoded_feature": "SAVINGSRANGES_3.0",
+      "raw_feature": "SAVINGSRANGES",
+      "contribution_log_odds": -0.10438365786539662
+    },
+    {
+      "encoded_feature": "SAVINGSRANGES_4.0",
+      "raw_feature": "SAVINGSRANGES",
+      "contribution_log_odds": -0.004916324833411453
+    },
+    {
+      "encoded_feature": "SAVINGSRANGES_5.0",
+      "raw_feature": "SAVINGSRANGES",
+      "contribution_log_odds": 0.18241472632945635
+    },
+    {
+      "encoded_feature": "SAVINGSRANGES_6.0",
+      "raw_feature": "SAVINGSRANGES",
+      "contribution_log_odds": -1.0321451729728721
+    },
+    {
+      "encoded_feature": "SAVINGSRANGES_7.0",
+      "raw_feature": "SAVINGSRANGES",
+      "contribution_log_odds": 0.31996038206280863
+    },
+    {
+      "encoded_feature": "EMPLOY_1.0",
+      "raw_feature": "EMPLOY",
+      "contribution_log_odds": -0.011569875902925034
+    },
+    {
+      "encoded_feature": "EMPLOY_2.0",
+      "raw_feature": "EMPLOY",
+      "contribution_log_odds": -0.009522882678316625
+    },
+    {
+      "encoded_feature": "EMPLOY_3.0",
+      "raw_feature": "EMPLOY",
+      "contribution_log_odds": 0.004782422937188204
+    },
+    {
+      "encoded_feature": "EMPLOY_4.0",
+      "raw_feature": "EMPLOY",
+      "contribution_log_odds": 0.007367495247349355
+    },
+    {
+      "encoded_feature": "VOLATILITY_1.0",
+      "raw_feature": "VOLATILITY",
+      "contribution_log_odds": 0.3825557711796682
+    },
+    {
+      "encoded_feature": "VOLATILITY_2.0",
+      "raw_feature": "VOLATILITY",
+      "contribution_log_odds": -0.051278137119299044
+    },
+    {
+      "encoded_feature": "VOLATILITY_3.0",
+      "raw_feature": "VOLATILITY",
+      "contribution_log_odds": 0.39793050627334037
+    },
+    {
+      "encoded_feature": "EARNERS_1.0",
+      "raw_feature": "EARNERS",
+      "contribution_log_odds": -0.004551292946623433
+    },
+    {
+      "encoded_feature": "EARNERS_2.0",
+      "raw_feature": "EARNERS",
+      "contribution_log_odds": 0.024359185277788412
+    },
+    {
+      "encoded_feature": "EARNERS_3.0",
+      "raw_feature": "EARNERS",
+      "contribution_log_odds": 0.1570012070910578
+    },
+    {
+      "encoded_feature": "HOUSING_1.0",
+      "raw_feature": "HOUSING",
+      "contribution_log_odds": 0.03798798746481807
+    },
+    {
+      "encoded_feature": "HOUSING_2.0",
+      "raw_feature": "HOUSING",
+      "contribution_log_odds": -0.046077621034987574
+    },
+    {
+      "encoded_feature": "HOUSING_3.0",
+      "raw_feature": "HOUSING",
+      "contribution_log_odds": -0.007704658193874656
+    },
+    {
+      "encoded_feature": "PRODHAVE_8_0.0",
+      "raw_feature": "PRODHAVE_8",
+      "contribution_log_odds": 0.024129739922825397
+    },
+    {
+      "encoded_feature": "PRODHAVE_8_1.0",
+      "raw_feature": "PRODHAVE_8",
+      "contribution_log_odds": 0.14105202749524853
+    },
+    {
+      "encoded_feature": "PPHHSIZE_1.0",
+      "raw_feature": "PPHHSIZE",
+      "contribution_log_odds": 0.04149790442674272
+    },
+    {
+      "encoded_feature": "PPHHSIZE_2.0",
+      "raw_feature": "PPHHSIZE",
+      "contribution_log_odds": 0.11364568656090553
+    },
+    {
+      "encoded_feature": "PPHHSIZE_3.0",
+      "raw_feature": "PPHHSIZE",
+      "contribution_log_odds": -0.052155483350748225
+    },
+    {
+      "encoded_feature": "PPHHSIZE_4.0",
+      "raw_feature": "PPHHSIZE",
+      "contribution_log_odds": -0.020826576317788413
+    },
+    {
+      "encoded_feature": "PPHHSIZE_5.0",
+      "raw_feature": "PPHHSIZE",
+      "contribution_log_odds": 0.19959963820312068
+    }
+  ],
+  "checks": {
+    "encoded_additivity_absolute": 1.3877787807814457e-16,
+    "raw_group_additivity_absolute": 8.326672684688674e-17,
+    "grouping_absolute": 2.220446049250313e-16,
+    "probability_absolute": 0.0
+  },
+  "additivity_verified": true,
+  "method": "shap.LinearExplainer + shap.maskers.Independent",
+  "shap_version": "0.54.1",
+  "artifact_sha256": "6f8a82a70e38ae9d5f6143ca4b491d21932d480ca1b38e3d93f079c6794c06d8",
+  "background_sha256": "d5d40e9dccc8eb5fabe64ff5da18ec764d9c0340621bb68e704864365fcb9a4c",
+  "background_n": 200,
+  "space": "log-odds, not probability percentage points",
+  "limitations": [
+    "Contributions explain the frozen survey model estimate relative to the recorded training background; they are not personal causes or causal effects.",
+    "The output is contemporaneous self-reported financial difficulty, not BNPL default or a validated future Australian outcome.",
+    "Independent masking breaks dependencies between encoded inputs, including mutually exclusive one-hot categories. Summing by input preserves additivity but is not conditional/group-retrained SHAP.",
+    "A different background can change the baseline and attribution allocation without changing the model probability.",
+    "The existing model card records local probability overestimation, subgroup error differences, unweighted main evaluation and domain limits."
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "version": "stage5-frozen-v1",
+  "selected_model": "logistic_regression",
+  "artifact": "models/cfpb/stage4_v1/logistic_regression.joblib",
+  "artifact_sha256": "6f8a82a70e38ae9d5f6143ca4b491d21932d480ca1b38e3d93f079c6794c06d8",
+  "data_sha256": "3680d33576549a99a8dfd7f99d5661a36a8fc1aac0d66f2bf2ec5524695304d8",
+  "split_sha256": "7b2bddd4605e5c09319d4e9bfd69c209a6c094a32730ca18b31462df7712a9a5",
+  "schema_sha256": "7afb0e9352f39a9c2b09ff89793f5a36ea5b8a094e0037d77b856bb1b0ba5023",
+  "label_mapping_sha256": "f3027cf1c93d13831c77b707bca27dd5f779f38fa62eb23d0f0bf13a33fa5238",
+  "features": [
+    "PPINCIMP",
+    "SAVINGSRANGES",
+    "EMPLOY",
+    "VOLATILITY",
+    "EARNERS",
+    "HOUSING",
+    "PRODHAVE_8",
+    "PPHHSIZE"
+  ],
+  "threshold": 0.5,
+  "threshold_rule": "Fixed 0.5 reference; no business cost function or threshold optimization.",
+  "calibration": "none",
+  "parameters": "{'memory': None, 'steps': [('codebook', CodebookTransformer(schema={'EARNERS': {'app_prompt': 'How many people '\n                                                      'currently contribute to '\n                                                      'the income used to pay '\n                                                      'bills for your '\n                                                      'household?',\n                                        'available_at_screening': 'Self-reported '\n                                                                  'contemporaneous '\n                                                                  'input; not '\n                                                                  'verified at '\n                                                                  'credit '\n                                                                  'application '\n                                                                  'time',\n                                        'codebook_pdf_pages': [48],\n                                        'guide_pdf_pages': [86],\n                                        'labels': {'1': 'One', '2': 'Two',\n                                                   '3': 'More than two'},\n                                        'missin...\n                                           'labels': {'1': 'Roughly the same '\n                                                           'each month',\n                                                      '2': 'Roughly the same '\n                                                           'most months, with '\n                                                           'unusually high or '\n                                                           'low months',\n                                                      '3': 'Often varies quite '\n                                                           'a bit month to '\n                                                           'month'},\n                                           'missing_codes': {'-1': 'Refused'},\n                                           'question': 'Which of the following '\n                                                       'best describes how '\n                                                       'your household’s '\n                                                       'income changes from '\n                                                       'month to month, if at '\n                                                       'all?',\n                                           'reason': 'Income predictability; '\n                                                     'not a bill-payment '\n                                                     'outcome.',\n                                           'sensitive': False}})), ('preprocessor', ColumnTransformer(transformers=[('categorical',\n                                 Pipeline(steps=[('imputer',\n                                                  SimpleImputer(keep_empty_features=True,\n                                                                strategy='most_frequent')),\n                                                 ('onehot',\n                                                  OneHotEncoder(handle_unknown='ignore'))]),\n                                 ['PPINCIMP', 'SAVINGSRANGES', 'EMPLOY',\n                                  'VOLATILITY', 'EARNERS', 'HOUSING',\n                                  'PRODHAVE_8', 'PPHHSIZE'])])), ('classifier', LogisticRegression(max_iter=1000, random_state=42))], 'transform_input': None, 'verbose': False}",
+  "selection_trace": {
+    "best_ap": 0.7208572712242223,
+    "ap_eligible": [
+      "logistic_regression",
+      "logistic_sigmoid",
+      "random_forest",
+      "forest_sigmoid"
+    ],
+    "best_eligible_brier": 0.16728131784039177,
+    "brier_eligible": [
+      "logistic_regression",
+      "logistic_sigmoid"
+    ]
+  },
+  "fit_population": "Original train only (3810); no train+validation refit",
+  "test_evaluated": false,
+  "stage5_policy": "Evaluate frozen artifact once on locked test IDs. Do not reselect from test metrics. Retain sample-level scope; report weighted sensitivity separately."
+}
