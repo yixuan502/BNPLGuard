@@ -4,7 +4,7 @@ Reviewed 5 November 2026. This is an evidence-processing note, not the course re
 
 ## Source and verification
 
-The user supplied a compiled workbook with Sessions, Responses, Summary and S1 Interpretations sheets. A byte-identical copy is retained at `user_testing/private/received_2026-11-05/submitted_feedback.xlsx`, excluded from Git. SHA256: `e58fbd8bd7d914c7003198a581d17cf8b0b8cc8ee688194822ee62d69d70337f`. No original workbook cells, cached formula values, metadata or scores were changed.
+The user supplied a compiled workbook with Sessions, Responses, Summary and S1 Interpretations sheets. A byte-identical copy is retained separately outside the source project and excluded from publication. SHA256: `e58fbd8bd7d914c7003198a581d17cf8b0b8cc8ee688194822ee62d69d70337f`. No original workbook cells, cached formula values, metadata or scores were changed.
 
 The workbook records three consenting nondevelopers and app commit `771aadd`; these are source-recorded statements, not independent attendance/version verification. Session dates are absent. Original participant forms, screenshots and recordings were not supplied with this workbook in this review. Some English wording is normalized or translated; it must not be presented as independently verified verbatim testimony.
 
@@ -32,14 +32,14 @@ The data support a narrow descriptive statement: recorded final app answers were
 
 Before stronger reporting, obtain original pre-H2/H3 app answers (if they were actually collected), legible original S1 wording, and session dates. Clarify the nonzero assisted duration in the session marked H0: duration alone does not prove substantive assistance. Retain H2/H3 operation codes even where narrative notes say navigation; do not relabel them H1 without source confirmation. Do not retrospectively invent missing records. Confirm translated feedback against original wording before quoting it.
 
-The blank instruments remain in `user_testing/materials_v1`: send only `participant_test_sheet.pdf` to participants; facilitators retain `facilitator_guide_and_answers.pdf` and `anonymous_results.xlsx`. Do not replace that blank workbook with the submitted feedback. The course report and video remain team tasks.
+Blank structured instruments are included in `user_testing/materials_v1`; they are distinct from the collected participant records.
 
 ## Reproduce the audit locally
 
 From the project root, with the privately held source workbook:
 
 ```bash
-.venv/bin/python scripts/review_user_feedback.py --input user_testing/private/received_2026-11-05/submitted_feedback.xlsx --output-dir outputs/user_testing/feedback_review_v2
+.venv/bin/python scripts/review_user_feedback.py --input /path/to/private/submitted_feedback.xlsx --output-dir outputs/user_testing/feedback_review_v2
 ```
 
 Use a new output directory to preserve prior receipts. No training, formal model evaluation, deployment or external API is performed by this audit.

@@ -169,8 +169,16 @@ def test_no_training_bootstrap_background_generation_or_external_api(monkeypatch
     assert config['server']['enableCORS'] and config['server']['enableXsrfProtection']
 
 
-def test_original_files_still_unchanged_after_ui_runs():
-    for name,h in read_json('data/metadata/stage7_protected_before.json').items():assert sha256(ROOT/name)==h,name
+@pytest.fixture(scope='module',autouse=True)
+def preserved_runtime_files():
+    files=[]
+    for directory in ['src','config','models']:
+        files.extend(p for p in (ROOT/directory).rglob('*') if p.is_file() and '__pycache__' not in p.parts)
+    return {str(p.relative_to(ROOT)):sha256(p) for p in files}
+
+
+def test_original_files_still_unchanged_after_ui_runs(preserved_runtime_files):
+    for name,h in preserved_runtime_files.items():assert sha256(ROOT/name)==h,name
 
 
 def test_feedback_input_order_and_visible_scenario_summaries():

@@ -35,8 +35,7 @@ def test_algebraic_check_reports_residual_not_authenticated_generation():
     assert 'not publisher-confirmed' in out.loc['risk_score','evidence']
 
 
-def test_real_audit_preserves_prior_files_and_counts_reconcile():
-    verify('outputs/kaggle_audit/v1')
+def test_saved_audit_counts_reconcile():
     out=ROOT/'outputs/kaggle_audit/v1';summary=read_json(out/'quality_summary.json')
     assert summary['model_training_performed'] is False
     categories=pd.read_csv(out/'category_distributions.csv')

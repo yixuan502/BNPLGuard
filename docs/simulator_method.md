@@ -76,7 +76,7 @@ Current RTI=1100/4500=24.444…%; current Coverage=1000/3600=0.277777…months. 
 
 ![Illustrative monthly scenario comparison](../outputs/simulator/stage6_demo_v1/scenario_comparison.png)
 
-The CSV contains all six metrics, their deltas/reasons, effective inputs and assumptions. The JSON includes the complete structured response and messages. The original first export was preserved as stage6_demo_initial when the RTI-delta label was clarified to percentage points; financial results did not change. stage6_demo_v1 is the current handoff export.
+The CSV contains all six metrics, their deltas/reasons, effective inputs and assumptions. The JSON includes the complete structured response and messages. The original first export was preserved as stage6_demo_initial when the RTI-delta label was clarified to percentage points; financial results did not change. stage6_demo_v1 is the saved demonstration export.
 
 ## Calling from a future UI
 

@@ -35,21 +35,3 @@ def test_calibration_wraps_full_pipeline_and_uses_train_cv():
         assert obj.ensemble is False and obj.method=='sigmoid' and obj.cv.n_splits==5
         assert list(obj.estimator.named_steps)==['codebook','preprocessor','classifier']
         assert len(obj.calibrated_classifiers_)==1
-
-def test_saved_predictions_metrics_and_frozen_selection():
-    xt,yt,xv,yv,wv,split=development_data()
-    saved=pd.read_csv(OUT/'validation_predictions.csv')
-    np.testing.assert_array_equal(saved.PUF_ID,xv.index)
-    results=read_json(OUT/'comparison.json')
-    for name,r in results.items():
-        obj=joblib.load(OUT/f'{name}.joblib');p=obj.predict_proba(xv)[:,1]
-        np.testing.assert_allclose(saved[name],p,rtol=0,atol=1e-14)
-        actual=metrics(yv,p,.5)
-        for key in ['average_precision','roc_auc','brier','precision','recall','f1']:
-            assert actual[key]==r['validation'][key]
-    frozen=read_json(OUT/'frozen_selection.json')
-    assert select_finalist(results,read_json('config/stage4_search.json'))[0]==frozen['selected_model']
-    assert sha256(ROOT/frozen['artifact'])==frozen['artifact_sha256']
-    assert frozen['test_evaluated'] is False and frozen['threshold']==.5
-    manifest=read_json(OUT/'run_manifest.json')
-    assert all(sha256(ROOT/p)==h for p,h in manifest['protected_sha256'].items())

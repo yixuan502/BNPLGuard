@@ -12,7 +12,7 @@ An optional provider may select only from preapproved factual phrasing variants 
 
 Missing configuration, denied authorization, exception, timeout, omitted limits or invalid output returns the unchanged template. UI waiting is bounded by a daemon worker; an eventual transport must honor the supplied timeout because a local timeout cannot cancel a remote request already sent. Mock fallback tests passed; no external LLM quality, provider latency or paid integration validation is claimed.
 
-Fictional combined service demonstration: outputs/extensions/demo_v2/explanation.txt. The initial verbose draft was retained in demo_v1; demo_v2 is the current handoff.
+Fictional combined service demonstration: outputs/extensions/demo_v2/explanation.txt. The initial verbose draft was retained in demo_v1; demo_v2 is the saved demonstration.
 
 ```python
 from src.extension_service import predict_and_explain_cfpb, simulate_and_explain

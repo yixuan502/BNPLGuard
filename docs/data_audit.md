@@ -13,7 +13,7 @@ The active desktop project is `/Users/oneone/Desktop/BNPLGuard`. The initial ana
 | bnpl-credit-risk-insights.ipynb | Notebook v4, 18 cells, 4,969,107 bytes in the initial inventory | Reference only, never executed; check the current inventory for availability after copying |
 | project-a-tech-team.pdf | Five-page course assignment | Entire document was extracted and read; retained in docs/references |
 | marking-criteria-a-tech-team.pdf | Seven-page marking criteria | Entire document was extracted and read; retained in docs/references |
-| FINS5557_BNPLGuard_Codex_Prompt_v2.md | User's original project specification | English maintained version in docs/project_spec.md; original wording retained in migration backup |
+| FINS5557_BNPLGuard_Codex_Prompt_v2.md | User's original project specification | English maintained version in README.md; original wording retained in migration backup |
 
 The original inspection found no Kaggle raw CSV or archive. The user subsequently announced a CSV upload; availability is verified independently in `data/metadata/kaggle_inventory.json`. A Notebook path such as `/kaggle/input/...` is not a local Mac file and does not establish data provenance or shape.
 
