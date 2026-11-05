@@ -150,3 +150,13 @@ Local full regression154passed; local auditPASS; isolated release and actual Git
 ## 5 November 2026: feedback receipt, not a new model experiment
 
 Read-only OOXML review of a user-supplied three-participant compilation. Existing simulator independently reproduced both case keys; all36 item scores and summary arithmetic agree. Text16/18; final recorded app18/18 combines6 independent and12 post-operational-guidance items. S1 scores are retained as source-reported, not independently verified. Source workbook unchanged and private; aggregate JSON/note only are publication candidates. No training, test-set re-evaluation, calibration, threshold change, UI fix or report writing occurred.
+
+
+## Local Stress presentation revision (5 November2026)
+
+Revision stress-feedback-v1 changes UI labels/layout and visibility only.155regression tests passed in12.07s; local data gatePASS. Real Chrome desktop/narrow viewport checks and screenshot inspection passed; physical devices/real comprehension effects untested. Formula/model/formal-results and original feedback hashes retained. Blank retest prepared, no outcomes invented. No model experiment, push or deployment. Full record:docs/stress_feedback_changes.md.
+
+
+## Local monthly instalment estimator
+
+The optional purchase-plan input uses cent-exact allocation and applies the highest monthly instalment to the independent stress simulator after explicit user action. Direct input remains the default and is retained when switching modes. See docs/installment_plan.md. User retest task prepared; no participant result is implied. Changes are local and pending publication; no training, push or deployment.

@@ -319,3 +319,32 @@
 **/__pycache__/
 **/secrets.toml
 **/.env
+
+# Local stress-feedback-v1 review candidates; publication pending.
+!/docs/
+!/outputs/
+!/outputs/app/
+!/outputs/app/stress_feedback_v1/
+!/user_testing/
+!/user_testing/retest_v1/
+!/docs/stress_feedback_changes.md
+!/outputs/app/stress_feedback_v1/acceptance.json
+!/outputs/app/stress_feedback_v1/browser_check.cjs
+!/outputs/app/stress_feedback_v1/browser_qa.json
+!/outputs/app/stress_feedback_v1/desktop_monthly.png
+!/outputs/app/stress_feedback_v1/desktop_results_bottom.png
+!/outputs/app/stress_feedback_v1/desktop_results_top.png
+!/outputs/app/stress_feedback_v1/desktop_savings.png
+!/outputs/app/stress_feedback_v1/desktop_zero.png
+!/outputs/app/stress_feedback_v1/narrow_monthly.png
+!/outputs/app/stress_feedback_v1/narrow_results_bottom.png
+!/outputs/app/stress_feedback_v1/narrow_results_top.png
+!/outputs/app/stress_feedback_v1/narrow_savings.png
+!/outputs/app/stress_feedback_v1/narrow_zero.png
+!/user_testing/retest_v1/facilitator_notes.md
+!/user_testing/retest_v1/retest_form.md
+
+# Local instalment calculator; publication pending.
+!/src/installment_plan.py
+!/tests/test_installment_plan.py
+!/docs/installment_plan.md

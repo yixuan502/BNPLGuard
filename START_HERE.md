@@ -82,3 +82,8 @@ PyCharm选择本机解压目录下新建的 `.venv` 解释器，工作目录为�
 6. 不附旧环境、Git历史、重复复现目录、bootstrap逐次大数组、个体级预测、课程提示词和账户材料。部分原研究测试依赖旧baseline目录／本地保护快照，故本包不是完整研究归档；不要宣称原154项测试已在本包重跑。包内旧manifest保留其原run文件列表，列表里的被裁掉文件不是“本包已有”。
 
 **原桌面ZIP的历史交付检查（不是本次新增反馈的验收）**：文件完整性已检查（ZIP实际解压、逐文件SHA256、三份导航链接目标与冻结工件哈希）；本次未在全新环境完整安装并重跑，不能写成“运行复现已验证”。已有stage8 GitHub干净检出四区检查是历史证据，不是本次解压验收的替代。
+
+
+## Stress and instalment release (5 November 2026)
+
+Release marker: `stress-installments-20261105`. Updated Stress input order, savings separation, five visible scenario results and optional monthly instalment estimation. User retest forms are prepared; actual participant retest remains pending. See docs/installment_plan.md, docs/stress_feedback_changes.md and user_testing/retest_v1/. Online acceptance and actual commit must be checked separately; do not infer them from this preparation note.

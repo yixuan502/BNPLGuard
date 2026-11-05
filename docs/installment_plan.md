@@ -1,0 +1,7 @@
+# Monthly purchase-plan estimator
+
+Choose Estimate from a purchase plan, enter purchase amount, upfront payment and positive integer monthly instalments, preview, then select Use this repayment in the stress simulator and Compare scenarios. Direct monthly entry is the default; its previous value is retained when switching back. Changing a plan clears the applied amount and previous results; apply again before comparing. Loading the fictional example or reset returns to direct mode. The selected amount replaces Bnew and never adds to B0.
+
+Amounts must be finite, nonnegative, numeric and in whole cents; more than two decimal places are rejected. Upfront cannot exceed purchase. First N−1 instalments are rounded down to cents and the last clears the remaining principal. The maximum instalment is used as Bnew; other months may be slightly lower. Zero and full upfront payment are valid. Monthly payments, no interest or fees, and upfront paid before the simulated month are assumptions; savings is the balance after upfront payment. The model covers one instalment month, not purchase-day cash flow. No weekly schedules, dated payments or platform fees are modeled. This is an illustrative budget calculation, not a quote or default estimate.
+
+Retest: use user_testing/retest_v1/retest_form.md and facilitator_notes.md. No actual retest outcome is supplied. The frozen CFPB pipeline and simulator formulas remain unchanged. Local only; publication requires a separate instruction.

@@ -25,12 +25,13 @@ SCOPES={
     'PRODHAVE_8':'A student/education loan for yourself or someone else.',
     'PPHHSIZE':'Household members; the final band is five or more.',
 }
-AMOUNTS={'I':('Monthly after-tax income','Income received after tax.'),
-         'E':('Necessary living expenses','Exclude all repayments already entered below.'),
-         'D':('Non-BNPL debt repayments','Monthly repayments on existing debts other than BNPL.'),
-         'B0':('Existing BNPL repayments','Current total monthly BNPL repayments.'),
-         'Bnew':('Proposed new BNPL repayments','Additional monthly repayment amount, not a purchase price.'),
-         'S':('Available emergency savings','Savings currently available, not a monthly contribution.')}
+AMOUNTS={'I':('Monthly after-tax income','Income received after tax each month. Do not include savings balances.'),
+         'E':('Monthly necessary living expenses','Living costs only. Exclude all debt and BNPL repayments entered below.'),
+         'D':('Monthly non-BNPL debt repayments','Existing debt repayments per month, excluding all BNPL repayments.'),
+         'B0':('Monthly existing BNPL repayments','Total repayments per month on existing BNPL commitments. Exclude the proposed new plan.'),
+         'Bnew':('Monthly proposed new BNPL repayments','Additional repayments per month for the proposed plan, not its purchase price.'),
+         'S':('Emergency savings — current available balance','Available savings today, not monthly income or a monthly contribution.')}
+
 
 
 def screen_options(field):

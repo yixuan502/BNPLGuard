@@ -82,6 +82,7 @@
     "src/extension_service.py",
     "src/extensions_verify.py",
     "src/input_validation.py",
+    "src/installment_plan.py",
     "src/kaggle_audit.py",
     "src/kaggle_experiment.py",
     "src/llm_adapter.py",

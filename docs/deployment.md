@@ -56,3 +56,8 @@ Next: stage-nine real-user feedback, with consent and an explicit protocol, foll
 ## Post-release repository expansion (5 November 2026)
 
 At the user's request the private source repository now includes the reviewed research/team-handoff set, beyond the unchanged99-file inference packaging contract. See deployment/repository_files.json and docs/repository_contents.md. Added study evidence is aggregate only; the received participant workbook remains private.154local regression tests passed in6.27s, the data gate passed and192protected hashes remain unchanged. App source, model, encoded SHAP background, schema, lock and simulator arithmetic are unchanged. Existing Git history/visibility are preserved. This source publication is not a new manual deployment or new anonymous online acceptance; main may refresh automatically through the existing Community Cloud integration. The prior accepted deployed revision is771aadd; use Git history for the newer research handoff revision.
+
+
+## Stress and instalment release (5 November 2026)
+
+Release marker: `stress-installments-20261105`. Updated Stress input order, savings separation, five visible scenario results and optional monthly instalment estimation. User retest forms are prepared; actual participant retest remains pending. See docs/installment_plan.md, docs/stress_feedback_changes.md and user_testing/retest_v1/. Online acceptance and actual commit must be checked separately; do not infer them from this preparation note.

@@ -171,3 +171,52 @@ def test_no_training_bootstrap_background_generation_or_external_api(monkeypatch
 
 def test_original_files_still_unchanged_after_ui_runs():
     for name,h in read_json('data/metadata/stage7_protected_before.json').items():assert sha256(ROOT/name)==h,name
+
+
+def test_feedback_input_order_and_visible_scenario_summaries():
+    at=app();sim=load_stress(at)
+    assert [w.key for w in at.number_input][:6]==['stress_widget_'+k for k in ['I','E','D','B0','Bnew','S']]
+    assert all('Monthly' in w.label for w in list(at.number_input)[:5])
+    assert 'current available balance' in at.number_input(key='stress_widget_S').label
+    text='\n'.join(m.value for m in at.markdown)
+    assert 'Savings are not included in monthly income or the monthly cash buffer' in text
+    for s in sim['scenarios']:
+        assert '**'+s['title']+'**' in text
+        assert 'Final monthly cash buffer: '+s['display']['cash_buffer']['text'] in text
+        assert 'Change from current: '+s['delta_display']['cash_buffer']['text'] in text
+    assert text.count('Status: Surplus')==3
+    assert text.count('Status: Shortfall')==1 and text.count('Status: Break-even')==1
+    assert 'income reduction 20%' in text
+    at.number_input(key='stress_widget_S').set_value(2000.).run()
+    assert 'stress_submission' not in at.session_state
+    assert not any('Final monthly cash buffer:' in m.value for m in at.markdown)
+    at.button(key='run_stress').click().run()
+    updated=at.session_state['stress_submission']['result']['simulation']
+    assert [s['metrics']['cash_buffer'] for s in updated['scenarios']]==[s['metrics']['cash_buffer'] for s in sim['scenarios']]
+    assert float(updated['scenarios'][0]['metrics']['savings_coverage']['value'])==pytest.approx(2*float(sim['scenarios'][0]['metrics']['savings_coverage']['value']))
+    at.button(key='stress_reset').click().run()
+    assert 'stress_submission' not in at.session_state and all(w.value is None for w in list(at.number_input)[:6])
+    assert not any('Final monthly cash buffer:' in m.value for m in at.markdown)
+
+
+def test_purchase_plan_switch_invalidation_and_example():
+    at=app(); original=load_stress(at)
+    at.radio(key='plan_mode').set_value('Estimate from a purchase plan').run()
+    assert 'stress_submission' not in at.session_state
+    at.number_input(key='plan_purchase').set_value(600.).run()
+    at.button(key='apply_plan').click().run()
+    assert at.session_state['stress_draft']['Bnew']==200
+    at.button(key='run_stress').click().run()
+    assert at.session_state['stress_submission']['result']['simulation']==original
+    at.number_input(key='plan_purchase').set_value(100.).run()
+    assert 'stress_submission' not in at.session_state and at.session_state['stress_draft']['Bnew'] is None
+    at.button(key='apply_plan').click().run()
+    assert at.session_state['stress_draft']['Bnew']==33.34
+    at.button(key='apply_plan').click().run()
+    assert at.session_state['stress_draft']['Bnew']==33.34
+    at.radio(key='plan_mode').set_value('Enter monthly repayment directly').run()
+    assert at.session_state['stress_draft']['Bnew']==200
+    at.button(key='stress_reset').click().run()
+    assert at.radio(key='plan_mode').value=='Enter monthly repayment directly'
+    at.button(key='stress_example').click().run()
+    assert at.session_state['stress_draft']['Bnew']==200

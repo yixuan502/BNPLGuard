@@ -197,3 +197,20 @@ All36 simulator answers were rescored with the existing deterministic simulator:
 The existing private yixuan502/BNPLGuard main history is retained. The reviewed repository set expands from99 deployment files to266 files (approximately15.48MB uncompressed): original source/configuration, frozen comparator/Kaggle artifacts, final aggregate research evidence and plots, navigation, blank English instruments/authoring sources, and the aggregate feedback review. Repository publication uses deployment/repository_files.json; the inference99-file manifest is unchanged. Raw data/course/reference-code acquisition steps and archive-only test limits are explicit in docs/repository_contents.md. Actual participant workbooks, author/path metadata, row-level predictions, environments, secrets and obsolete checkouts remain excluded. Desktop ZIP remains the earlier handoff snapshot, not overwritten.
 
 Validation in the existing project .venv:154tests passed in6.27s; data auditPASS6394x217/6350eligible/2454positive; all192 protected hashes unchanged; three navigation documents have valid local link targets; source feedback workbook SHA256 unchanged. No application source, model, schema, dependency lock, financial calculation or frozen result changed. No fresh-environment full research rerun, manual Cloud deployment or new anonymous browser acceptance occurred. LLM remains disabled and Kaggle remains appendix-only. Current publication SHA is available from Git HEAD; historic accepted Cloud revision771aadd is not silently overwritten as an acceptance claim.
+
+
+## Feedback-driven Stress revision and retest preparation (5 November2026)
+
+Completed locally as stress-feedback-v1 on d67f0ba (local and remote matched before editing). Monthly flow labels, separate current savings balance and no-double-counting explanations; ordered single-column fields; five expanded result cards with final value/change/status and submitted assumptions. RTI/coverage and trusted template details preserved; input edits clear stale results. No model/formula/schema/SHAP changes, no retraining, no report/video, no commit/push/deployment. LLM off; Kaggle appendix-only.
+
+Actual acceptance:155tests passed in12.07s; data auditPASS; standard buffers900/700/0/-200/1100AUD. Headless Chrome desktop1280x900 and narrow390x844 interactions/screenshots checked input order, cards, reset, invalidation and zero/N/A; no horizontal overflow. Physical devices and real user retest are not completed. Original research/user-study files hash-preserved; receipts in outputs/app/stress_feedback_v1. See docs/stress_feedback_changes.md. Blank English retest form and facilitator notes in user_testing/retest_v1; outcome fields remain empty. Previous missing dates/answers remain missing. Next: consented independent retest, separate hint/post-hint recording, then separately authorized publication and live acceptance.
+
+
+## Local monthly instalment estimator
+
+The optional purchase-plan input uses cent-exact allocation and applies the highest monthly instalment to the independent stress simulator after explicit user action. Direct input remains the default and is retained when switching modes. See docs/installment_plan.md. User retest task prepared; no participant result is implied. Changes are local and pending publication; no training, push or deployment.
+
+
+## Stress and instalment release (5 November 2026)
+
+Release marker: `stress-installments-20261105`. Updated Stress input order, savings separation, five visible scenario results and optional monthly instalment estimation. User retest forms are prepared; actual participant retest remains pending. See docs/installment_plan.md, docs/stress_feedback_changes.md and user_testing/retest_v1/. Online acceptance and actual commit must be checked separately; do not infer them from this preparation note.

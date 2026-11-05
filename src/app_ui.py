@@ -1,9 +1,11 @@
 """English Screen/Stress/Explain/Model views over verified local interfaces."""
 import os
+from decimal import Decimal
 from pathlib import Path
 import pandas as pd
 import streamlit as st
 from .common import ROOT
+from .installment_plan import calculate_plan
 from . import app_services as services,app_state as state,app_charts as charts
 from .app_inputs import FIELDS,LABELS,SHORT_LABELS,SCOPES,AMOUNTS,screen_options,screen_payload
 
@@ -35,10 +37,16 @@ def change_widget(section,field):
 
 
 def reset_section(section):
+    if section == 'stress':
+        for key in ['plan_mode','plan_purchase','plan_upfront','plan_months','plan_applied','plan_manual']:
+            st.session_state.pop(key, None)
     state.reset(st.session_state,section);st.session_state.pop(section+'_error',None)
 
 
 def example_section(section,navigate=False):
+    if section == 'stress':
+        for key in ['plan_mode','plan_purchase','plan_upfront','plan_months','plan_applied','plan_manual']:
+            st.session_state.pop(key, None)
     state.load_example(st.session_state,section);st.session_state.pop(section+'_error',None)
     if navigate:st.session_state['workspace']='Screen'
 
@@ -130,7 +138,22 @@ def render_stress_result(submission):
     response=submission['result'];simulation=response['simulation']
     st.subheader('Scenario comparison')
     st.caption('Illustrative scenario—not empirical model results. '+('Fictional example submission.' if submission['origin']=='fictional' else 'Results for the submitted assumptions.'))
+    inputs=submission['inputs']
+    st.write(f"Submitted assumptions: {inputs['currency']}; income reduction {inputs['income_drop_percent']:g}%; "
+             f"proposed new monthly BNPL {inputs['currency']} {inputs['Bnew']:,.2f}; "
+             f"hypothetical reduction of existing monthly BNPL {inputs['currency']} {inputs['bnpl_reduction']:,.2f}.")
+    st.caption('Final monthly cash buffer is the amount left after expenses and repayments. Change from current is the difference from the Current scenario, not the final amount.')
+    # Single-column cards preserve reading order at every viewport width.
+    for item in simulation['scenarios']:
+        buffer=Decimal(item['metrics']['cash_buffer']['value'])
+        status='Surplus' if buffer>0 else 'Shortfall' if buffer<0 else 'Break-even'
+        with st.container(border=True):
+            st.markdown('**'+item['title']+'**')
+            st.write('Final monthly cash buffer: '+item['display']['cash_buffer']['text'])
+            st.write('Change from current: '+item['delta_display']['cash_buffer']['text'])
+            st.write('Status: '+status)
     st.altair_chart(charts.stress_chart(simulation),width='stretch')
+    st.markdown('**Scenario details: RTI, savings coverage and explanation**')
     scenarios={s['title']:s for s in simulation['scenarios']}
     selected=st.selectbox('Inspect a scenario',list(scenarios),key='stress_inspect')
     scenario=scenarios[selected]
@@ -154,6 +177,44 @@ def render_stress_result(submission):
         st.write('Savings coverage assumes no new income and constant expenses/repayments; it is not actual time until funds run out. No dated payment calendar, fees or multi-month depletion are modeled.')
 
 
+def plan_mode_changed():
+    ss=st.session_state
+    if ss['plan_mode']=='Estimate from a purchase plan':
+        ss['plan_manual']=ss['stress_draft']['Bnew']
+        value=None
+        ss.pop('plan_applied',None)
+    else:
+        value=ss.get('plan_manual')
+        ss.pop('plan_applied',None)
+    ss['stress_widget_Bnew']=value
+    state.change(ss,'stress','Bnew',value)
+    ss.pop('stress_submission',None)
+    ss['stress_changed']=True
+
+
+def plan_edited():
+    ss=st.session_state
+    ss.pop('plan_applied',None)
+    ss['stress_widget_Bnew']=None
+    state.change(ss,'stress','Bnew',None)
+    ss.pop('stress_submission',None)
+    ss['stress_changed']=True
+
+
+def apply_plan():
+    ss=st.session_state
+    try:
+        plan=calculate_plan(ss['plan_purchase'],ss['plan_upfront'],ss['plan_months'])
+        value=float(plan['maximum'])
+        ss['stress_widget_Bnew']=value
+        state.change(ss,'stress','Bnew',value)
+        ss['plan_applied']=(ss['plan_purchase'],ss['plan_upfront'],ss['plan_months'])
+        ss.pop('stress_submission',None)
+        ss['stress_changed']=True
+    except ValueError as error:
+        ss['stress_error']=str(error)
+
+
 def stress_page():
     st.header('Stress')
     st.write('Compare monthly repayment assumptions. Use one currency throughout; no exchange-rate conversion is performed. Necessary living expenses must exclude all repayments entered separately.')
@@ -162,12 +223,40 @@ def stress_page():
     actions[1].button('Reset simulation',key='stress_reset',on_click=reset_section,args=('stress',),width='stretch')
     provenance_notice('stress');restore_widgets('stress')
     st.selectbox('Currency for every amount',['AUD','USD','EUR','GBP','CAD','INR'],key='stress_widget_currency',on_change=change_widget,args=('stress','currency'))
-    columns=st.columns(2)
-    for i,(field,(label,help_text)) in enumerate(AMOUNTS.items()):
-        with columns[i%2]:
-            st.number_input(label,min_value=0.,value=None,step=50.,format='%.2f',key='stress_widget_'+field,
-                placeholder='Enter amount (zero is valid)',help=help_text,on_change=change_widget,args=('stress',field))
-            st.caption(help_text)
+    st.subheader('Monthly cash flow')
+    st.caption('Enter each amount once: living expenses exclude debt repayments; non-BNPL debt excludes BNPL; existing BNPL excludes the proposed new plan.')
+    for field,(label,help_text) in AMOUNTS.items():
+        if field=='Bnew':
+            mode=st.radio('Proposed new BNPL input', ['Enter monthly repayment directly','Estimate from a purchase plan'], key='plan_mode', on_change=plan_mode_changed)
+            if mode=='Estimate from a purchase plan':
+                st.caption('One payment per month; no interest or fees. The upfront payment was paid before the simulated month. Enter savings after that payment. Results describe one instalment month, not the purchase-day cash flow. This is a budget estimate, not a provider quote, approval or default probability. Amounts must use the selected currency and whole cents.')
+                st.number_input('Purchase amount', min_value=0.0, value=None, step=0.01, format='%.2f', key='plan_purchase', on_change=plan_edited)
+                st.number_input('Upfront payment', min_value=0.0, value=0.0, step=0.01, format='%.2f', key='plan_upfront', on_change=plan_edited)
+                st.number_input('Number of monthly instalments', min_value=1, value=3, step=1, key='plan_months', on_change=plan_edited)
+                try:
+                    plan=calculate_plan(st.session_state.plan_purchase,st.session_state.plan_upfront,st.session_state.plan_months)
+                    currency=st.session_state.stress_draft['currency']
+                    st.write(f"Remaining instalment principal: {currency} {plan['remaining']:.2f}")
+                    st.write(f"Regular monthly repayment: {currency} {plan['regular']:.2f}")
+                    if plan['final'] != plan['regular']:
+                        st.write(f"Final instalment repayment: {currency} {plan['final']:.2f}")
+                    st.write(f"Monthly repayment used in this scenario: {currency} {plan['maximum']:.2f}")
+                    st.caption('The highest repayment month is used; other months may be slightly lower. The first N−1 payments are rounded down to cents; the last payment clears the remainder.')
+                    st.button('Use this repayment in the stress simulator',key='apply_plan',on_click=apply_plan)
+                except ValueError as error:
+                    st.info(str(error))
+                if not st.session_state.get('plan_applied'):
+                    st.info('Apply the current purchase plan before comparing scenarios.')
+                else:
+                    st.success('Purchase plan repayment applied. Compare scenarios to calculate.')
+                continue
+        if field=='S':
+            st.subheader('Savings balance today')
+            st.write('Savings are not included in monthly income or the monthly cash buffer. They are used to calculate how many months of expenses and repayments could be covered with no new income and unchanged outflows.')
+        st.number_input(label,min_value=0.,value=None,step=50.,format='%.2f',key='stress_widget_'+field,
+            placeholder='Enter amount (zero is valid)',help=help_text,on_change=change_widget,args=('stress',field))
+        st.caption(help_text)
+    st.subheader('Scenario assumptions')
     st.slider('Assumed income reduction (%)',min_value=0.,max_value=100.,step=5.,key='stress_widget_income_drop_percent',on_change=change_widget,args=('stress','income_drop_percent'))
     st.number_input('Hypothetical reduction of existing monthly BNPL',min_value=0.,step=50.,format='%.2f',key='stress_widget_bnpl_reduction',
           help='Cannot exceed existing BNPL. This is a scenario assumption, not a contract change.',on_change=change_widget,args=('stress','bnpl_reduction'))
@@ -307,6 +396,7 @@ def main():
     st.markdown(STYLE,unsafe_allow_html=True)
     st.title('BNPLGuard')
     st.caption('AI-Powered Financial Vulnerability Screening and BNPL Repayment Stress Simulation')
+    st.caption('Release: stress-installments-20261105')
     page=st.radio('Workspace',['Screen','Stress','Explain','Model'],horizontal=True,key='workspace',label_visibility='collapsed')
     st.divider()
     {'Screen':screen_page,'Stress':stress_page,'Explain':explain_page,'Model':model_page}[page]()

@@ -67,3 +67,18 @@ The CFPB source/version links and raw checksum are retained in `config/app_sourc
 The repository now also contains final research artifacts, Kaggle appendix evidence, simulator/SHAP examples and blank English user-testing instruments; the reviewed inference runtime remains the separate99-file `deployment/runtime_files.json` subset. Start with [START_HERE](START_HERE.md), [EVIDENCE_MAP](EVIDENCE_MAP.md) and [AI_HANDOFF_PROMPT](AI_HANDOFF_PROMPT.md) (Chinese team navigation). See [repository contents and acquisition steps](docs/repository_contents.md) for deliberate exclusions and reproduction limits.
 
 [User feedback verification](docs/user_testing_feedback_review.md) now records receipt of a three-participant compilation:16/18 text answers;18/18 recorded app answers, including12 after operational guidance. Independent app originals and S1 wording have evidence gaps; do not infer causal improvement or all-user independent success. The source workbook is private; only the aggregate review is committed. Blank instruments remain separate: participant PDF for testers, answer guide and blank results workbook for facilitators. This receipt supersedes earlier waiting-for-feedback statements; no course report has been written by this change.
+
+
+## Local feedback revision — pending publication
+
+Stress now separates monthly cash-flow entries from savings today, preserves I/E/D/B0/Bnew/S reading order in one column, and shows all five scenario cards with final buffer, change and signed status. The existing RTI/coverage/details/templates remain. Revision stress-feedback-v1 is a local change on base d67f0ba; no push/deployment occurred. See [change and acceptance record](docs/stress_feedback_changes.md), [blank English retest form](user_testing/retest_v1/retest_form.md) and [facilitator-only guide](user_testing/retest_v1/facilitator_notes.md).155tests and desktop/narrow Chrome checks passed; physical devices and real retest outcomes remain unverified. Use the local app for this revision; the public URL still reflects the published version.
+
+
+## Local monthly instalment estimator
+
+The optional purchase-plan input uses cent-exact allocation and applies the highest monthly instalment to the independent stress simulator after explicit user action. Direct input remains the default and is retained when switching modes. See docs/installment_plan.md. User retest task prepared; no participant result is implied. Changes are local and pending publication; no training, push or deployment.
+
+
+## Stress and instalment release (5 November 2026)
+
+Release marker: `stress-installments-20261105`. Updated Stress input order, savings separation, five visible scenario results and optional monthly instalment estimation. User retest forms are prepared; actual participant retest remains pending. See docs/installment_plan.md, docs/stress_feedback_changes.md and user_testing/retest_v1/. Online acceptance and actual commit must be checked separately; do not infer them from this preparation note.

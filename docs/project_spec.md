@@ -236,3 +236,8 @@ The user explicitly authorizes preparing a clean deployment tree, preserving fro
 ## Authorized complete-project GitHub handoff and feedback processing (5 November 2026)
 
 The user now requests the complete project on the existing GitHub repository. Extend the prior deployment-only repository with reviewed source, final research evidence, frozen comparator/Kaggle artifacts, handoff navigation and blank user-study materials. Preserve the private visibility and existing history; do not force-push. The inference runtime allowlist remains separate and unchanged. Raw-source acquisition instructions replace uncertain-license redistribution; environments, obsolete copies, credentials, course PDFs, reference Notebook code, per-record predictions/bootstrap arrays and actual participant workbooks stay local. Only the aggregate feedback review may be committed. This scope supersedes the earlier deployment-only file subset, not any frozen research or privacy contract. No retraining or manual redeployment is authorized/necessary for this publication.
+
+
+## Local-only feedback revision authorization (5 November2026)
+
+The user authorizes Stress presentation improvements, local tests/browser acceptance and blank English retest materials. Preserve all frozen research/financial contracts and original feedback. Keep monthly flows distinct from savings stocks, preserve input order across widths, expose all five scenario final values/deltas/statuses, and invalidate results on edit. This round explicitly prohibits automatic push/deployment, report/video creation and fabricated missing study records. A new retest is not historical evidence recovery.
