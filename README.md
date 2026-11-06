@@ -66,7 +66,7 @@ Potential improvements include clearer separation of existing/proposed repayment
 
 ## Security and attribution
 
-The app loads only trusted local artifacts, retains inputs/results in session state and does not log financial inputs or send them to an external AI API. No secret is required or committed. Any future API integration must use environment variables or platform secrets rather than hardcoded credentials.
+The app loads only trusted local artifacts, retains inputs/results in session state and does not log financial inputs or send them to an external AI API. No secret is required or committed. For a future optional API integration, keep a local `.env` file outside version control, for example `API_KEY=your_key_here`, and configure the application to read that environment variable or use platform secrets. The current application does not read or require this example variable; never commit real keys.
 
 Codex assisted with data/schema audits, implementation, model experiments and evaluation, SHAP, simulation, application/deployment checks and documentation. The submitting team is responsible for understanding and reviewing the work and accurately disclosing assistance and actual individual contributions in the assessed report.
 
